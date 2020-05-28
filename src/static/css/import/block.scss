@@ -79,6 +79,9 @@
 .main-title {
     font-size: 36px;
     font-weight: 700;
+    span{
+        color: $wheat;
+    }
     @media(max-width: 767px) {
         font-size: 18px;
     }
