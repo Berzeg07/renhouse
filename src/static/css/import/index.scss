@@ -291,7 +291,6 @@
     background: none;
     border-radius: 30px;
     transition: 0.5s;
-
     @media(min-width: 1170px) {
         width: 283px;
         height: 59px;
@@ -311,9 +310,11 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.13);
         }
     }
-    &:hover{
+
+    &:hover {
         background: #e2e2e2;
-        &:after{
+
+        &:after {
             width: 30px;
             height: 30px;
             border-radius: 10px;
@@ -444,5 +445,105 @@
             width: 43%;
             position: relative;
         }
+    }
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.filial-block{
+    max-width: 1670px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.filial-slider {
+    padding-bottom: 35px;
+
+    .swiper-slide {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 209px;
+        @media(max-width: 767px){
+            width: 154px !important;
+        }
+    }
+
+    .swiper-pagination-progressbar-fill {
+        background: #dcdcdc;
+        border-radius: 4px;
+        height: 4px;
+    }
+
+    .swiper-pagination-progressbar {
+        bottom: 0;
+        top: auto;
+        background: none;
+    }
+}
+
+.filial-slider__item {
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    img{
+        display: block;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        left: 0;
+        top: 0;
+        z-index: 10;
+    }
+}
+
+.filial-slider__top {
+    position: absolute;
+    top: 29px;
+    left: 29px;
+    z-index: 20;
+    color: white;
+    text-align: left;
+
+    li {
+        margin-bottom: 15px;
+
+        &:first-child {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        &:last-child {
+            font-size: 14px;
+            color: #d1d1d1;
+        }
+    }
+}
+
+.filial-block {
+    @media(min-width: 1170px) {
+        padding-top: 100px;
+    }
+}
+
+.filial-block__article {
+    margin-bottom: 54px;
+}
+
+.filial-block__title {
+    margin-bottom: 28px;
+
+    span {
+        color: $wheat;
     }
 }
