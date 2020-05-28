@@ -1,0 +1,100 @@
+// Технические стили для страницы block *
+.list-block {
+    margin-bottom: 40px;
+
+    li {
+        margin-bottom: 15px;
+    }
+}
+
+.block-title {
+    padding-top: 50px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: brown;
+}
+
+// БЭМ блоки ==================================================================*
+
+// Контейнер *
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    @media(max-width: 767px) {
+        max-width: 320px;
+    }
+    @media(min-width: 768px) and (max-width: 1169px) {
+        max-width: 768px;
+    }
+}
+
+// Кнопки *
+
+.btn {
+    display: inline-block;
+    font-size: 18px;
+    color: white;
+    border-radius: 35px;
+    transition: 0.5s;
+    text-align: center;
+    font-weight: 600;
+    @media(max-width: 767px) {
+        font-size: 16px;
+    }
+}
+
+.btn-white {
+    border: 1px solid #131313;
+    color: #131313;
+}
+
+.btn-black {
+    background: #131313;
+    color: white;
+}
+
+.btn-wheat {
+    background: #fed68c;
+}
+
+.btn-orange {
+    background: #f6ae2d;
+
+    &:hover {
+        box-shadow: 0 13px 70px rgba(246, 174, 45, 0.33);
+    }
+}
+
+// Заголовки *
+
+.main-title {
+    font-size: 36px;
+    font-weight: 700;
+    @media(max-width: 767px) {
+        font-size: 18px;
+    }
+    @media(min-width: 768px) and (max-width: 1099px) {
+        font-size: 24px;
+    }
+}
+
+.article-title {
+    font-size: 30px;
+    font-weight: 700;
+    @media(max-width: 767px) {
+        font-size: 18px;
+    }
+    @media(min-width: 768px) and (max-width: 1099px) {
+        font-size: 24px;
+    }
+}
+
+// Основной текст *
+.article{
+    @media(max-width: 767px){
+        font-size: 14px;
+    }
+}

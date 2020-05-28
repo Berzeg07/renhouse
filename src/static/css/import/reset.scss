@@ -25,7 +25,10 @@ body {
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
     font-family: "Lato";
+    font-size: 18px;
+    font-weight: 400;
     overflow-x: hidden;
+    color: #252422;
 }
 
 body,
@@ -40,6 +43,7 @@ ul {
 }
 
 a {
+    font-family: inherit;
     text-decoration: none;
     color: inherit;
 }
