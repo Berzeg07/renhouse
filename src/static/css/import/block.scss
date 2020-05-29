@@ -105,8 +105,14 @@
 // Основной текст *
 
 .article {
-    @media(max-width: 1160px) {
+    @media(max-width: 767px) {
         font-size: 14px;
+    }
+    @media(min-width: 768px) {
+        font-size: 16px;
+    }
+    @media(min-width: 1169px) {
+        font-size: 18px;
     }
 }
 // Затемняющий слой *
