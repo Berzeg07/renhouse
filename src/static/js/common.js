@@ -75,6 +75,34 @@ $(document).ready(function() {
         }
     });
 
+    var swiper3 = new Swiper('.presentation-slider', {
+        slidesPerView: 5,
+        spaceBetween: 34,
+        centeredSlides: false,
+        // slidesPerView: 'auto',
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'progressbar',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            767: {
+                slidesPerView: 2,
+                spaceBetween: 15,
+                loop: false,
+            },
+            1169: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+                loop: false,
+            },
+        }
+    });
+
 
 
 });
