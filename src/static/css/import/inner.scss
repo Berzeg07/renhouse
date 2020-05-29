@@ -249,14 +249,14 @@
 		width: 50%;
 		order: 4;
 	}
-	}buy-franchise
+}
 
 
-	.footer__ip br {
-		@media (min-width : 768px) {
-			display: none;
-		}
+.footer__ip br {
+	@media (min-width : 768px) {
+		display: none;
 	}
+}
 
 
 /*buy-franchise
@@ -605,7 +605,22 @@
 	margin-bottom: 56px;
 
 	position: relative;
-	z-index: 2;
+
+	&::after {
+		content: '';
+
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		background-image: url('../img/city-img.jpg');
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		width: 623px;
+		height: 334px;
+	}
+
+
 
 	@media (min-width : 1170px) {
 		margin-bottom: 0;
