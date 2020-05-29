@@ -733,14 +733,7 @@
 }
 
 .expading__new a {
-	width: 214px;
-	height: 64px;
-	margin: 0 auto;
 	margin-bottom: 52px;
-
-	display: block;
-
-	line-height: 64px;
 
 	@media (min-width : 768px) {
 		margin-bottom: 0;
@@ -753,9 +746,17 @@
 	}
 }
 
+.btn-new{
+	width: 214px;
+	height: 64px;
+	margin: 0 auto;
+
+	display: block;
+
+	line-height: 64px;
+}
+
 .expading__new ul {
-	font-size: 16px;
-	line-height: 24px;
 
 	@media (min-width : 1170px) {
 		margin-left: -115px;
@@ -764,11 +765,24 @@
 }
 
 .expading__new li {
+	max-width: 250px;
+	margin: 0 auto;
+
+	@media (min-width : 1170px) {
+		padding-left: 40px;
+	}
+}
+
+.achive-block {
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.achive-block li {
 	position: relative;
 
 	padding-left: 40px;
-	max-width: 250px;
-	margin: 0 auto;
+
 	margin-bottom: 24px;
 
 	&:last-child {
@@ -788,10 +802,6 @@
 
 		width: 18px;
 		height: 13px;
-	}
-
-	@media (min-width : 1170px) {
-		padding-left: 40px;
 	}
 }
 
@@ -827,4 +837,87 @@
 		width: auto;
 		margin: 0;
 	}
+}
+
+/*run-franchise
+=======================================================*/
+.run-franchise {
+	padding-top: 80px;
+	padding-bottom: 67px;
+}
+
+.run-franchise h1 {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 30px;
+	text-align: center;
+
+	margin-bottom: 46px;
+}
+
+.run-franchise__description {
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+
+	margin-bottom: 48px;
+}
+
+.run-franchise-slider {
+	/*padding-bottom: 0;
+	padding-top: 30px;*/
+}
+
+.run-franchise-slider .fun-franchise__wrap{
+	display: flex;
+	flex-direction: column;
+}
+
+.run-franchise-slider .swiper-pagination{
+	top: 0;
+}
+
+.run-franchise__services {
+	box-shadow: 0 11px 60px rgba(0, 0, 0, 0.13);
+	border-radius: 25px;
+	background-color: #f4f4f4;
+	border-top: 20px solid  #f6ae2d;
+
+	padding: 58px 15px 25px;
+}
+
+.run-franchise__services h2 {
+	font-size: 18px;
+	text-align: center;
+
+	margin-bottom: 31px;
+}
+
+.run-franchise__services-price {
+	width: 141px;
+	margin: 0 auto;
+	margin-bottom: 44px;
+}
+
+.run-franchise__services-price .old{
+	font-size: 16px;
+	font-weight: 400;
+	text-decoration: line-through;
+	color: #858585;
+	text-align: right;
+
+	display: block;
+
+	margin-bottom: 19px;
+}
+
+.run-franchise__services-price .new{
+	font-weight: 900;
+	font-size: 24px;
+
+	display: block;
+}
+
+.run-franchise__services-link {
+	margin-bottom: 47px;
 }
