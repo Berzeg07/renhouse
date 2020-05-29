@@ -1,3 +1,15 @@
+.visually-hidden {
+	position: absolute;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	white-space: nowrap;
+}
+
+/*Footer
+=======================================================*/
 .footer {
 	background-color: #131313;
 
@@ -31,7 +43,7 @@
 	display: none;
 
 	@media (min-width : 768px) {
-		display: block;
+		display: inline-block;
 		order: 1;
 
 		width: 50%;
@@ -237,10 +249,300 @@
 		width: 50%;
 		order: 4;
 	}
+	}buy-franchise
+
+
+	.footer__ip br {
+		@media (min-width : 768px) {
+			display: none;
+		}
+	}
+
+
+/*buy-franchise
+==============================================================*/
+.buy-franchise {
+	padding: 73px 0;
 }
 
-.footer__ip br {
-	@media (min-width : 768px) {
-		display: none;
+.buy-franchise-column{
+	@media (min-width : 1170px) {
+		display: flex;
+		justify-content: space-between;
 	}
+}
+
+.buy-franchise__contract {
+	display: none;
+
+	@media (min-width : 1170px) {
+		width: 570px;
+		height: 735px;
+
+		border: 1px solid #c4c4c4;
+		background-color: #f8f8f8;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.buy-franchise fieldset{
+	border: none;
+
+	padding: 0;
+	margin: 0;
+}
+
+.buy-franchise legend {
+	color: #000000;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.buy-franchise .format {
+	margin-bottom: 59px;
+
+	@media (min-width : 768px) {
+		width: 50%;
+	}
+}
+
+.buy-franchise .format legend{
+	margin-bottom: 42px;
+
+	@media (min-width : 1170px) {
+		font-size: 24px;
+	}
+}
+
+.buy-franchise__promocode legend{
+	margin-bottom: 34px;
+	line-height: 35px;
+
+	@media (min-width : 1170px) {
+		font-weight: 400;
+
+		br {
+			display: none;
+		}
+	}
+}
+
+.promocode-column {
+	@media (min-width : 1170px) {
+		display: flex;
+
+		margin-bottom: 73px;
+	}
+}
+
+.buy-franchise__title {
+	color: #131313;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 26px;
+
+	width: 243px;
+	margin-bottom: 61px;
+
+	@media (min-width : 500px) {
+		width: auto;
+	}
+
+	@media (min-width : 768px) {
+		font-size: 24px;
+		line-height: 32px;
+
+		img {
+			margin-bottom: -33px;
+			margin-left: 20px;
+		}
+	}
+
+	@media (min-width : 1170px) {
+		font-size: 36px;
+		line-height: 43px;
+
+		img {
+			margin-bottom: -13px;
+			margin-left: 0;
+		}
+	}
+}
+
+.buy-franchise__title span {
+	color: #f6ae2d;
+}
+
+.buy-franchise__title-img {
+	width: 181px;
+	height: 45px;
+	margin-top: 20px;
+
+	display: block;
+
+	@media (min-width : 768px) {
+		display: inline;
+	}
+}
+
+.franchise-form__radio {
+	display: none;
+}
+
+.franchise-form__radio:checked ~ .franchise-form__label::before {
+	background-color: #f6ae2d;
+}
+
+.franchise-form__label {
+	position: relative;
+
+	padding-left: 45px;
+	color: #000000;
+	font-size: 16px;
+
+	&:before {
+		content: '';
+
+		width: 20px;
+		height: 21px;
+
+		position: absolute;
+		left: 0;
+		border: 1px solid #dcdcdc;
+		background-color: #ffffff;
+		border-radius: 5px;
+	}
+}
+
+.franchice-form__text {
+	border-radius: 26px;
+	border: 1px solid #dcdcdc;
+	background-color: #ffffff;
+}
+
+.buy-franchise__format li {
+	margin-bottom: 28px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.franchice-form__text {
+	width: 281px;
+	height: 52px;
+
+	@media (min-width : 1170px) {
+		width: 329px;
+		height: 66px;
+	}
+}
+
+.franchice-form__btn {
+	border-radius: 31px;
+	background-color: #949494;
+
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.promocode__text {
+	margin-bottom: 31px;
+	padding: 0 20px;
+
+	display: block;
+
+	@media (min-width : 1170px) {
+		margin-bottom: 0;
+		margin-right: 19px;
+	}
+}
+
+.promocode__btn {
+	padding: 18px 28px;
+	margin-bottom: 68px;
+
+	@media (min-width : 1170px) {
+		margin-bottom: 0;
+
+		background-color: #f6ae2d;
+	}
+}
+
+.buy-franchise__sum {
+	margin-bottom: 36px;
+
+	color: #000000;
+	font-size: 16px;
+	line-height: 43px;
+
+	@media (min-width : 768px) {
+		font-size: 18px;
+	}
+}
+
+.buy-franchise__sum span{
+	display: block;
+	font-weight: 700;
+	font-size: 35px;
+
+	@media (min-width : 768px) {
+		font-size: 24px;
+	}
+
+	@media (min-width : 1170px) {
+		display: inline-block;
+		margin-left: 35px;
+	}
+}
+
+.franchice-buy__submit {
+	padding: 25px 98px;
+	margin-bottom: 32px;
+
+	font-size: 18px;
+
+	align-self: flex-start;
+
+	@media (min-width : 1170px) {
+		padding: 26px 49px;
+		margin-bottom: 0;
+	}
+}
+
+.buy-franchise__form {
+	display: flex;
+	flex-direction: column;
+
+	@media (min-width : 768px) {
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	@media (min-width : 1170px) {
+		flex-direction: column;
+	}
+}
+
+.franchice-buy__offer {
+	order: 1;
+
+	@media (min-width : 1170px) {
+		order: 0;
+
+		margin-bottom: 60px;
+	}
+}
+
+.franchice-buy__offer a {
+	text-decoration: underline;
+}
+
+.submit-column {
+	display: flex;
+	flex-direction: column;
 }
