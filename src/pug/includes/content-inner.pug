@@ -1,1 +1,84 @@
-p Boka
+<section class="expanding">
+
+  <div class="expanding-block">
+    <div class="expading__description">
+    <div class="container">
+      <h1>Мы постоянно расширяемся</h1>
+
+      <p>В 2020 году RentHouse не только станет крупнейшей сетью посуточной аренды квартир в России, но и пойдет за рубеж.</p>
+    </div>
+  </div>
+
+  <div class="container expading__container">
+    <div class="expading__new">
+      <div class="expading__new-column">
+        <h2>Представительство вне России</h2>
+        <p>2 500 000 <span>руб.</span></p>
+        <a class="btn btn-orange" href="#">Начать</a>
+      </div>
+      <ul>
+        <li>Открытие под брендом <br> RentHouse за границей</li>
+        <li>Адаптация бизнес-модели с<br>помощью RentHouse</li>
+        <li>От 500 000 рублей чистой <br> прибыли и статус «мастер франшизы»</li>
+      </ul>
+    </div>
+  </div>
+
+  </div>
+</section>
+
+section.buy-franchise
+ h1.visually-hidden Оплата франшизы
+ .container
+  div.buy-franchise__title <p>Вы можете оплатить франшизу <br> RentHouse в <span>один клик</span> с помощью<br> интернет-эквайринга от <span class="buy-franchise__title-img"><img src="img/tinkoff.png" alt="Тинькофф"></span></p>
+  .buy-franchise-column
+   .buy-franchise__contract
+    img(src='img/oferta.jpg')
+
+   form.franchice-form.buy-franchise__form
+
+    fieldset.format
+     legend Выбрать формат франшизы
+
+     ul.buy-franchise__format
+      li
+       input.franchise-form__radio(type='radio' id='run' name='format-franchise')
+       label.franchise-form__label(for='run') Запуск франшизы
+
+      li
+       input.franchise-form__radio(type='radio' id='coop' name='format-franchise')
+       label.franchise-form__label(for='coop') Корпоратиный
+
+      li
+       input.franchise-form__radio(type='radio' id='self' name='format-franchise' checked)
+       label.franchise-form__label(for='self') Личное открытие
+
+      li
+       input.franchise-form__radio(type='radio' id='partner' name='format-franchise')
+       label.franchise-form__label(for='partner') Партнерство
+
+      li
+       input.franchise-form__radio(type='radio' id='represent' name='format-franchise')
+       label.franchise-form__label(for='represent') Представительство вне России
+
+
+    fieldset.buy-franchise__promocode.promocode
+     legend Введите промокод, <br> если он у Вас есть:
+
+     .promocode-column
+       label(aria-label='Промокод')
+        input.franchice-form__text.promocode__text(type='text')
+       button.franchice-form__btn.promocode__btn(type='button') Применить
+
+    p.buy-franchise__sum Cумма к оплате <span>499 990 руб</span>
+
+    .submit-column
+     p.franchise-form__offer.franchice-buy__offer
+      input.franchise-form__radio(type='checkbox' id='offer' name='agree-franchise')
+      label.franchise-form__label(for='offer') Я принимаю условия <a href="#">оферты</a>
+
+     button.btn.btn-orange.franchice-buy__submit(type='sumbit') Оплатить
+
+
+
+
