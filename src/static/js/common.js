@@ -1,4 +1,19 @@
 $(document).ready(function() {
+
+    // document.onkeydown = function(e) {
+    //     if (e.ctrlKey &&
+    //         (e.keyCode === 67 ||
+    //             e.keyCode === 86 ||
+    //             e.keyCode === 85 ||
+    //             e.keyCode === 83 ||
+    //             e.keyCode === 117)) {
+    //         alert('not allowed');
+    //         return false;
+    //     } else {
+    //         return true;
+    //     }
+    // };
+
     $('.burger').click(function() {
         $(this).toggleClass('is-active');
         $('.mobile-menu, .overlay').fadeToggle();
