@@ -921,3 +921,44 @@
 .run-franchise__services-link {
 	margin-bottom: 47px;
 }
+
+.achive-block {
+	margin-bottom: 51px;
+}
+
+.achive-block li {
+	padding-left: 31px;
+}
+
+.video-review h3 {
+	font-size: 16px;
+	line-height: 18px;
+	text-align: center;
+
+	margin-bottom: 38px;
+}
+
+.video-review__links li {
+	margin-bottom: 31px;
+
+	text-align: center;
+
+	&:last-child {
+		margin-bottom: 0px;
+	}
+}
+
+.video-review__links a {
+	font-size: 14px;
+	color: #698cc8;
+}
+
+.video-review__slider {
+	position: relative;
+}
+
+
+.video-review .swiper-button-next {
+	width: 15px;
+	height: 15px;
+}

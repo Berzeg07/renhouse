@@ -147,6 +147,7 @@ var swiper5 = new Swiper('.video-review__slider', {
         slidesPerView: 1,
         spaceBetween: 34,
         centeredSlides: false,
+        navigationShow: true,
         // slidesPerView: 'auto',
         loop: true,
         pagination: {
