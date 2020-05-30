@@ -147,23 +147,10 @@ var swiper5 = new Swiper('.video-review__slider', {
         slidesPerView: 1,
         spaceBetween: 34,
         centeredSlides: false,
-        navigationShow: true,
-        // slidesPerView: 'auto',
         loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'progressbar',
-        },
         navigation: {
-            nextEl: '.swiper-button-next',
+            nextEl: '.video-review .swiper-button-next',
             prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            0: {
-                slidesPerView: 1,
-                spaceBetween: 15,
-                loop: false,
-            }
         }
     });
 
