@@ -46,12 +46,13 @@
 		display: inline-block;
 		order: 1;
 
-		width: 50%;
+		width: 40%;
 		margin-bottom: 30px;
 	}
 
 	@media (min-width : 1170px) {
 		margin-bottom: 0;
+		width: 50%;
 	}
 }
 
@@ -133,11 +134,14 @@
 		order: 2;
 
 		margin-bottom: 30px;
+		width: 60%;
+		justify-content: flex-end;
 	}
 
 	@media (min-width : 1170px) {
 		order: 3;
-
+		width: auto;
+		justify-content: flex-start;
 		margin-bottom: 0;
 	}
 }
@@ -937,7 +941,7 @@
 .run-franchise__services {
 	border-radius: 25px;
 	background-color: #f4f4f4;
-	box-shadow: 0 11px 60px rgba(0, 0, 0, 0.13);
+	box-shadow: 0 11px 16px rgba(0, 0, 0, 0.13);
 
 	padding: 58px 15px 25px;
 
@@ -1287,4 +1291,36 @@
 	background-color: #f4f4f4;
 	width: 1170px;
 }
+
+
+
+/*WOrk-system
+===============================================*/
+.work-system {
+	background-image: url('../img/_cyclist.png');
+	background-position: right -10px bottom;
+	background-repeat: no-repeat;
+	background-color: #f4f4f4;
+	-webkit-background-size: cover;
+	background-size: contain;
+
+	padding-top: 60px;
+	height: 250px;
+}
+
+.work-system  h1 {
+	font-size: 18px;
+	line-height: 30px;
+	color: #131313;
+
+	span {
+		width: 25px;
+		height: 2px;
+		background-color: #131313;
+		vertical-align: middle;
+		display: inline-block;
+	}
+}
+
+
 

@@ -127,7 +127,7 @@ $(document).ready(function() {
     });
 
     } else {
-        swiper.destroy(); // или swiper.autoplay.stop();
+        swiper4.destroy(); // или swiper.autoplay.stop();
     }
 }
 
