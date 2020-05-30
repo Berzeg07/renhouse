@@ -106,6 +106,7 @@
 // Основной текст *
 
 .article {
+    line-height: 26px;
     @media(max-width: 767px) {
         font-size: 14px;
     }
