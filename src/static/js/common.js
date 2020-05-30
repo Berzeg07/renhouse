@@ -103,12 +103,11 @@ $(document).ready(function() {
         }
     });
 
-    var swiper4;
 
     function resizeScrenn() {
     if ($(window).width() >= 1170) {
 
-        swiper4 = new Swiper('.run-franchise-slider', {
+        var swiper4 = new Swiper('.run-franchise-slider', {
             slidesPerView: 4,
             spaceBetween: 30,
             centeredSlides: false,
@@ -117,10 +116,6 @@ $(document).ready(function() {
         pagination: {
             el: '.swiper-pagination',
             type: 'progressbar',
-        },
-        navigation: {
-            nextEl: '.run-franchise-slider .swiper-button-next',
-            prevEl: '.swiper-button-prev',
         },
         breakpoints: {
             1170: {
