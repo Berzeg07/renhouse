@@ -693,6 +693,26 @@
 
 }
 
+.expading__new-column {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	-ms-align-items: center;
+	align-items: center;
+
+	@media (min-width : 768px) {
+		-ms-align-items: flex-start;
+		align-items: flex-start;
+	}
+}
+
 .expading__new h2 {
 	width: 167px;
 	margin: 0 auto;
@@ -1297,15 +1317,28 @@
 /*WOrk-system
 ===============================================*/
 .work-system {
-	background-image: url('../img/_cyclist.png');
-	background-position: right -10px bottom;
+	background-image: url('../img/_cyclist-small.png');
+
 	background-repeat: no-repeat;
 	background-color: #f4f4f4;
-	-webkit-background-size: cover;
-	background-size: contain;
+
+	background-position: right bottom;
 
 	padding-top: 60px;
 	height: 250px;
+
+	@media (min-width : 768px) {
+		height: 270px;
+		padding-top: 107px;
+
+		background-image: url('../img/_cyclist-middel.png');
+	}
+
+	@media (min-width : 1170px) {
+		height: 341px;
+		padding-top: 114px;
+		background-image: url('../img/_cyclist.png');
+	}
 }
 
 .work-system  h1 {
@@ -1319,6 +1352,21 @@
 		background-color: #131313;
 		vertical-align: middle;
 		display: inline-block;
+	}
+
+	@media (min-width : 768px) {
+		font-size: 24px;
+		line-height: 36px;
+	}
+
+	@media (min-width : 1170px) {
+		font-size: 36px;
+		line-height: 50px;
+
+		span {
+			width: 60px;
+			height: 3px;
+		}
 	}
 }
 

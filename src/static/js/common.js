@@ -156,4 +156,10 @@ var swiper5 = new Swiper('.video-review__slider', {
         }
     });
 
+function sound() {
+     var audio = new Audio(); // Создаём новый элемент Audio
+     audio.src = '...'; // Указываем путь к звуку "клика"
+     audio.autoplay = true; // Автоматически запускаем
+}
+
 });
