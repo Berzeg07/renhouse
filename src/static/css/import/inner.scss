@@ -777,7 +777,7 @@
 }
 
 .achive-block {
-	font-size: 15px;
+
 	line-height: 24px;
 }
 
@@ -785,8 +785,9 @@
 	position: relative;
 
 	padding-left: 40px;
-
 	margin-bottom: 24px;
+
+	font-size: 15px;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -807,6 +808,7 @@
 		height: 13px;
 	}
 }
+
 
 .expading__new {
 	@media (min-width : 768px) {
@@ -863,6 +865,11 @@
 	@media (min-width : 768px) {
 		font-size: 24px;
 	}
+
+	@media (min-width : 1170px) {
+		font-size: 36px;
+		line-height: 44px;
+	}
 }
 
 .run-franchise__description {
@@ -875,7 +882,12 @@
 	@media (min-width : 768px) {
 		width: 337px;
 		margin: 0 auto 48px;
+	}
 
+	@media (min-width : 1170px) {
+		width: auto;
+		margin: 0;
+		margin-bottom: 62px;
 	}
 }
 
@@ -888,11 +900,19 @@
 		margin-left: 0;
 		margin-bottom: -45px;
 	}
+
+	@media (min-width : 1170px) {
+		padding-top: 30px;
+	}
 }
 
 .run-franchise-slider .fun-franchise__wrap{
 	display: flex;
 	flex-direction: column;
+
+	@media (min-width : 1170px) {
+		flex-direction: row;
+	}
 }
 
 .fun-franchise__wrap .swiper-slide {
@@ -939,6 +959,14 @@
 
 	}
 
+	@media (min-width : 1170px) {
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 25px;
+
+		min-height: 870px;
+	}
+
 }
 
 .run-franchise__services h2 {
@@ -950,6 +978,10 @@
 	@media (min-width : 768px) {
 		font-size: 24px;
 		text-align: left;
+	}
+
+	@media (min-width : 1170px) {
+		text-align: center;
 	}
 }
 
@@ -965,6 +997,20 @@
 		margin-left: 0;
 
 		text-align: left;
+	}
+
+	@media (min-width : 1170px) {
+		text-align: right;
+
+		width: auto;
+	}
+}
+
+.run-franchise__services-price .without {
+	margin-top: 64px;
+
+	@media (min-width : 1170px) {
+		margin-top: 40px;
 	}
 }
 
@@ -985,7 +1031,16 @@
 	font-size: 24px;
 
 	display: block;
+
+	@media (min-width : 1170px) {
+		font-size: 36px;
+
+		span {
+			font-size: 16px;
+		}
+	}
 }
+
 
 .run-franchise__services-link {
 	margin-bottom: 47px;
@@ -993,9 +1048,17 @@
 	@media (min-width : 768px) {
 		margin-bottom: 0;
 	}
+
+	@media (min-width : 1170px) {
+		max-width: 300px;
+		width: 100%;
+		height: 64px;
+
+		margin-bottom: 46px;
+	}
 }
 
-.achive-block {
+.run-franchise__services .achive-block {
 	max-width: 250px;
 	margin: 0 auto;
 
@@ -1007,7 +1070,7 @@
 	}
 }
 
-.achive-block li {
+.run-franchise__services .achive-block li {
 	padding-left: 31px;
 	font-size: 15px;
 
@@ -1021,15 +1084,21 @@
 	@media (min-width : 768px) {
 		display: flex;
 		margin-top: 50px;
-
-		-ms-align-items: center;
 		align-items: center;
+	}
+
+	@media (min-width : 1170px) {
+		display: block;
 	}
 }
 
 .video-review-block {
 	@media (min-width : 768px) {
 		width: 350px;
+	}
+
+	@media (min-width : 1170px) {
+		width: auto;
 	}
 }
 
@@ -1046,6 +1115,12 @@
 
 		text-align: left;
 	}
+
+	@media (min-width : 1170px) {
+		margin-right: 0;
+		text-align: center;
+		margin-bottom: 30px;
+	}
 }
 
 .video-review__links {
@@ -1057,6 +1132,12 @@
 
 		width: 350px;
 		margin-top: -31px;
+	}
+
+	@media (min-width : 1170px) {
+		width: auto;
+		margin-top: 0;
+		display: block;
 	}
 }
 
@@ -1078,6 +1159,15 @@
 
 		margin-top: 31px;
 	}
+
+	@media (min-width : 1170px) {
+		width: auto;
+
+		text-align: center;
+		margin-top: 0;
+
+		margin-bottom: 13px;
+	}
 }
 
 .video-review__links a {
@@ -1085,6 +1175,23 @@
 	color: #698cc8;
 
 	line-height: 19px;
+
+	@media (min-width : 1170px) {
+		background-color: #ffffff;
+		color: #698cc8;
+		max-width: 221px;
+		width: 100%;
+		height: 32px;
+		line-height: 32px;
+		border-radius: 16px;
+		display: block;
+		margin: 0 auto;
+
+		&:hover {
+			background-color: #698cc8;
+			color: #ffffff;
+		}
+	}
 }
 
 .video-review__slider{
@@ -1096,7 +1203,6 @@
 	position: absolute;
 	right: 0;
 	top: 50%;
-	transform: translateY(-11px);
 
 	background: url('../img/next-arrow-black.png') no-repeat;
 
@@ -1105,6 +1211,7 @@
 
 	@media (min-width : 768px) {
 		margin: 0;
+		transform: translateY(-11px);
 	}
 }
 
@@ -1112,10 +1219,31 @@
 	@media (min-width : 768px) {
 		display: flex;
 	}
+
+	@media (min-width : 1170px) {
+		display: block;
+	}
 }
 
 .fun-franchise-inner {
 	@media (min-width : 768px) {
 		margin-right: 117px;
 	}
+
+	@media (min-width : 1170px) {
+		margin-right: 0;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 }
+
+.run-container {
+	@media (min-width : 1170px) {
+		max-width: 1412px;
+		position: relative;
+		left: 130px;
+	}
+}
+

@@ -103,54 +103,61 @@ $(document).ready(function() {
         }
     });
 
-//     var swiper4;
+    var swiper4;
 
-//     function resizeScrenn() {
-//     if ($(window).width() >= 1170) {
+    function resizeScrenn() {
+    if ($(window).width() >= 1170) {
 
-//         swiper4 = new Swiper('.run-franchise-slider', {
-//             slidesPerView: 4,
-//             spaceBetween: 34,
-//             centeredSlides: false,
-//         // slidesPerView: 'auto',
-//         loop: true,
-//         pagination: {
-//             el: '.swiper-pagination',
-//             type: 'progressbar',
-//         },
-//         navigation: {
-//             nextEl: '.swiper-button-next',
-//             prevEl: '.swiper-button-prev',
-//         },
-//         breakpoints: {
-//             1170: {
-//                 slidesPerView: 4,
-//                 spaceBetween: 40,
-//                 loop: false,
-//             },
-//         }
-//     });
+        swiper4 = new Swiper('.run-franchise-slider', {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            centeredSlides: false,
+        // slidesPerView: 'auto',
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'progressbar',
+        },
+        navigation: {
+            nextEl: '.run-franchise-slider .swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            1170: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                loop: true
+            },
+        }
+    });
 
-//     } else {
-//         swiper.destroy(); // или swiper.autoplay.stop();
-//     }
-// }
+    } else {
+        swiper.destroy(); // или swiper.autoplay.stop();
+    }
+}
 
 
-// resizeScrenn();
+resizeScrenn();
 
-// $(window).resize(function () {
-//     resizeScrenn();
-// });
+$(window).resize(function () {
+    resizeScrenn();
+});
 
 var swiper5 = new Swiper('.video-review__slider', {
         slidesPerView: 1,
-        spaceBetween: 34,
+        spaceBetween: 30,
         centeredSlides: false,
         loop: true,
         navigation: {
             nextEl: '.video-review .swiper-button-next',
             prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            1170: {
+                slidesPerView: 1,
+                spaceBetween: 40,
+                loop: true
+            },
         }
     });
 
