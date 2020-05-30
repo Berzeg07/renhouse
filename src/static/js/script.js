@@ -15,6 +15,40 @@ $(document).ready(function() {
         }
     });
 
+    $.fancybox.defaults.backFocus = false;
+
+    var swiperTeam = new Swiper('.team-slider', {
+        slidesPerView: 4,
+        spaceBetween: 46,
+        centeredSlides: false,
+        // slidesPerView: 'auto',
+        loop: true,
+        simulateTouch: false,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'progressbar',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            499: {
+                slidesPerView: 1,
+                spaceBetween: 15,
+                loop: false,
+            },
+            767: {
+                slidesPerView: 2,
+                spaceBetween: 15,
+                loop: false,
+            },
+            1169: {
+                spaceBetween: 26,
+            }
+        }
+    });
+
 
    //  $(function() {
    //     $('.certificates__img').click(function(event) {
