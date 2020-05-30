@@ -670,6 +670,7 @@
 
 	@media (min-width : 768px) {
 		padding-top: 54px;
+		padding-left: 33px;
 
 		&:before {
 			top: 0px;
@@ -701,6 +702,8 @@
 		text-align: left;
 		font-size: 24px;
 		line-height: 30px;
+		margin: 0;
+		margin-bottom: 35px;
 	}
 
 	@media (min-width : 1170px) {
@@ -774,7 +777,7 @@
 }
 
 .achive-block {
-	font-size: 16px;
+	font-size: 15px;
 	line-height: 24px;
 }
 
@@ -844,6 +847,9 @@
 .run-franchise {
 	padding-top: 80px;
 	padding-bottom: 67px;
+
+	position: relative;
+	z-index: 2;
 }
 
 .run-franchise h1 {
@@ -853,6 +859,10 @@
 	text-align: center;
 
 	margin-bottom: 46px;
+
+	@media (min-width : 768px) {
+		font-size: 24px;
+	}
 }
 
 .run-franchise__description {
@@ -861,11 +871,23 @@
 	text-align: center;
 
 	margin-bottom: 48px;
+
+	@media (min-width : 768px) {
+		width: 337px;
+		margin: 0 auto 48px;
+
+	}
 }
 
 .run-franchise-slider {
 	padding-bottom: 0;
+	margin-bottom: -62px;
 	/*padding-top: 30px;*/
+
+	@media (min-width : 768px) {
+		margin-left: 0;
+		margin-bottom: -45px;
+	}
 }
 
 .run-franchise-slider .fun-franchise__wrap{
@@ -874,10 +896,8 @@
 }
 
 .fun-franchise__wrap .swiper-slide {
-	margin-bottom: 61px;
-
-	&:last-child {
-		margin-bottom: 0;
+	@media (min-width : 768px) {
+		/*align-items: center;*/
 	}
 }
 
@@ -888,9 +908,11 @@
 .run-franchise__services {
 	border-radius: 25px;
 	background-color: #f4f4f4;
-	box-shadow: 0 11px 60px rgba(0, 0, 0, 0.13);
+	/*box-shadow: 0 11px 60px rgba(0, 0, 0, 0.13);*/
 
 	padding: 58px 15px 25px;
+
+	margin-bottom: 62px;
 
 	position: relative;
 
@@ -908,6 +930,15 @@
 		background-color: #f6ae2d;
 	}
 
+	@media (min-width : 768px) {
+		padding-right: 40px;
+		padding-left: 40px;
+
+		padding-bottom: 40px;
+		margin-bottom: 46px;
+
+	}
+
 }
 
 .run-franchise__services h2 {
@@ -915,12 +946,26 @@
 	text-align: center;
 
 	margin-bottom: 31px;
+
+	@media (min-width : 768px) {
+		font-size: 24px;
+		text-align: left;
+	}
 }
 
 .run-franchise__services-price {
-	width: 141px;
+	width: 163px;
 	margin: 0 auto;
 	margin-bottom: 44px;
+
+	text-align: right;
+
+	@media (min-width : 768px) {
+		margin-right: 0;
+		margin-left: 0;
+
+		text-align: left;
+	}
 }
 
 .run-franchise__services-price .old{
@@ -928,7 +973,7 @@
 	font-weight: 400;
 	text-decoration: line-through;
 	color: #858585;
-	text-align: right;
+
 
 	display: block;
 
@@ -944,6 +989,10 @@
 
 .run-franchise__services-link {
 	margin-bottom: 47px;
+
+	@media (min-width : 768px) {
+		margin-bottom: 0;
+	}
 }
 
 .achive-block {
@@ -951,11 +1000,37 @@
 	margin: 0 auto;
 
 	margin-bottom: 51px;
+
+	@media (min-width : 768px) {
+		margin-bottom: 0;
+		max-width: none;
+	}
 }
 
 .achive-block li {
 	padding-left: 31px;
 	font-size: 15px;
+
+	@media (min-width : 768px) {
+		font-size: 16px;
+		padding-left: 45px;
+	}
+}
+
+.video-review {
+	@media (min-width : 768px) {
+		display: flex;
+		margin-top: 50px;
+
+		-ms-align-items: center;
+		align-items: center;
+	}
+}
+
+.video-review-block {
+	@media (min-width : 768px) {
+		width: 350px;
+	}
 }
 
 .video-review h3 {
@@ -964,6 +1039,25 @@
 	text-align: center;
 
 	margin-bottom: 38px;
+
+	@media (min-width : 768px) {
+		margin-bottom: 0;
+		margin-right: 80px;
+
+		text-align: left;
+	}
+}
+
+.video-review__links {
+	@media (min-width : 768px) {
+		display: flex;
+		flex-wrap: wrap;
+		-ms-align-items: center;
+		align-items: center;
+
+		width: 350px;
+		margin-top: -31px;
+	}
 }
 
 .video-review__links li {
@@ -973,25 +1067,55 @@
 
 	&:last-child {
 		margin-bottom: 0px;
+		z-index: 2;
+	}
+
+	@media (min-width : 768px) {
+		text-align: left;
+		margin-bottom: 0;
+
+		width: 50%;
+
+		margin-top: 31px;
 	}
 }
 
 .video-review__links a {
 	font-size: 14px;
 	color: #698cc8;
+
+	line-height: 19px;
 }
 
-.video-review__slider {
+.video-review__slider{
 	position: relative;
 }
 
 
-.video-review .swiper-button-next {
+.video-review__slider .swiper-button-next {
 	position: absolute;
 	right: 0;
+	top: 50%;
+	transform: translateY(-11px);
 
 	background: url('../img/next-arrow-black.png') no-repeat;
 
 	width: 11px;
 	height: 19px;
+
+	@media (min-width : 768px) {
+		margin: 0;
+	}
+}
+
+.run-franchise-block {
+	@media (min-width : 768px) {
+		display: flex;
+	}
+}
+
+.fun-franchise-inner {
+	@media (min-width : 768px) {
+		margin-right: 117px;
+	}
 }
