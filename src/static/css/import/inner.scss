@@ -2722,8 +2722,9 @@
 	}
 
 	@media (min-width : 1170px) {
-		width: 313px;
-	font-size: 15px;
+		width: 100%;
+		min-width: 313px;
+		font-size: 15px;
 
 	}
 }
