@@ -2203,6 +2203,533 @@
 	}
 }
 
+/*calculate
+=================================================*/
+.calculate {
+	padding-bottom: 25px;
+
+	color: #131313;
+}
+
+.calculate .container {
+	@media (min-width : 1170px) {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.calculate__caption {
+	width: 206px;
+	margin-bottom: 49px;
 
 
+	@media (min-width : 768px) {
+		width: 360px;
+		margin-bottom: 72px;
+	}
 
+	@media (min-width : 1170px) {
+		width: 410px;
+		margin-bottom: 79px;
+	}
+}
+
+.calculate__description {
+	width: 276px;
+	padding-top: 54px;
+	padding-bottom: 26px;
+	margin-bottom: 54px;
+
+	font-size: 14px;
+	line-height: 22px;
+
+	position: relative;
+
+	&:before {
+		content: '';
+
+		position: absolute;
+		top:0;
+		left: 0;
+
+		background-image: url('../img/calculator.png');
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-size: cover;
+
+		width: 25px;
+		height: 32px;
+	}
+
+	&:after {
+		content: '';
+
+		position: absolute;
+		bottom:0;
+		left: 0;
+
+		width: 279px;
+		height: 1px;
+		background-color: #e8e8e8;
+	}
+
+	@media (min-width : 500px) {
+		width: 330px;
+	}
+
+	@media (min-width : 650px) {
+		width: auto;
+	}
+
+	@media (min-width : 768px) {
+		width: 426px;
+		font-size: 16px;
+		line-height: 30px;
+
+		padding-top: 0;
+		padding-left: 59px;
+
+		&::before {
+			top: 15px;
+		}
+
+		&::after {
+			width: 333px;
+		}
+	}
+
+	@media (min-width : 1170px) {
+		font-size: 18px;
+		line-height: 30px;
+		width: 490px;
+		margin-bottom: 72px;
+		padding-bottom: 54px;
+
+		&::before {
+			top: 3px;
+			width: 38px;
+			height: 48px;
+		}
+
+		&::after {
+			width: 639px;
+		}
+	}
+}
+
+.calculate__city {
+	margin: 0;
+	margin-bottom: 63px;
+
+	@media (min-width : 650px) {
+		display: flex;
+		align-items: center;
+	}
+
+	@media (min-width : 1170px) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+.calculate__city h2 {
+	margin-bottom: 27px;
+	font-size: 16px;
+
+	@media (min-width : 650px) {
+		margin-bottom: 0;
+		margin-right: 9px;
+	}
+
+	@media (min-width : 768px) {
+		margin-right: 36px;
+	}
+
+	@media (min-width : 1170px) {
+		font-size: 18px;
+		margin-bottom: 35px;
+	}
+}
+
+.calculate__city ul {
+	margin-left: -3px;
+	display: flex;
+
+	@media (min-width : 500px) {
+		margin-left: -10px;
+	}
+
+	@media (min-width : 768px) {
+		margin-left: -27px;
+	}
+}
+
+.calculate__city li {
+	margin-left: 3px;
+
+	@media (min-width : 500px) {
+		margin-left: 10px;
+	}
+
+	@media (min-width : 768px) {
+		margin-left: 27px;
+
+		&:nth-of-type(1){
+			order: 1;
+		}
+
+	}
+}
+
+.calculate__city a {
+	padding: 12px 14px;
+
+	font-size: 14px;
+
+	@media (min-width : 768px) {
+		padding: 0;
+		line-height: 48px;
+		width: 136px;
+		height: 48px;
+	}
+
+	@media (min-width : 1170px) {
+		width: 205px;
+		height: 48px;
+
+		font-size: 16px;
+		font-weight: 700;
+	}
+}
+
+.calculate__apartament {
+	margin-bottom: 45px;
+
+	@media (min-width : 768px) {
+		display: flex;
+	}
+
+	@media (min-width : 1170px) {
+		flex-direction: column;
+	}
+}
+
+
+.calculate__apartament h2 {
+	margin-bottom: 42px;
+	font-size: 16px;
+
+	@media (min-width : 768px) {
+		margin-right: 35px;
+	}
+
+	@media (min-width : 1170px) {
+		font-size: 18px;
+		margin-bottom: 79px;
+	}
+}
+
+.calculate__apartament ul {
+	display: flex;
+	margin-left: -35px;
+
+	@media (min-width : 768px) {
+		margin-left: 0;
+	}
+}
+
+.calculate__apartament li {
+	display: flex;
+	flex-direction: column;
+	margin-left: 35px;
+	text-align: center;
+	position: relative;
+
+	&::before {
+		content: "";
+
+		position: absolute;
+		left: -37px;
+		top: 8px;
+
+
+		background-color: #e8e8e8;
+		width: 48px;
+		height: 4px;
+	}
+
+	&:first-of-type {
+		&::before {
+			display: none;
+		}
+	}
+
+	@media (min-width : 768px) {
+		margin-left: 0px;
+		margin-right: 75px;
+
+		&::before {
+			left: -78px;
+			width: 80px;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	@media (min-width : 1170px) {
+		margin-right: 83px;
+
+		&::before {
+			left: -90px;
+			width: 100px;
+		}
+	}
+}
+
+
+.calculate__apartament a {
+	position: relative;
+	font-size: 16px;
+	padding-top: 38px;
+	cursor: pointer;
+	z-index: 2;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		width: 17px;
+		height: 18px;
+		border-radius: 50%;
+		box-shadow: 0 2px 10px 6px rgba(0, 0, 0, 0.07);
+		background-color: #ffffff;
+
+	}
+
+	@media (min-width : 1170px) {
+		font-size: 18px;
+		font-weight: 700;
+	}
+}
+
+.calculate__apartament .calculate-link_active {
+	&::before {
+		background-color: #f6ae2d;
+	}
+}
+
+.calculate__apartament .calculate-li-active {
+	&::before {
+		background-color: #f6ae2d;
+	}
+}
+
+.calculate__income {
+	border-radius: 35px;
+	background-color: #f4f4f4;
+
+	padding: 46px 20px 35px;
+
+	@media (min-width : 768px) {
+		padding: 60px 41px 80px 36px;
+	}
+
+	@media (min-width : 1170px) {
+		position: relative;
+		margin-top: 70px;
+	}
+}
+
+.calculate__income-sum {
+	font-size: 24px;
+	margin-bottom: 29px;
+	text-align: center;
+	font-weight: 700;
+
+	@media (min-width : 768px) {
+		font-size: 29px;
+		margin-bottom: 39px;
+		text-align: left;
+	}
+
+	@media (min-width : 1170px) {
+		font-size: 48px;
+		margin-bottom: 43px;
+		text-align: center;
+	}
+}
+
+.calculate__income-description {
+	font-size: 16px;
+	margin-bottom: 46px;
+	text-align: center;
+
+	@media (min-width : 768px) {
+		margin-bottom: 41px;
+		text-align: left;
+	}
+
+	@media (min-width : 1170px) {
+		font-size: 24px;
+		margin-bottom: 77px;
+		text-align: center;
+	}
+}
+
+.calculate__income-statistic {
+	margin-bottom: 48px;
+
+	@media (min-width : 768px) {
+
+		display: flex;
+		justify-content: space-between;
+	}
+
+	@media (min-width : 1170px) {
+		flex-direction: column;
+	}
+}
+
+.calculate__income-statistic li {
+	border-radius: 35px;
+	background-color: #ffffff;
+	position: relative;
+	padding: 24px 30px 31px 87px;
+	margin-bottom: 21px;
+
+	&::before {
+		content: '';
+
+		position: absolute;
+		top: 35px;
+		left: 31px;
+
+
+		background-image: url('../img/consumption.png');
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-size: cover;
+
+		width: 26px;
+		height: 42px;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	span {
+		display: block;
+
+		margin-bottom: 28px;
+		font-size: 16px;
+
+		&:last-child {
+			margin-bottom: 0;
+			font-size: 20px;
+			color: #f6ae2d;
+			font-weight: 700;
+		}
+	}
+
+	@media (min-width : 768px) {
+		margin-bottom: 0;
+
+		padding: 25px 73px 32px 110px;
+		display: flex;
+
+		flex-direction: column;
+	}
+
+	@media (min-width : 1170px) {
+		margin-bottom: 25px;
+
+		&::before {
+			width: 29px;
+			height: 48px;
+			top:30px;
+		}
+
+
+		span {
+			font-size: 18px;
+			margin-bottom: 31px;
+
+			&:last-child {
+				font-size: 24px;
+			}
+		}
+	}
+}
+
+.calculate__income-btn {
+	max-width: 280px;
+	width: 100%;
+	height: 64px;
+	line-height: 64px;
+	margin: 0 auto;
+	margin-bottom: 32px;
+	display: block;
+
+	@media (min-width : 768px) {
+		width: 252px;
+		margin: 0;
+	}
+
+	@media (min-width : 1170px) {
+		max-width: none;
+		width: 326px;
+		margin-bottom: 22px;
+	}
+}
+
+.calculate__income-rule {
+	color: #a1a1a1;
+	font-size: 12px;
+	line-height: 16px;
+	text-align: center;
+	width: 222px;
+	margin: 0 auto;
+
+	@media (min-width : 768px) {
+		width: 258px;
+		font-size: 14px;
+		margin: 0;
+		text-align: left;
+	}
+
+	@media (min-width : 1170px) {
+		width: 276px;
+		text-align: center;
+	}
+}
+
+.calulate__down-column {
+	@media (min-width : 768px) {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	@media (min-width : 1170px) {
+		flex-direction: column;
+	}
+}
+
+.calculate__city_active {
+	color: #ffffff;
+	background-color: #000000;
+}
+
+.calculate__apartament .calculate-link_first {
+	@media (min-width : 1170px) {
+		&::before {
+			width: 23px;
+			height: 23px;
+		}
+	}
+}

@@ -163,3 +163,40 @@ function sound() {
 }
 
 });
+
+let calculateLinksChecked = document.querySelectorAll('.calculate-link');
+
+    calculateLinksChecked.forEach((item) => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            stateCalc.call(item);
+        });
+    });
+
+    function stateCalc() {
+
+        let num = Number(this.getAttribute('data-num'));
+
+        calculateLinksChecked.forEach((item) => {
+            item.classList.remove('calculate-link_active');
+            item.classList.remove('calculate-link_first');
+            item.parentElement.classList.remove('calculate-li-active');
+        });
+
+
+        calculateLinksChecked.forEach((item) => {
+            if(item.getAttribute('data-num') === 5 ) {
+                item.classList.add('calculate-link_active');
+                return;
+            }
+
+            if(item.getAttribute('data-num') <= num) {
+                item.classList.add('calculate-link_active');
+                item.parentElement.classList.add('calculate-li-active');
+            }
+        });
+
+        this.classList.add('calculate-link_first');
+    }
+
+
