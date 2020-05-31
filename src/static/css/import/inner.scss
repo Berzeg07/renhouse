@@ -2620,6 +2620,26 @@
 
 	&:last-child {
 		margin-bottom: 0;
+
+		&::after {
+			content: '?';
+
+			position: absolute;
+			top: 17px;
+			right: 21px;
+
+			color: #ffffff;
+			font-size: 18px;
+			line-height: 28px;
+			text-align: center;
+			width: 28px;
+			height: 28px;
+			background-color: #b8b8b8;
+			border-radius: 50%;
+			cursor: pointer;
+
+
+		}
 	}
 
 	span {
