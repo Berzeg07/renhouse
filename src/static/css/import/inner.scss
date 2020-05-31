@@ -2621,16 +2621,17 @@
 	&:last-child {
 		margin-bottom: 0;
 
-		&::after {
-			content: '?';
+		.calculate__income-quest {
 
+		}
+
+		.calculate__income-quest {
 			position: absolute;
 			top: 17px;
 			right: 21px;
-
 			color: #ffffff;
 			font-size: 18px;
-			line-height: 28px;
+			line-height: 30px;
 			text-align: center;
 			width: 28px;
 			height: 28px;
@@ -2638,22 +2639,25 @@
 			border-radius: 50%;
 			cursor: pointer;
 
-
+			&:hover + .calculate__income-info {
+				display: block;
+			}
 		}
+
 	}
 
-	span {
+	.calculate__income-span {
 		display: block;
 
 		margin-bottom: 28px;
 		font-size: 16px;
+	}
 
-		&:last-child {
-			margin-bottom: 0;
-			font-size: 20px;
-			color: #f6ae2d;
-			font-weight: 700;
-		}
+	.calculate__income-span_last{
+		margin-bottom: 0;
+		font-size: 20px;
+		color: #f6ae2d;
+		font-weight: 700;
 	}
 
 	@media (min-width : 768px) {
@@ -2675,15 +2679,57 @@
 		}
 
 
-		span {
+		.calculate__income-span {
 			font-size: 18px;
 			margin-bottom: 31px;
+		}
 
-			&:last-child {
-				font-size: 24px;
-			}
+		.calculate__income-span_last{
+			font-size: 24px;
 		}
 	}
+}
+
+.calculate__income-info {
+	box-shadow: 0 11px 59px rgba(0, 0, 0, 0.31);
+	background-color: #2d2d2d;
+
+	font-size: 14px;
+	line-height: 30px;
+	color: #ffffff;
+
+	padding: 30px 17px 17px 27px;
+	border-radius: 35px;
+	position: absolute;
+	top: 60px;
+	right: -30px;
+
+	width: 270px;
+	display: none;
+
+	&::before {
+		content: '';
+
+		position: absolute;
+		top: -28px;
+		right: 49px;
+
+		width: 15px;
+		height: 15px;
+
+		border: 15px solid transparent;
+		border-bottom-color: #2d2d2d;
+	}
+
+	@media (min-width : 1170px) {
+		width: 313px;
+	font-size: 15px;
+
+	}
+}
+
+.calculate__income-info-inner {
+	color: #f6ae2d;
 }
 
 .calculate__income-btn {
