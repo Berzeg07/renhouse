@@ -342,18 +342,18 @@
             p.inner-title.inner-title_future Будущее за RentHouse
             p.article Мы управляем бизнесом через собственную CRM-систему. Собственая IT-платформа дает возможность анализировать сотни метрик и оставаться прибыльными с 2014 года.
         li
-            .crm-slider.fotorama(data-nav="thumbs" data-arrows="true" data-thumbwidth="210" data-thumbheight="110" data-click="true" data-swipe="true" data-thumbmargin="21")
-                img(src="img/f4.jpg")
-                img(src="img/f1.jpg")
-                img(src="img/f2.jpg")
-                img(src="img/f3.jpg")
+            //- .crm-slider.fotorama(data-nav="thumbs" data-arrows="true" data-thumbwidth="210" data-thumbheight="110" data-click="true" data-swipe="true" data-thumbmargin="21")
+            //-     img(src="img/f4.jpg")
+            //-     img(src="img/f1.jpg")
+            //-     img(src="img/f2.jpg")
+            //-     img(src="img/f3.jpg")
                     
 
-            //- .crm-slider.fotorama(data-nav="thumbs" data-arrows="true" data-thumbwidth="210" data-thumbheight="110" data-click="false" data-swipe="false" data-thumbmargin="21")
-            //-     <div data-img="img/f4.jpg" style="height:100%;"><a href="img/f4.jpg" data-fancybox="gallery" style="display:block; height:100%;"></a></div>
-            //-     <div data-img="img/f1.jpg" style="height:100%;"><a href="img/f1.jpg" data-fancybox="gallery" style="display:block; height:100%;"></a></div>
-            //-     <div data-img="img/f2.jpg" style="height:100%;"><a href="img/f2.jpg" data-fancybox="gallery" style="display:block; height:100%;"></a></div>
-            //-     <div data-img="img/f3.jpg" style="height:100%;"><a href="img/f3.jpg" data-fancybox="gallery" style="display:block; height:100%;"></a></div>
+            .crm-slider.fotorama(data-nav="thumbs" data-arrows="true" data-thumbwidth="210" data-thumbheight="110" data-click="false" data-swipe="false" data-thumbmargin="21")
+                <div data-img="img/f4.jpg" style="height:100%;"><a href="img/f4.jpg" data-fancybox="gallery1" style="display:block; height:100%;"></a></div>
+                <div data-img="img/f1.jpg" style="height:100%;"><a href="img/f1.jpg" data-fancybox="gallery1" style="display:block; height:100%;"></a></div>
+                <div data-img="img/f2.jpg" style="height:100%;"><a href="img/f2.jpg" data-fancybox="gallery1" style="display:block; height:100%;"></a></div>
+                <div data-img="img/f3.jpg" style="height:100%;"><a href="img/f3.jpg" data-fancybox="gallery1" style="display:block; height:100%;"></a></div>
     
     ul.community-block
         li.community-block__item
@@ -486,4 +486,56 @@
             b 85 292 277 рублей выручки.
         
         p.article.founder-block__article У Вас еще есть возможность запустить свою собственную сеть апартаментов под брендом RentHouse.
-                    
+
+.total-block.container
+    .total-block__item
+        p.main-title.total-block__title Еженедельно мы делимся опытом ведения бизнеса
+        
+        .total-block__article
+            p.article За 6 лет мы собрали огромную базу знаний об управлении бизнесом в сфере недвижимости и хотим поделиться ей с вами. 
+            p.article Все тонкости ведения бизнеса на квартирах, все «подводные камни», юридическая поддержка бизнеса, истории реальных людей - все это мы предоставляем вам!
+        
+        ul.subscription
+            li
+                .subscription__item
+                    p.subscription__title.subscription__title_email Еженедельная рассылка на почту
+                    p.subscription__article Все только самое полезное
+                    a(href="#").subscription__link Подписаться
+                
+            li
+                .subscription__item    
+                    p.subscription__title.subscription__title_youtube Полезный контент на Youtube
+                    p.subscription__article Более 40 видео
+                    a(href="https://www.youtube.com/channel/UCLrQgO5fb_OSgswDQRQSk5g/videos").subscription__link Смотреть
+        
+    .total-block__item 
+        .video-wrap
+            <video class="video" controls muted poster="img/prev2.jpg">
+                <source src="video/nature.mp4" type="video/mp4">
+                <source src="video/nature.webm" type="video/webm">
+                <source src="video/nature.ogv" type="video/ogg">
+                <object data="video/nature.swf" type="application/x-shockwave-flash">
+                    <param name="movie" value="video/nature.swf">
+                </object>
+            </video>    
+
+.shedule-block.container
+    .shedule-block__item
+        p.main-title Фактический график 
+            span повышения цены на франшизу RentHouse
+        
+        p.article Франшиза постояно совершенствуется. Паушальный взнос регулярно растет в цене. Хотите узнать почему? Спросите у отдела продаж прямо сейчас.
+        
+        button(type="button").btn.btn-black.btn-black_shedule Получить консультацию
+        
+        
+    .shedule-block__item
+        .shedule-block__img
+            img(src="img/_schedule.png")
+                
+        button(type="button").btn.btn-black.btn-black_shedule.btn-black_shedule-mob Получить консультацию
+        
+    
+    
+    
+    

@@ -1792,7 +1792,7 @@
         content: '';
         position: absolute;
         left: 0;
-        top: -27px;
+        top: 60px;
         width: 610px;
         height: 602px;
         background: url("../img/room-image.png") no-repeat center;
@@ -1839,7 +1839,6 @@
     }
 
     .founder-block__item {
-
         &:last-child {
             @media(min-width: 1170px) {
                 width: 545px;
@@ -1868,5 +1867,166 @@
         position: absolute;
         left: 20px;
         top: 0;
+    }
+}
+
+.total-block {
+    padding-top: 82px;
+    @media(min-width: 1170px) {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 160px;
+    }
+
+    .total-block__item {
+        &:first-child {
+            @media(min-width: 1170px) {
+                width: 450px;
+            }
+        }
+    }
+}
+
+.total-block__title {
+    margin-bottom: 58px;
+    @media(min-width: 768px) {
+        width: 301px;
+    }
+    @media(min-width: 1170px) {
+        width: auto;
+    }
+}
+
+.total-block__article {
+    margin-bottom: 54px;
+    @media(min-width: 768px) {
+        width: 523px;
+    }
+    @media(min-width: 1170px) {
+        width: auto;
+        margin-bottom: 86px;
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+}
+
+.subscription__title {
+    font-size: 18px;
+    font-weight: 700;
+    padding-left: 65px;
+    position: relative;
+    margin-bottom: 21px;
+    @media(max-width: 1169px) {
+        font-size: 14px;
+        padding-left: 30px;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.subscription__title_email {
+    &:after {
+        width: 23px;
+        height: 23px;
+        background: url("../img/mail-icon.png") no-repeat center;
+        background-size: contain;
+        @media(max-width: 1169px) {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+.subscription__title_youtube {
+    &:after {
+        width: 30px;
+        height: 23px;
+        background: url("../img/youtube-icon.png") no-repeat center;
+        background-size: contain;
+        @media(max-width: 1169px) {
+            width: 21px;
+            height: 16px;
+        }
+    }
+}
+
+.subscription__article {
+    font-size: 14px;
+    color: #858585;
+    margin-bottom: 22px;
+}
+
+.subscription__link {
+    display: inline-block;
+    position: relative;
+    font-size: 18px;
+    color: $wheat;
+    padding-right: 50px;
+
+    &:hover {
+        color: #f6ae2d;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 26px;
+        height: 13px;
+        background: url("../img/str-orange.png") no-repeat center;
+        background-size: contain;
+        @media(max-width: 767px) {
+            width: 18px;
+            height: 9px;
+        }
+    }
+}
+
+.subscription {
+    position: relative;
+    @media(min-width: 768px) and (max-width: 1169px) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    li {
+        margin-bottom: 50px;
+        @media(min-width: 768px) and (max-width: 1169px) {
+            width: 50%;
+        }
+
+        &:last-child {
+            @media (min-width: 1170px) {
+                position: absolute;
+                top: 0;
+                right: -100%;
+            }
+        }
+    }
+}
+
+.subscription__item {
+    @media(min-width: 768px) {
+        display: inline-block;
+        padding: 18px 25px;
+        border-radius: 30px;
+
+        &:hover {
+            box-shadow: 0 11px 60px rgba(0, 0, 0, 0.13);
+
+            .subscription__link {
+                color: #f6ae2d;
+            }
+        }
     }
 }
