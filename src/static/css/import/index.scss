@@ -489,9 +489,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 209px !important;
+    width: auto;
         @media(max-width: 767px) {
             width: 154px !important;
+        }
+        @media(min-width: 1900px) {
+            width: 209px !important;
         }
     }
 }
@@ -502,7 +505,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 325px !important;
+
         @media(max-width: 767px) {
             width: 221px !important;
         }
