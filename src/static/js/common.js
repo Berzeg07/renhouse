@@ -108,7 +108,7 @@ $(document).ready(function() {
     if ($(window).width() >= 1170) {
 
         var swiper4 = new Swiper('.run-franchise-slider', {
-            slidesPerView: 4,
+
             spaceBetween: 30,
             centeredSlides: false,
         // slidesPerView: 'auto',
@@ -120,6 +120,11 @@ $(document).ready(function() {
         breakpoints: {
             1170: {
                 slidesPerView: 3,
+                spaceBetween: 20,
+                loop: true
+            },
+             1660: {
+                slidesPerView: 4,
                 spaceBetween: 20,
                 loop: true
             },

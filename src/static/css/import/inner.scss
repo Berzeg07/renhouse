@@ -880,8 +880,12 @@
 	@media (min-width : 1170px) {
 		background-image: url('../img/big-city.png');
 		background-repeat: no-repeat;
-		background-position: left 210px bottom 30px;
+		background-position: left 0px bottom 60px;
 		padding-bottom: 89px;
+	}
+
+	@media (min-width : 1400px) {
+		background-position: left 210px bottom 30px;
 	}
 }
 
@@ -1301,6 +1305,10 @@
 
 .run-container {
 	@media (min-width : 1170px) {
+		max-width: 1659px;
+	}
+
+	@media (min-width: 1660px) {
 		max-width: 1412px;
 		position: relative;
 		left: 130px;
@@ -1338,6 +1346,11 @@
 		height: 341px;
 		padding-top: 114px;
 		background-image: url('../img/_cyclist.png');
+		background-position: right -190px bottom;
+	}
+
+	@media (min-width : 1920px) {
+		background-position: right 0px bottom 0px;
 	}
 }
 
@@ -1499,7 +1512,7 @@
 	}
 
 	@media (min-width : 1170px) {
-		margin-top: -51px;
+		margin-top: -40px;
 	}
 }
 
