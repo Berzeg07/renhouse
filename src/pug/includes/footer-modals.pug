@@ -1,1 +1,55 @@
-p модалки
+.request-modal
+    form.form-modal(method="post")
+        button(type="button").close-modal
+        
+        p.request-modal__title Получить консультацию
+        p.request-modal__article Наш менеджер свяжется с вами в течение 15 минут и ответит на все вопросы
+        
+        input.inp(type="text" placeholder="Имя" name="uname")
+        input.inp(type="text" placeholder="+7(999)999-99-99" name="phone")
+        input.inp(type="text" placeholder="E-mail" name="email")
+        
+        .request-modal__button-wrap
+            button(type="submit" name="submit").btn.btn-orange.btn_form Отправить
+            
+        p.privacy Нажимая кнопку, принимаю условия политики и 
+            a(href="#") пользовательского соглашения
+
+.thanks-modal
+    .form-modal
+        button(type="submit").close-modal
+        
+        p.request-modal__title Спасибо за заявку!
+        p.request-modal__article.request-modal__article_thanks Проверьте Вашу почту, наше предложение уже ждет Вас там
+        
+        .presentation        
+            p.presentation__title 
+                b Вы можете посмотреть уникальные презентации уже сейчас:
+            
+            .modal-slider.swiper-container
+                .swiper-wrapper
+                    .swiper-slide
+                        .presentation-slider__img
+                            img(src="img/ps-1.jpg")
+                        
+                        p.presentation-slider__article Сколько я смогу зарабатывать?
+                                
+                    .swiper-slide
+                        .presentation-slider__img
+                            img(src="img/ps-2.jpg")
+                        
+                        p.presentation-slider__article Почему RentHouse?
+                
+                .swiper-button-next
+                .swiper-button-prev
+    
+        ul.social-link
+            li
+                a(href="#")
+                    img(src="img/youtube-icon-g.png")
+            li
+                a(href="#")
+                    img(src="img/telegram-icon-g.png")
+            li
+                a(href="#")
+                    img(src="img/inst-icon-g.png")

@@ -1,5 +1,17 @@
 $(document).ready(function() {
 
+    $('.request-call').click(function(e) {
+        e.preventDefault();
+        $('.request-modal, .overlay').fadeIn();
+        $('body').addClass('overflow-hidden');
+    });
+
+    $('.close-modal').click(function() {
+        $('.request-modal, .overlay').fadeOut();
+        $('body').removeClass('overflow-hidden');
+        $('.thanks-modal').removeClass('is-active');
+    });
+
     $('.burger').click(function() {
         $(this).toggleClass('is-active');
         $('.mobile-menu, .overlay').fadeToggle();
@@ -29,6 +41,29 @@ $(document).ready(function() {
                 slidesPerView: 4,
                 spaceBetween: 40,
                 loop: false,
+            },
+            1899: {
+                slidesPerView: 5,
+                spaceBetween: 40,
+                loop: false,
+            },
+        }
+    });
+
+    var swiperPres = new Swiper('.modal-slider', {
+        slidesPerView: 2,
+        spaceBetween: 56,
+        // centeredSlides: true,
+        // slidesPerView: 'auto',
+        loop: false,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            767: {
+                slidesPerView: 1,
+                // spaceBetween: 35,
             },
         }
     });
@@ -144,20 +179,37 @@ $(document).ready(function() {
         var imagArr = fotorama.data;
         var srcArr = [];
 
-        for(var i = 0; i < imagArr.length; i++){
+        for (var i = 0; i < imagArr.length; i++) {
             var src = {};
             src.src = imagArr[i].img;
             srcArr.push(src);
         }
 
-        $('.fotorama__img').click(function(){
+        $('.fotorama__img').click(function() {
             $.fancybox.open(srcArr, {
                 loop: false
             });
         });
     });
 
+    $(".form-modal").submit(function() {
+        var form_data = $(this).serialize();
+        $.ajax({
+            type: "POST",
+            url: "http://test.webdevfactory.ru/sendmessage.php",
+            data: form_data,
+            success: function() {
+                cleanTnanks(this);
+            }
+        });
+        return false;
+    });
 
+    function cleanTnanks(form) {
+        $('.request-modal, .overlay').fadeOut();
+        $('.thanks-modal').addClass('is-active');
+        // location = "spasibo.php";
+    };
 
 
     //  $(function() {
