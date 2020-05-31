@@ -1755,6 +1755,11 @@
 	margin-bottom: 78px;
 	border-radius: 30px;
 	border: 1px solid #131313;
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	@media (min-width : 768px) {
 		width: 488px;
@@ -1768,6 +1773,47 @@
 		width: 584px;
 		height: 339px;
 		margin-left: -140px;
+	}
+}
+
+.inverview-video__play {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	width: 44px;
+	height: 44px;
+
+	background-color: rgba(45, 45, 45, 0.5);
+
+	font-size: 0;
+	border-radius: 50%;
+	cursor: pointer;
+
+	&::before {
+		content: '';
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		width: 14px;
+		height: 17px;
+		background-image: url('../img/play-white.png');
+		background-repeat: no-repeat;
+		background-position: 0 0;
+	}
+
+
+	@media (min-width : 768px) {
+		width: 55px;
+		height: 55px;
+	}
+
+	@media (min-width : 1170px) {
+		background-color: #000000;
 	}
 }
 
