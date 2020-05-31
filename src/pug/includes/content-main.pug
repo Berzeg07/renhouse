@@ -342,18 +342,31 @@
             p.inner-title.inner-title_future Будущее за RentHouse
             p.article Мы управляем бизнесом через собственную CRM-систему. Собственая IT-платформа дает возможность анализировать сотни метрик и оставаться прибыльными с 2014 года.
         li
-            //- .crm-slider.fotorama(data-nav="thumbs" data-arrows="true" data-thumbwidth="210" data-thumbheight="110" data-click="true" data-swipe="true" data-thumbmargin="21")
-            //-     img(src="img/f4.jpg")
-            //-     img(src="img/f1.jpg")
-            //-     img(src="img/f2.jpg")
-            //-     img(src="img/f3.jpg")
+            .crm-slider.fotorama(data-nav="thumbs" data-arrows="true" data-thumbwidth="210" data-thumbheight="110" data-click="false" data-swipe="false" data-thumbmargin="21")
+                img(src="img/f4.jpg")
+                img(src="img/f1.jpg")
+                img(src="img/f2.jpg")
+                img(src="img/f3.jpg")
+            
+            //- <div class="fotorama" data-nav="thumbs" data-arrows="true" data-thumbwidth="210" data-thumbheight="110" data-click="false" data-swipe="false" data-thumbmargin="21">
+            //-     <div data-img="img/slide_1.jpg"><a href="img/slide_1.jpg" data-fancybox="gallery"></a></div>
+            //-     <div data-img="img/slide_2.jpg"><a href="img/slide_2.jpg" data-fancybox="gallery"></a></div>
+            //-     <div data-img="img/slide_3.jpg"><a href="img/slide_3.jpg" data-fancybox="gallery"></a></div>
+            //-     <div data-img="img/slide_4.jpg"><a href="img/slide_4.jpg" data-fancybox="gallery"></a></div>
+            //- </div>
                     
 
-            .crm-slider.fotorama(data-nav="thumbs" data-arrows="true" data-thumbwidth="210" data-thumbheight="110" data-click="false" data-swipe="false" data-thumbmargin="21")
-                <div data-img="img/f4.jpg" style="height:100%;"><a href="img/f4.jpg" data-fancybox="gallery1" style="display:block; height:100%;"></a></div>
-                <div data-img="img/f1.jpg" style="height:100%;"><a href="img/f1.jpg" data-fancybox="gallery1" style="display:block; height:100%;"></a></div>
-                <div data-img="img/f2.jpg" style="height:100%;"><a href="img/f2.jpg" data-fancybox="gallery1" style="display:block; height:100%;"></a></div>
-                <div data-img="img/f3.jpg" style="height:100%;"><a href="img/f3.jpg" data-fancybox="gallery1" style="display:block; height:100%;"></a></div>
+            //- .crm-slider.fotorama(data-nav="thumbs" data-arrows="true" data-thumbwidth="210" data-thumbheight="110" data-click="false" data-swipe="false" data-thumbmargin="21")
+            //-     <div data-img="img/f4.jpg" style="height:100%;"><a href="img/f4.jpg" data-fancybox="gallery1" style="display:block; height:100%;"></a></div>
+            //-     <div data-img="img/f1.jpg" style="height:100%;"><a href="img/f1.jpg" data-fancybox="gallery1" style="display:block; height:100%;"></a></div>
+            //-     <div data-img="img/f2.jpg" style="height:100%;"><a href="img/f2.jpg" data-fancybox="gallery1" style="display:block; height:100%;"></a></div>
+            //-     <div data-img="img/f3.jpg" style="height:100%;"><a href="img/f3.jpg" data-fancybox="gallery1" style="display:block; height:100%;"></a></div>
+            
+            //- .crm-slider.fotorama(data-nav="thumbs" data-arrows="true" data-thumbwidth="210" data-thumbheight="110" data-click="false" data-swipe="false" data-thumbmargin="21")
+            //-     <div data-img="img/f4.jpg" style="height:100%;"><a href="img/f4.jpg" data-fancybox="gallery1" style="display:block; height:100%;"></a></div>
+            //-     <div data-img="img/f1.jpg" style="height:100%;"><a href="img/f1.jpg" data-fancybox="gallery1" style="display:block; height:100%;"></a></div>
+            //-     <div data-img="img/f2.jpg" style="height:100%;"><a href="img/f2.jpg" data-fancybox="gallery1" style="display:block; height:100%;"></a></div>
+            //-     <div data-img="img/f3.jpg" style="height:100%;"><a href="img/f3.jpg" data-fancybox="gallery1" style="display:block; height:100%;"></a></div>
     
     ul.community-block
         li.community-block__item
@@ -521,19 +534,20 @@
 
 .shedule-block.container
     .shedule-block__item
-        p.main-title Фактический график 
+        p.main-title.shedule-block__title Фактический график 
             span повышения цены на франшизу RentHouse
         
-        p.article Франшиза постояно совершенствуется. Паушальный взнос регулярно растет в цене. Хотите узнать почему? Спросите у отдела продаж прямо сейчас.
-        
-        button(type="button").btn.btn-black.btn-black_shedule Получить консультацию
+        p.article.shedule-block__article Франшиза постояно совершенствуется. Паушальный взнос регулярно растет в цене. Хотите узнать почему? Спросите у отдела продаж прямо сейчас.
+        .shedule-block__btn-wrap.shedule-block__btn-wrap-desc
+            button(type="button").btn.btn-black.btn-black_shedule Получить консультацию
         
         
     .shedule-block__item
         .shedule-block__img
             img(src="img/_schedule.png")
-                
-        button(type="button").btn.btn-black.btn-black_shedule.btn-black_shedule-mob Получить консультацию
+        
+        .shedule-block__btn-wrap.shedule-block__btn-wrap-mob  
+            button(type="button").btn.btn-black.btn-black_shedule Получить консультацию
         
     
     

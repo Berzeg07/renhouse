@@ -49,29 +49,52 @@ $(document).ready(function() {
         }
     });
 
+    $(function() {
+        var $fotoramaDiv = $('.fotorama').fotorama();
+        var fotorama = $fotoramaDiv.data('fotorama');
+        var imagArr = fotorama.data;
+        var srcArr = [];
 
-   //  $(function() {
-   //     $('.certificates__img').click(function(event) {
-   //         event.preventDefault();
-   //
-   //         var i_path = $(this).attr('href');
-   //         $('body').append('<div class="magnify"><img src="' + i_path + '"><div class="close-popup"></div></div>');
-   //         // $('#magnify').css({
-   //         //     left: ($(document).width() - $('#magnify').outerWidth()) / 2,
-   //         //     // top: ($(document).height() - $('#magnify').outerHeight())/2 upd: 24.10.2016
-   //         //     top: ($(window).height() - $('#magnify').outerHeight()) / 2
-   //         // });
-   //         $('.overlay, .magnify').fadeIn('fast');
-   //     });
-   //
-   //     $('body').on('click', '.close-popup', function(event) {
-   //         event.preventDefault();
-   //
-   //         $('.overlay, .magnify').fadeOut('fast', function() {
-   //             $('.close-popup, .magnify').remove();
-   //         });
-   //     });
-   // });
+        for(var i = 0; i < imagArr.length; i++){
+            var src = {};
+            src.src = imagArr[i].img;
+            srcArr.push(src);
+        }
+
+        $('.fotorama__img').click(function(){
+            $.fancybox.open(srcArr, {
+                loop: false
+            });
+        });
+    });
+
+
+
+
+    //  $(function() {
+    //     $('.certificates__img').click(function(event) {
+    //         event.preventDefault();
+    //
+    //         var i_path = $(this).attr('href');
+    //         $('body').append('<div class="magnify"><img src="' + i_path + '"><div class="close-popup"></div></div>');
+    //         // $('#magnify').css({
+    //         //     left: ($(document).width() - $('#magnify').outerWidth()) / 2,
+    //         //     // top: ($(document).height() - $('#magnify').outerHeight())/2 upd: 24.10.2016
+    //         //     top: ($(window).height() - $('#magnify').outerHeight()) / 2
+    //         // });
+    //         $('.overlay, .magnify').fadeIn('fast');
+    //     });
+    //
+    //     $('body').on('click', '.close-popup', function(event) {
+    //         event.preventDefault();
+    //
+    //         $('.overlay, .magnify').fadeOut('fast', function() {
+    //             $('.close-popup, .magnify').remove();
+    //         });
+    //     });
+    // });
+
+
 
 
 });
