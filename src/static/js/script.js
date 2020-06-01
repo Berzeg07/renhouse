@@ -10,11 +10,29 @@ $(document).ready(function() {
         $('.request-modal, .overlay').fadeOut();
         $('body').removeClass('overflow-hidden');
         $('.thanks-modal').removeClass('is-active');
+        $('.franchaizi-modal').removeClass('is-active');
     });
 
     $('.burger').click(function() {
         $(this).toggleClass('is-active');
         $('.mobile-menu, .overlay').fadeToggle();
+    });
+
+    $('.link-detail').click(function(e){
+        e.preventDefault();
+        $('.franchaizi-modal').addClass('is-active');
+        $('.overlay').fadeIn();
+        $('body').addClass('overflow-hidden');
+    });
+
+    var swiperScrollbar = new Swiper('.franchaizi-scroll-box', {
+      direction: 'vertical',
+      slidesPerView: 'auto',
+      freeMode: true,
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+      mousewheel: true,
     });
 
     var swiper = new Swiper('.filial-slider', {
@@ -46,6 +64,30 @@ $(document).ready(function() {
                 slidesPerView: 5,
                 spaceBetween: 40,
                 loop: false,
+            },
+        }
+    });
+
+    var swiperTeam = new Swiper('.about-slider', {
+        slidesPerView: 4,
+        spaceBetween: 21,
+        centeredSlides: false,
+        slidesPerView: 'auto',
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'progressbar',
+        },
+
+        breakpoints: {
+            767: {
+                slidesPerView: 1,
+                spaceBetween: 15,
+                loop: false,
+            },
+            991: {
+                slidesPerView: 4,
+                // spaceBetween: 35,
             },
         }
     });
@@ -185,7 +227,7 @@ $(document).ready(function() {
             srcArr.push(src);
         }
 
-        $('.fotorama__img').click(function() {
+        $('.fotorama').on('click', '.fotorama__img', function() {
             $.fancybox.open(srcArr, {
                 loop: false
             });
