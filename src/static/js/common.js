@@ -88,13 +88,14 @@ var swiperTestimonials = new Swiper('.perks__slider .swiper-container', {
     }
 });
 
+
 var swiperComment = new Swiper('.swiper-comment', {
     slidesPerView: 1,
     spaceBetween: 30,
     centeredSlides: true,
     loop: true,
     navigation: {
-        nextEl: '.swiper-button-next',
+        nextEl: '.good-comment__next',
         prevEl: '.swiper-button-prev',
     }
 });
