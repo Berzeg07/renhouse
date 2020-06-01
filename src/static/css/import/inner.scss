@@ -2800,3 +2800,285 @@
 		}
 	}
 }
+
+
+/*perks
+=========================================*/
+.perks {
+	padding: 76px 0;
+	color: #131313;
+
+	@media (min-width : 1170px) {
+		padding: 171px 0 104px;
+	}
+}
+
+.perks-block {
+	@media (max-width : 1169px) {
+		max-width: none;
+		padding: 0;
+	}
+
+	@media (min-width : 1170px) {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.perks__caption {
+	font-size: 18px;
+	line-height: 26px;
+
+	margin-bottom: 58px;
+	width: 177px;
+
+	@media (min-width : 768px) {
+		font-size: 24px;
+		line-height: 32px;
+		width: 236px;
+		margin-bottom: 46px;
+	}
+
+	@media (min-width : 1170px) {
+		width: 342px;
+		font-size: 36px;
+		line-height: 44px;
+		margin-bottom: 52px;
+	}
+}
+
+.perks__caption span {
+	color: #f7b94d;
+}
+
+.perks__description {
+	font-size: 16px;
+	line-height: 24px;
+	width: 277px;
+	margin-bottom: 42px;
+
+
+	@media (min-width : 768px) {
+		width: 452px;
+	}
+
+	@media (min-width : 1170px) {
+		width: 450px;
+		font-size: 18px;
+		line-height: 30px;
+		margin-bottom: 55px;
+	}
+}
+
+.perks__description p {
+	margin-bottom: 10px;
+
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.perks__video {
+	margin-bottom: 51px;
+
+	@media (min-width : 768px) {
+		margin-bottom: 41px;
+	}
+}
+
+.perks__video p {
+	color: #858585;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.perks__video-block {
+	position: relative;
+	margin-bottom: 33px;
+	width: 277px;
+
+	@media (min-width : 768px) {
+		width: 322px;
+		margin-bottom: 61px;
+	}
+}
+
+.perks__slider {
+	padding-left: 20px;
+
+	@media (min-width : 600px) {
+		padding-left: 47px;
+	}
+
+	@media (min-width : 1170px) {
+		padding-left: 0;
+		width: 50%;
+		margin-top: -100px;
+	}
+}
+
+
+.perks__slider .swiper-button-next,
+.perks__slider .swiper-button-prev {
+	display: none;
+
+	@media (min-width : 1170px) {
+		display: block;
+		top: auto;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 26px 13px;
+		width: 49px;
+		height: 50px;
+		display: block;
+		box-shadow: 0 11px 60px rgba(0, 0, 0, 0.24);
+		background-color: #f4f4f4;
+		position: absolute;
+		border-radius: 50%;
+	}
+}
+
+.perks__slider .swiper-button-next {
+	bottom: 9%;
+	right: 38%;
+	background-image: url('../img/str-black.png');
+	transform: rotate(180deg);
+
+	&:hover {
+		background-image: url('../img/str-orange.png');
+		transform: rotate(0deg);
+	}
+}
+
+.perks__slider .swiper-button-prev {
+	bottom: 9%;
+	left: 40%;
+	background-image: url('../img/str-black.png');
+
+	&:hover {
+		background-image: url('../img/str-orange.png');
+		transform: rotate(180deg);
+	}
+}
+
+
+.perks__slider .swiper-slide {
+
+	display: flex;
+
+	width: 254px !important;
+
+	justify-content: center;
+	align-items: center;
+
+	@media (min-width : 768px) {
+		width: 296px !important;
+	}
+
+
+	@media (min-width : 1170px) {
+		width: 100% !important;
+	}
+
+}
+
+.perks__slider-item {
+	border-radius: 30px;
+	background-color: #f4f4f4;
+	padding: 133px 5px 76px;
+	position: relative;
+	width: 254px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&::before {
+		content: '';
+
+		position: absolute;
+		top: 21px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		width: 88px;
+		height: 90px;
+
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-size: cover;
+	}
+
+	&_marketing::before {
+		background-image: url('../img/perks-slider1.png');
+	}
+
+	&_search::before {
+		background-image: url('../img/perks-slider2.png');
+	}
+
+	&_run::before {
+		background-image: url('../img/perks-slider3.png');
+	}
+
+	&_education::before {
+		background-image: url('../img/perks-slider4.png');
+	}
+
+	@media (min-width : 768px) {
+		width: 296px;
+	}
+
+	@media (min-width : 1170px) {
+		width: 371px;
+		height: 489px;
+		box-shadow: 0 11px 60px rgba(0, 0, 0, 0.13);
+
+		margin-top: 60px;
+		margin-bottom: 140px;
+
+	}
+
+
+}
+
+.perks__slider-column {
+	@media (min-width : 1170px) {
+		background-image: url(../img/shadow-slider.png);
+		background-repeat: no-repeat;
+		padding: 0px 35px;
+		background-position: top 126px right 2px;
+	}
+}
+
+.perks__slider-item h2 {
+	font-size: 16px;
+	margin-bottom: 46px;
+	text-align: center;
+
+	@media (min-width : 1170px) {
+		font-size: 18px;
+		margin-bottom: 59px;
+	}
+}
+
+.perks__slider-item p {
+	font-size: 14px;
+	color: #858585;
+	line-height: 22px;
+	margin-bottom: 5px;
+	text-align: center;
+	width: 218px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	@media (min-width : 1170px) {
+		font-size: 15px;
+		line-height: 24px;
+		width: 270px;
+		text-align: left;
+	}
+}
