@@ -55,7 +55,7 @@ var swiper5 = new Swiper('.video-review__slider', {
     centeredSlides: false,
     loop: true,
     navigation: {
-        nextEl: '.video-review .swiper-button-next',
+        nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
     breakpoints: {
@@ -67,11 +67,35 @@ var swiper5 = new Swiper('.video-review__slider', {
     }
 });
 
-function sound() {
-     var audio = new Audio(); // Создаём новый элемент Audio
-     audio.src = '...'; // Указываем путь к звуку "клика"
-     audio.autoplay = true; // Автоматически запускаем
- }
+var swiperTestimonials = new Swiper('.perks__slider .swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    centeredSlides: false,
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        767: {
+            spaceBetween: 8,
+            slidesPerView: 'auto'
+        },
+        1169: {
+            spaceBetween: 22,
+            slidesPerView: 'auto'
+        }
+    }
+});
+
+
+
+
+// function sound() {
+//      var audio = new Audio(); // Создаём новый элемент Audio
+//      audio.src = '...'; // Указываем путь к звуку "клика"
+//      audio.autoplay = true; // Автоматически запускаем
+//  }
 
 });
 
