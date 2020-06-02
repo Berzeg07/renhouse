@@ -13,38 +13,18 @@ $(document).ready(function() {
     //     }
     // };
 
+
     $('.voice-btn').click(function() {
-        var audio = new Audio();
-        audio.src = '../' + $(this).attr('src');
-
-        $(this).toggleClass('is-active');
-
-        if ($(this).hasClass('is-active')) {
-            audio.play();
-            // document.querySelector('.radioPlay').innerHTML = 'pause';
-
+        if ($(this).hasClass('on')) {
+            $(this).removeClass('on');
+            $(this).find('.voice-btn__audio').get(0).pause();
         } else {
-            audio.stop();
-
-            // document.querySelector('.radioPlay').innerHTML = 'play';
+            $(this).addClass('on');
+            var pl = $(this).find('.voice-btn__audio').get(0)
+            pl.pause();
+            pl.play();
         }
-
-        // if ($(this).hasClass('is-active')) {
-        //     audio.play();
-        //     $(audio).on("ended", function() {
-        //         console.log("Audio ended");
-        //     });
-        // } else {
-        //     audio.pause();
-        // }
     });
-
-    HTMLAudioElement.prototype.stop = function() {
-        this.pause();
-        this.currentTime = 0.0;
-    }
-
-
 
     $(function() {
         $(".main-menu a").click(function(e) {
