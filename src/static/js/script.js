@@ -17,19 +17,27 @@ $(document).ready(function() {
     // var test = $('.voice-btn__audio');
     // console.log('test ', test);
     // $('.voice-btn').removeClass('on');
-// <div class="voice-btn"><audio src="audio/audio.mp3"></audio></div>
+    // <div class="voice-btn"><audio src="audio/audio.mp3"></audio></div>
+    var swiperPost = new Swiper('.post-slider', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
 
     $('.voice').click(function() {
         $('.voice-btn').each(function() {
-          $(this).find('.voice-btn__audio').get(0).pause();
-     });
+            $(this).find('.voice-btn__audio').get(0).pause();
+        });
         if ($(this).hasClass('on')) {
             $(this).removeClass('on');
             $(this).find('.voice-btn__audio').get(0).pause();
         } else {
             $(this).addClass('on');
             var pl = $(this).find('.voice-btn__audio').get(0)
-            // pl.pause();
             pl.play();
             $(pl).on("ended", function() {
                 $(this).parent().removeClass('on');
