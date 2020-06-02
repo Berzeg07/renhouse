@@ -1,26 +1,27 @@
-.container.top-main
-    .top-main__item
-        p.top-main__title 
-            b Renthouse
-            span франчайзинговая сеть квартир краткосрочной аренды
+.top-main-wrap
+    .container.top-main
+        .top-main__item
+            p.top-main__title 
+                b Renthouse
+                span франчайзинговая сеть квартир краткосрочной аренды
 
-        p.article.top-main__article
-            |Чтобы окупить все вложения и заработать от 
-            b 1 483 029 рублей 
-            |чистой прибыли за 8 месяцев, запросите бизнес-план для своего города
+            p.article.top-main__article
+                |Чтобы окупить все вложения и заработать от 
+                b 1 483 029 рублей 
+                |чистой прибыли за 8 месяцев, запросите бизнес-план для своего города
 
-        ul.top-main__list
-            li
-                button(type="button").btn.btn-orange.btn-plan Получить бизнес план
-            li
-                a(data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/Zg95ZA00Ang?v=_sI_Ps7JSEk&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0" href="javascript:;").btn-watch Смотреть видео о нас
+            ul.top-main__list
+                li
+                    button(type="button").btn.btn-orange.btn-plan Получить бизнес план
+                li
+                    a(data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/Zg95ZA00Ang?v=_sI_Ps7JSEk&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0" href="javascript:;").btn-watch Смотреть видео о нас
 
-    .top-main__item
-        .top-main__image
-            img(src="img/header-bg.jpg")
-            ul.top-main__image-article
-                li Фотография с первого слета франчайзинга в Москве
-                li декабрь 2019
+        .top-main__item
+            .top-main__image
+                img(src="img/header-bg.jpg")
+                ul.top-main__image-article
+                    li Фотография с первого слета франчайзинга в Москве
+                    li декабрь 2019
 
 .filial-block
     h2.main-title.filial-block__title
@@ -215,14 +216,15 @@
 
     .stat-video__item
         .video-wrap
-            <video class="video" controls muted poster="video/poster.jpg">
-                <source src="video/nature.mp4" type="video/mp4">
-                <source src="video/nature.webm" type="video/webm">
-                <source src="video/nature.ogv" type="video/ogg">
-                <object data="video/nature.swf" type="application/x-shockwave-flash">
-                    <param name="movie" value="video/nature.swf">
-                </object>
-            </video>
+            <iframe src="https://www.youtube.com/embed/o-Jqsf3AahA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            //- <video class="video" controls muted poster="video/poster.jpg">
+            //-     <source src="video/nature.mp4" type="video/mp4">
+            //-     <source src="video/nature.webm" type="video/webm">
+            //-     <source src="video/nature.ogv" type="video/ogg">
+            //-     <object data="video/nature.swf" type="application/x-shockwave-flash">
+            //-         <param name="movie" value="video/nature.swf">
+            //-     </object>
+            //- </video>
 
 .presentation-block
     .container.presentation-block__top
@@ -256,7 +258,7 @@
 
         .swiper-pagination
 
-.container.reasons-block
+.container.reasons-block#aboutUs
     ul.reasons-block__top
         li
             p.reasons-block__title Субаренда недвижимости
@@ -301,7 +303,7 @@
                 |арендовать офисы, нести расходы за организационную технику и прочее.
 
 
-.container.certificate-block
+.container.certificate-block#howItWork
     h2.main-title.certificate-block__title Почему стоит выбрать франшизу посуточной аренды квартир RentHouse?
     ul.certificate-info
         li
@@ -342,11 +344,12 @@
             p.inner-title.inner-title_future Будущее за RentHouse
             p.article Мы управляем бизнесом через собственную CRM-систему. Собственая IT-платформа дает возможность анализировать сотни метрик и оставаться прибыльными с 2014 года.
         li
-            .crm-slider.fotorama(data-nav="thumbs" data-arrows="true" data-thumbwidth="210" data-thumbheight="110" data-click="false" data-swipe="false" data-thumbmargin="21")
-                img(src="img/f4.jpg")
-                img(src="img/f1.jpg")
-                img(src="img/f2.jpg")
-                img(src="img/f3.jpg")
+            .crm-slider-wrap
+                .crm-slider.fotorama(data-nav="thumbs" data-arrows="true" data-thumbwidth="210" data-thumbheight="110" data-click="false" data-swipe="false" data-thumbmargin="21")
+                    img(src="img/f4.jpg")
+                    img(src="img/f1.jpg")
+                    img(src="img/f2.jpg")
+                    img(src="img/f3.jpg")
 
             //- <div class="fotorama" data-nav="thumbs" data-arrows="true" data-thumbwidth="210" data-thumbheight="110" data-click="false" data-swipe="false" data-thumbmargin="21">
             //-     <div data-img="img/slide_1.jpg"><a href="img/slide_1.jpg" data-fancybox="gallery"></a></div>
@@ -523,14 +526,15 @@
 
     .total-block__item 
         .video-wrap
-            <video class="video" controls muted poster="img/prev2.jpg">
-                <source src="video/nature.mp4" type="video/mp4">
-                <source src="video/nature.webm" type="video/webm">
-                <source src="video/nature.ogv" type="video/ogg">
-                <object data="video/nature.swf" type="application/x-shockwave-flash">
-                    <param name="movie" value="video/nature.swf">
-                </object>
-            </video>    
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-nLKY9yj2yA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            //- <video class="video" controls muted poster="img/prev2.jpg">
+            //-     <source src="video/nature.mp4" type="video/mp4">
+            //-     <source src="video/nature.webm" type="video/webm">
+            //-     <source src="video/nature.ogv" type="video/ogg">
+            //-     <object data="video/nature.swf" type="application/x-shockwave-flash">
+            //-         <param name="movie" value="video/nature.swf">
+            //-     </object>
+            //- </video>    
 
 .shedule-block.container
     .shedule-block__item
