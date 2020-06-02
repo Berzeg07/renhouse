@@ -210,9 +210,13 @@
 
         ul.stat-video__voice-list
             li
-                span.voice-item Слушать обращение
+                span.voice-item.voice 
+                    |Слушать обращение
+                    audio(src="audio/audio.mp3").voice-btn__audio  
             li
-                span.voice-item Слушать обращение
+                span.voice-item.voice 
+                    |Слушать обращение
+                    audio(src="audio/audio.mp3").voice-btn__audio  
 
     .stat-video__item
         .video-wrap
@@ -232,7 +236,7 @@
             p.presentation-block__article Хотите узнать о наших результатах работы в период коронавируса и задачах до конца карантина?
 
         .presentation-block__item
-            button(type="button").btn.btn-orange.presentation-btn Смотреть презентацию 
+            a(href="pdf/book.pdf" target="_blank").btn.btn-orange.presentation-btn Смотреть презентацию 
 
     .presentation-slider.swiper-container.progress-slider
         .swiper-wrapper
