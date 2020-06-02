@@ -998,6 +998,7 @@
     box-shadow: 0 13px 70px rgba(246, 174, 45, 0.33);
     width: 319px;
     height: 60px;
+    line-height: 60px;
 
     &:hover {
         box-shadow: 0 13px 70px rgba(246, 174, 45, 0.57);
@@ -2471,11 +2472,6 @@
     position: absolute;
     right: -20px;
     top: -10px;
-    width: 35px;
-    height: 34px;
-    border: 1px solid #131313;
-    background: url("../img/speaker-icon.png") no-repeat center;
-    border-radius: 10em;
     @media(max-width: 767px) {
         top: -23px;
     }
@@ -2733,3 +2729,16 @@
 .fotorama__img {
     border-radius: 10px !important;
 }
+
+.voice-btn{
+    cursor: pointer;
+    width: 35px;
+    height: 34px;
+    border: 1px solid #131313;
+    background: url("../img/speaker-icon.png") no-repeat center;
+    border-radius: 10em;
+}
+
+// .voice-btn.on{
+//     background: url('../img/micro.png') no-repeat center;
+// }

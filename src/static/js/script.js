@@ -13,16 +13,27 @@ $(document).ready(function() {
     //     }
     // };
 
+    // $('.voice-btn__audio').get(0).pause();
+    // var test = $('.voice-btn__audio');
+    // console.log('test ', test);
+    // $('.voice-btn').removeClass('on');
+// <div class="voice-btn"><audio src="audio/audio.mp3"></audio></div>
 
-    $('.voice-btn').click(function() {
+    $('.voice').click(function() {
+        $('.voice-btn').each(function() {
+          $(this).find('.voice-btn__audio').get(0).pause();
+     });
         if ($(this).hasClass('on')) {
             $(this).removeClass('on');
             $(this).find('.voice-btn__audio').get(0).pause();
         } else {
             $(this).addClass('on');
             var pl = $(this).find('.voice-btn__audio').get(0)
-            pl.pause();
+            // pl.pause();
             pl.play();
+            $(pl).on("ended", function() {
+                $(this).parent().removeClass('on');
+            });
         }
     });
 
