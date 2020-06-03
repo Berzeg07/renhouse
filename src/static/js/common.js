@@ -109,8 +109,12 @@ var swiperComment = new Swiper('.swiper-comment', {
 //      audio.autoplay = true; // Автоматически запускаем
 //  }
 
+
 });
 
+
+
+//Калькулятор
 let calculateLinksChecked = document.querySelectorAll('.calculate-link'),
 calculateLinksCity = document.querySelectorAll('.calculate-city-link');
 
@@ -235,3 +239,272 @@ function stateCalc() {
 
     this.classList.add('calculate-link_first');
 }
+
+
+
+//Обратная связь вместо с опросником
+let btnCall = document.querySelectorAll('.js-call'),//Кнопки для открытия модальных окок обраной связи
+    recalName, recalPhone, recalEmail, recalIncome, recalInvestment, recalWhen, recalWhen2;
+
+
+//Открытие модального окна для обратной связи
+btnCall.forEach((item) => {
+    item.addEventListener('click', openCallModal);
+});
+
+
+let recallBlock = document.querySelector('.js-recall'), //Модальное окно обратной связи
+    overlayBlock = document.querySelector('.overlay2'), //Подложка
+    sendForm = document.querySelector('#recall-form'), //Форма
+    question1 = document.querySelector('.js-question1'),//Опросник 1
+    question2 = document.querySelector('.js-question2'),//Опросник 2
+    question3 = document.querySelector('.js-question3');//Опросник 3
+
+//Открытия модального окна обратной связи
+function openCallModal() {
+
+    closeModel = recallBlock.querySelector('.js-recall .close-modal'); //Закрытие окна обратной связи
+    recallBlock.classList.add('recall_open'); //Открытие модального окна обратной связи
+    overlayBlock.style.display = 'block'; //Включение подложки
+    document.querySelector('body').style.overflow = 'hidden';//Без скрола боди
+
+    closeModel.addEventListener('click', () => {
+        console.log('closeModel');
+        recallBlock.classList.remove('recall_open');
+        overlayBlock.style.display='none';
+        document.querySelector('body').style.overflowY = 'scroll';
+        sendForm.uname.value = '';
+        sendForm.phone.value = '';
+        sendForm.email.value = '';
+
+    }, false);
+
+    overlayBlock.addEventListener('click', clickOverlay);//Клик на подложку
+
+    sendForm.addEventListener('submit', sendMessages, false);
+}
+
+//Обработка формы
+function sendMessages(e) {
+    e.preventDefault();
+
+    recalName = sendForm.uname.value;
+    recalPhone = sendForm.phone.value;
+    recalEmail = sendForm.email.value;
+
+
+    sendForm.uname.value = '';
+    sendForm.phone.value = '';
+    sendForm.email.value = '';
+    recallBlock.classList.remove('recall_open');
+
+    recallBlock.classList.remove('recall_open');
+    openQuestioner();
+}
+
+
+//Опросник 1
+function openQuestioner() {
+      let further = question1.querySelector('.questionare__further'),//Кнопка далее
+          modelClose = question1.querySelector('.questionnaire__close');//Кнопка закрыть
+
+    overlayBlock.removeEventListener('click', clickOverlay);//Удаляем клик с подложки
+    question1.classList.add('recall_open');//Открытие первого опросника
+
+
+        modelClose.onclick = function() {
+            sendQuestions(question1);
+        };
+
+    //Отправка результатов опроса в переменную и вызов второго опросника
+    further.onclick = function(e) {
+        e.preventDefault();
+        recalIncome = question1.querySelector('.questionare__income_active').innerHTML;
+        recalInvestment = question1.querySelector('.questionare__investment_active').innerHTML;
+        question1.classList.remove('recall_open');
+        openQuestioner2();
+    };
+
+};
+
+//Опросник 2
+function openQuestioner2() {
+    question2.classList.add('recall_open');
+
+    let modelClose = question2.querySelector('.questionnaire__close');
+        further = question2.querySelector('.questionare__further');
+
+
+    modelClose.onclick = function() {
+        sendQuestions(question2);
+    };
+
+    further.onclick = function(e) {
+        e.preventDefault();
+        recalWhen = question2.querySelector('.questionare__buy1_active').innerHTML;
+        question2.classList.remove('recall_open');
+        openQuestioner3();
+    };
+
+}
+
+//Опросник 3
+function openQuestioner3() {
+    question3.classList.add('recall_open');
+
+    let modelClose = question3.querySelector('.questionnaire__close'),
+        further = question3.querySelector('.questionare__further');
+
+    modelClose.onclick = function() {
+        sendQuestions(question3);
+    };
+
+
+    further.onclick = function(e) {
+        e.preventDefault();
+
+        recalWhen2 = question3.querySelector('.questionare__buy2_active').innerHTML;
+        question3.classList.remove('recall_open');
+        overlayBlock.style.display = 'none';
+        preparingMessage();
+
+        //Окно спасибо
+        openThanksModel();
+    };
+
+}
+
+//Сбор информации
+function preparingMessage() {
+
+    if((recalName && recalPhone && recalEmail && recalIncome && recalInvestment && recalWhen && recalWhen2) != undefined){
+        let messageInfo = `?name=${recalName}&phone=${recalPhone}&email=${recalEmail}&income=${recalIncome}&investment=${recalInvestment}&when=${recalWhen}&when2=${recalWhen2}`;
+        console.log(messageInfo);
+        return;
+    }else if ((recalName && recalPhone && recalEmail) != undefined) {
+        let messageInfo = `?name=${recalName}&phone=${recalPhone}&email=${recalEmail}`;
+        console.log(messageInfo);
+        return;
+    }
+
+}
+
+
+//Отправка сообщения на почту
+function sendMessage(info) {
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.open('POST', 'message.php', false);
+
+    xhr.send(info);
+
+    if (xhr.status != 200) {
+      console.log( xhr.status + ': ' + xhr.statusText ); // пример вывода: 404: Not Found
+    } else {
+        alert('Сообщение отправлено');
+    }
+
+console.log('Отправлено');
+}
+
+
+//Закрытие Опросника
+function sendQuestions(questionNum) {
+
+    preparingMessage();
+    questionNum.classList.remove('recall_open');
+    document.querySelector('.overlay2').style.display='none';
+
+    //Окно спасибо
+    openThanksModel();
+}
+
+//Окно спасибо
+function openThanksModel() {
+    document.querySelector('body').style.overflowY = 'scroll';
+    document.querySelector('.overlay').style.display='block';
+    document.querySelector('.thanks-modal').classList.add('is-active');
+}
+
+//Закрытие подложки
+function clickOverlay() {
+
+    document.querySelector('.overlay2').style.display='none';
+    document.querySelector('body').style.overflowY = 'scroll';
+    document.querySelector('#recall-form').uname.value = '';
+    document.querySelector('#recall-form').phone.value = '';
+    document.querySelector('#recall-form').email.value = '';
+    document.querySelector('.js-recall').classList.remove('recall_open');
+
+}
+
+//Кнопки опросника 1 - Планируемая сумма
+let btnsQuestion1 = question1.querySelectorAll('.questionare__income button');
+
+btnsQuestion1.forEach((item) => {
+    item.addEventListener('click', function() {
+        btnsQuestion1.forEach((item) => {
+            item.classList.remove('questionare__income_active');
+        });
+
+        item.classList.add('questionare__income_active');
+    });
+});
+
+//Кнопки опросника 1 - Сумма инвестиций
+let btnsQuestion12 = question1.querySelectorAll('.questionare__investment button');
+
+btnsQuestion12.forEach((item) => {
+    item.addEventListener('click', function() {
+        btnsQuestion12.forEach((item) => {
+            item.classList.remove('questionare__investment_active');
+        });
+
+        item.classList.add('questionare__investment_active');
+    });
+});
+
+//Кнопки опросника 2
+let btnsQuestion2 = question2.querySelectorAll('.questionare__buy button');
+
+btnsQuestion2.forEach((item) => {
+    item.addEventListener('click', function() {
+        btnsQuestion2.forEach((item) => {
+            item.classList.remove('questionare__buy1_active');
+        });
+
+        item.classList.add('questionare__buy1_active');
+    });
+});
+
+//Кнопки опросника 3
+let btnsQuestion3 = question3.querySelectorAll('.questionare__buy2 button');
+
+btnsQuestion3.forEach((item) => {
+    item.addEventListener('click', function() {
+        btnsQuestion3.forEach((item) => {
+            item.classList.remove('questionare__buy2_active');
+        });
+
+        item.classList.add('questionare__buy2_active');
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

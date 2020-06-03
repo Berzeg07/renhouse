@@ -17,7 +17,7 @@
 
      div.recall
       a.footer__call(href="tel:+78007074553") +7 800 707-45-53
-      button.btn.call-order(type="button") Заказать звонок
+      button.btn.call-order.js-call(type="button") Заказать звонок
 
 
      div.footer__bank
@@ -28,118 +28,152 @@
      p.footer__ip ИП Шабалкин Дмитрий Олегович<br> / ИНН 632410235767
 
 
-.js-recall.modal-look.modal
-  form.form-modal#recall(method="post")
+.js-recall.modal-look.modal.cause-modal
+  form.recall-form-modal#recall-form(method="post")
     button(type="button").close-modal
 
     p.request-modal__title Получить консультацию
     p.request-modal__article Наш менеджер свяжется с вами в течение 15 минут и ответит на все вопросы
 
-    input.inp(type="text" placeholder="Имя" name="uname")
-    input.inp(type="text" placeholder="+7(999)999-99-99" name="phone")
-    input.inp(type="text" placeholder="E-mail" name="email")
+    input.inp(type="text" placeholder="Имя" name="uname" required)
+    input.inp(type="text" placeholder="+7(999)999-99-99" name="phone" required)
+    input.inp(type="text" placeholder="E-mail" name="email" required)
 
-    .request-modal__button-wrap
-        button(type="submit" name="submit").btn.btn-orange.btn_form Отправить
+    .recall-modal-btn-block
+        button(name="submit").btn.btn-orange.btn_recall-submit Отправить
 
     p.privacy Нажимая кнопку, принимаю условия политики и
         a(href="#") пользовательского соглашения
 
 
-<div class="questionnaire modal-look js-question1">
-  <ul class="questionnaire__steps">
-    <li class="questionnaire__steps_active"><span>1</span></li>
-    <li><span>2</span></li>
-    <li><span>3</span></li>
-  </ul>
+<div class="modal-look2 js-question1">
+  <div class="questionnaire">
+    <ul class="questionnaire__steps">
+      <li class="questionnaire__steps_active"><span>1</span></li>
+      <li><span>2</span></li>
+      <li><span>3</span></li>
+    </ul>
 
-  <div class="questionare__questions">
-    <h1>Шаг 1 из 3</h1>
+    <div class="questionare__questions">
+      <h1>Шаг 1 из 3</h1>
 
-    <p>Ответьте на несколько вопросов, чтобы мы смогли подобрать для Вас оптимальные условия</p>
+      <p>Ответьте на несколько вопросов, чтобы мы смогли подобрать для Вас оптимальные условия</p>
 
-    <fieldset class="questionare__income">
-      <legend>Планируемая сумма дохода с RentHouse в месяц</legend>
+      <fieldset class="questionare__income">
+        <legend>Планируемая сумма дохода с RentHouse в месяц</legend>
 
-      <ul>
-        <li><button class="btn btn-white" type="button" form="recall">100 000 - 150 000 рублей</button></li>
-        <li><button class="btn btn-white" type="button" form="recall">500 000 - 900 000 рублей</button></li>
-        <li><button class="btn btn-white" type="button" form="recall">от 1 000 000 рублей</button></li>
-      </ul>
-    </fieldset>
+        <ul>
+          <li><button class="btn btn-white questionare__income_active" type="button">100 000 - 150 000 рублей</button></li>
+          <li><button class="btn btn-white" type="button">500 000 - 900 000 рублей</button></li>
+          <li><button class="btn btn-white" type="button">от 1 000 000 рублей</button></li>
+        </ul>
+      </fieldset>
 
-    <fieldset class="questionare__investment">
-      <legend>Планируемая сумма дохода с RentHouse в месяц</legend>
+      <fieldset class="questionare__investment">
+        <legend>Планируемая сумма ваших инвестиций</legend>
 
-      <ul>
-        <li><button class="btn btn-white" type="button" form="recall">до 100 000 рублей</button></li>
-        <li><button class="btn btn-white" type="button" form="recall">500 000 - 900 000 рублей</button></li>
-        <li><button class="btn btn-white" type="button" form="recall">1 500 000 - 3 000 000 рублей</button></li>
-      </ul>
-    </fieldset>
+        <ul>
+          <li><button class="btn btn-white questionare__investment_active" type="button">до 100 000 рублей</button></li>
+          <li><button class="btn btn-white" type="button">500 000 - 900 000 рублей</button></li>
+          <li><button class="btn btn-white" type="button">1 500 000 - 3 000 000 рублей</button></li>
+        </ul>
+      </fieldset>
 
-    <a class="btn btn-orange questionare__further" href="#">Далее</a>
-    <span class="questionnaire__close"></span>
+      <a class="btn btn-orange questionare__further" href="#">Далее</a>
+      <span class="questionnaire__close"></span>
+    </div>
   </div>
 </div>
 
-<div class="questionnaire modal-look js-question2">
-  <ul class="questionnaire__steps">
-    <li><span>1</span></li>
-    <li class="questionnaire__steps_active"><span>2</span></li>
-    <li><span>3</span></li>
-  </ul>
+<div class="modal-look2 js-question2">
+  <div class="questionnaire">
+    <ul class="questionnaire__steps">
+      <li><span>1</span></li>
+      <li class="questionnaire__steps_active"><span>2</span></li>
+      <li><span>3</span></li>
+    </ul>
 
-  <div class="questionare__questions">
-    <h1>Шаг 2 из 3</h1>
+    <div class="questionare__questions">
+      <h1>Шаг 2 из 3</h1>
 
-    <p class="questionare__questions_two">Ответьте на несколько вопросов, чтобы мы смогли подобрать для Вас оптимальные условия</p>
+      <p class="questionare__questions_two">Ответьте на несколько вопросов, чтобы мы смогли подобрать для Вас оптимальные условия</p>
 
-    <fieldset class="questionare__buy">
-      <legend>Когда Вы планируете приобрести франшизу и запустить новый бизнес?</legend>
+      <fieldset class="questionare__buy questionare__buy1">
+        <legend>Когда Вы планируете приобрести франшизу и запустить новый бизнес?</legend>
 
-      <ul>
-        <li><button class="btn btn-white" type="button" form="recall">В течении месяца</button></li>
-        <li><button class="btn btn-white" type="button" form="recall">В течение 3-х месяцев</button></li>
-        <li><button class="btn btn-white" type="button" form="recall">Через полгода</button></li>
-        <li><button class="btn btn-white" type="button" form="recall">Пока не знаю</button></li>
-        <li><button class="btn btn-white" type="button" form="recall">Как только продам свое имущество</button></li>
-        <li><button class="btn btn-white" type="button" form="recall">Как только найду стороннее финансирование</button></li>
-      </ul>
-    </fieldset>
+        <ul>
+          <li><button class="btn btn-white questionare__buy1_active" type="button">В течении месяца</button></li>
+          <li><button class="btn btn-white" type="button">В течение 3-х месяцев</button></li>
+          <li><button class="btn btn-white" type="button">Через полгода</button></li>
+          <li><button class="btn btn-white" type="button">Пока не знаю</button></li>
+          <li><button class="btn btn-white" type="button">Как только продам свое имущество</button></li>
+          <li><button class="btn btn-white" type="button">Как только найду стороннее финансирование</button></li>
+        </ul>
+      </fieldset>
 
-    <a class="btn btn-orange questionare__further" href="#">Далее</a>
-    <span class="questionnaire__close"></span>
+      <a class="btn btn-orange questionare__further" href="#">Далее</a>
+      <span class="questionnaire__close"></span>
+    </div>
   </div>
 </div>
 
-<div class="questionnaire modal-look js-question3">
-  <ul class="questionnaire__steps">
-    <li><span>1</span></li>
-    <li><span>2</span></li>
-    <li class="questionnaire__steps_active"><span>3</span></li>
-  </ul>
+<div class="overlay2"></div>
 
-  <div class="questionare__questions">
-    <h1>Шаг 3 из 3</h1>
+<div class="modal-look2 js-question3">
+  <div class="questionnaire">
+    <ul class="questionnaire__steps">
+      <li><span>1</span></li>
+      <li><span>2</span></li>
+      <li class="questionnaire__steps_active"><span>3</span></li>
+    </ul>
 
-    <p class="questionare__questions_two">Ответьте на несколько вопросов, чтобы мы смогли подобрать для Вас оптимальные условия</p>
+    <div class="questionare__questions">
+      <h1>Шаг 3 из 3</h1>
 
-    <fieldset class="questionare__buy">
-      <legend>Когда Вы планируете приобрести франшизу и запустить новый бизнес?</legend>
+      <p class="questionare__questions_two">Ответьте на несколько вопросов, чтобы мы смогли подобрать для Вас оптимальные условия</p>
 
-      <ul>
-        <li><button class="btn btn-white" type="button" form="recall">В течении месяца</button></li>
-        <li><button class="btn btn-white" type="button" form="recall">В течение 3-х месяцев</button></li>
-        <li><button class="btn btn-white" type="button" form="recall">Через полгода</button></li>
-        <li><button class="btn btn-white" type="button" form="recall">Пока не знаю</button></li>
-        <li><button class="btn btn-white" type="button" form="recall">Как только продам свое имущество</button></li>
-      </ul>
-    </fieldset>
+      <fieldset class="questionare__buy questionare__buy2">
+        <legend>Когда Вы планируете приобрести франшизу и запустить новый бизнес?</legend>
 
-    <a class="btn btn-orange questionare__further" href="#">Далее</a>
-    <span class="questionnaire__close"></span>
+        <ul>
+          <li><button class="btn btn-white questionare__buy2_active" type="button">В течении месяца</button></li>
+          <li><button class="btn btn-white" type="button">В течение 3-х месяцев</button></li>
+          <li><button class="btn btn-white" type="button">Через полгода</button></li>
+          <li><button class="btn btn-white" type="button">Пока не знаю</button></li>
+          <li><button class="btn btn-white" type="button">Как только продам свое имущество</button></li>
+        </ul>
+      </fieldset>
+
+      <a class="btn btn-orange questionare__further" href="#">Далее</a>
+      <span class="questionnaire__close"></span>
+    </div>
   </div>
+</div>
+
+<div class="modal-close_window modal-look modal-close_window_width">
+
+  <h1>Получите презентацию <span>прямо сейчас!</span></h1>
+
+  <div class="modal-close_window-block">
+    <form id="modal-close_window" class="modal-close_window__form">
+      <div class="modal-close_window__inputs">
+        <input type="text" name="name" required placeholder="Имя">
+        <input type="phone" name="phone" required placeholder="+7 (999) 999-99-99">
+        <input type="email" name="email" required placeholder="E-mail">
+      </div>
+
+      <button class="btn btn-orange modal-close_window__send" type="submit" name="submit">Получить презентацию</button>
+
+      <p>Нажимая кнопку, принимаю условия политики и <a href="#">пользовательского соглашения</a></p>
+    </form>
+
+    <div class="modal-close_window__info">
+      <p><img src="img/ps-3.png" alt="Презентация"></p>
+      <p>Сколько я смогу зарабатывать с RentHouse?</p>
+    </div>
+
+  </div>
+  <span class="modal-close_window__btn"></span>
 </div>
 
 include ./footer-modals.pug
