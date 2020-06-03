@@ -280,13 +280,14 @@ function openCallModal() {
 
     overlayBlock.addEventListener('click', clickOverlay);//Клик на подложку
 
-    sendForm.addEventListener('submit', sendMessages, false);
+    sendForm.onsubmit = function (e) {
+        e.preventDefault();
+        sendMessages();
+    }
 }
 
 //Обработка формы
-function sendMessages(e) {
-    e.preventDefault();
-
+function sendMessages() {
     recalName = sendForm.uname.value;
     recalPhone = sendForm.phone.value;
     recalEmail = sendForm.email.value;
