@@ -379,11 +379,11 @@ function preparingMessage() {
 
     if((recalName && recalPhone && recalEmail && recalIncome && recalInvestment && recalWhen && recalWhen2) != undefined){
         let messageInfo = `?name=${recalName}&phone=${recalPhone}&email=${recalEmail}&income=${recalIncome}&investment=${recalInvestment}&when=${recalWhen}&when2=${recalWhen2}`;
-        console.log(messageInfo);
+        sendMessage(messageInfo);
         return;
     }else if ((recalName && recalPhone && recalEmail) != undefined) {
         let messageInfo = `?name=${recalName}&phone=${recalPhone}&email=${recalEmail}`;
-        console.log(messageInfo);
+        sendMessage(messageInfo);
         return;
     }
 
@@ -402,10 +402,8 @@ function sendMessage(info) {
     if (xhr.status != 200) {
       console.log( xhr.status + ': ' + xhr.statusText ); // пример вывода: 404: Not Found
     } else {
-        alert('Сообщение отправлено');
+        concole.log('Сообщение отправлено');
     }
-
-console.log('Отправлено');
 }
 
 
