@@ -269,7 +269,6 @@ function openCallModal() {
     document.querySelector('body').style.overflow = 'hidden';//Без скрола боди
 
     closeModel.addEventListener('click', () => {
-        console.log('closeModel');
         recallBlock.classList.remove('recall_open');
         overlayBlock.style.display='none';
         document.querySelector('body').style.overflowY = 'scroll';
@@ -378,12 +377,23 @@ function openQuestioner3() {
 function preparingMessage() {
 
     if((recalName && recalPhone && recalEmail && recalIncome && recalInvestment && recalWhen && recalWhen2) != undefined){
-        let messageInfo = `?name=${recalName}&phone=${recalPhone}&email=${recalEmail}&income=${recalIncome}&investment=${recalInvestment}&when=${recalWhen}&when2=${recalWhen2}`;
-        sendMessage(messageInfo);
+        let formData = new FormData();
+        formData.append("name", recalName);
+        formData.append("phone", recalPhone);
+        formData.append("email", recalName);
+        formData.append("income", recalIncome);
+        formData.append("investment", recalInvestment);
+        formData.append("when", recalWhen);
+        formData.append("when2", recalWhen2);
+        sendMessages(formData);
+        console.log(formData);
         return;
     }else if ((recalName && recalPhone && recalEmail) != undefined) {
-        let messageInfo = `?name=${recalName}&phone=${recalPhone}&email=${recalEmail}`;
-        sendMessage(messageInfo);
+        let formData = new FormData();
+        formData.append("name", recalName);
+        formData.append("phone", recalPhone);
+        formData.append("email", recalName);
+        sendMessage(formData);
         return;
     }
 
@@ -391,19 +401,19 @@ function preparingMessage() {
 
 
 //Отправка сообщения на почту
-function sendMessage(info) {
+function sendMessage(formData) {
 
     let xhr = new XMLHttpRequest();
 
-    xhr.open('POST', 'message.php', false);
+    xhr.open('POST', 'message.php');
 
-    xhr.send(info);
+    xhr.send(formData);
 
-    if (xhr.status != 200) {
-      console.log( xhr.status + ': ' + xhr.statusText ); // пример вывода: 404: Not Found
-    } else {
-        concole.log('Сообщение отправлено');
-    }
+    // if (xhr.status != 200) {
+    //   console.log( xhr.status + ': ' + xhr.statusText ); // пример вывода: 404: Not Found
+    // } else {
+    //     concole.log('Сообщение отправлено');
+    // }
 }
 
 
