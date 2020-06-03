@@ -280,12 +280,14 @@ function openCallModal() {
 
     overlayBlock.addEventListener('click', clickOverlay);//Клик на подложку
 
-    sendForm.addEventListener('submit', sendMessages, false);
+    sendForm.onsubmit = function(e) {
+        e.preventDefault();
+        sendMessages();
+    }
 }
 
 //Обработка формы
-function sendMessages(e) {
-    e.preventDefault();
+function sendMessages() {
 
     recalName = sendForm.uname.value;
     recalPhone = sendForm.phone.value;
@@ -297,7 +299,6 @@ function sendMessages(e) {
     sendForm.email.value = '';
     recallBlock.classList.remove('recall_open');
 
-    recallBlock.classList.remove('recall_open');
     openQuestioner();
 }
 
@@ -385,7 +386,7 @@ function preparingMessage() {
         formData.append("investment", recalInvestment);
         formData.append("when", recalWhen);
         formData.append("when2", recalWhen2);
-        sendMessages(formData);
+        sendMessage(formData);
         console.log(formData);
         return;
     }else if ((recalName && recalPhone && recalEmail) != undefined) {
