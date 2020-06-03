@@ -280,11 +280,7 @@ function openCallModal() {
 
     overlayBlock.addEventListener('click', clickOverlay);//Клик на подложку
 
-<<<<<<< HEAD
     sendForm.onsubmit = function(e) {
-=======
-    sendForm.onsubmit = function (e) {
->>>>>>> d05efd8a5c5c15ad2bdc7bb9ee0cd9e51a767f62
         e.preventDefault();
         sendMessages();
     }
@@ -390,7 +386,6 @@ function preparingMessage() {
         formData.append("when", recalWhen);
         formData.append("when2", recalWhen2);
         sendMessage(formData);
-        console.log(formData);
         return;
     }else if ((recalName && recalPhone && recalEmail) != undefined) {
         let formData = new FormData();
