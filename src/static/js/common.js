@@ -249,7 +249,10 @@ let btnCall = document.querySelectorAll('.js-call'),//Кнопки для отк
 
 //Открытие модального окна для обратной связи
 btnCall.forEach((item) => {
-    item.addEventListener('click', openCallModal);
+    item.addEventListener('click', function(e) {
+        e.preventDefault();
+        openCallModal();
+    });
 });
 
 
