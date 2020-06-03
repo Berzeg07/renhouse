@@ -280,7 +280,11 @@ function openCallModal() {
 
     overlayBlock.addEventListener('click', clickOverlay);//Клик на подложку
 
+<<<<<<< HEAD
     sendForm.onsubmit = function(e) {
+=======
+    sendForm.onsubmit = function (e) {
+>>>>>>> d05efd8a5c5c15ad2bdc7bb9ee0cd9e51a767f62
         e.preventDefault();
         sendMessages();
     }
@@ -288,7 +292,10 @@ function openCallModal() {
 
 //Обработка формы
 function sendMessages() {
+<<<<<<< HEAD
 
+=======
+>>>>>>> d05efd8a5c5c15ad2bdc7bb9ee0cd9e51a767f62
     recalName = sendForm.uname.value;
     recalPhone = sendForm.phone.value;
     recalEmail = sendForm.email.value;
