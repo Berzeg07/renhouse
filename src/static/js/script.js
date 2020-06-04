@@ -18,18 +18,13 @@ $(document).ready(function() {
     // console.log('test ', test);
     // $('.voice-btn').removeClass('on');
     // <div class="voice-btn"><audio src="audio/audio.mp3"></audio></div>
-    var swiperPost = new Swiper('.post-slider', {
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-      },
-    });
+
 
     $('.voice').click(function() {
-        $('.voice-btn').each(function() {
+        // $('.voice-btn').each(function() {
+        //     $(this).find('.voice-btn__audio').get(0).pause();
+        // });
+        $('.voice').each(function() {
             $(this).find('.voice-btn__audio').get(0).pause();
         });
         if ($(this).hasClass('on')) {
@@ -92,10 +87,10 @@ $(document).ready(function() {
     });
 
     var swiper = new Swiper('.filial-slider', {
-        slidesPerView: 6,
-        spaceBetween: 21,
+        slidesPerView: 7,
+        spaceBetween: 15,
         // centeredSlides: true,
-        slidesPerView: 'auto',
+        // slidesPerView: 'auto',
         loop: true,
         pagination: {
             el: '.swiper-pagination',
@@ -106,14 +101,19 @@ $(document).ready(function() {
             prevEl: '.swiper-button-prev',
         },
         breakpoints: {
+            499: {
+                slidesPerView: 1,
+                spaceBetween: 15,
+                loop: false,
+            },
             767: {
                 slidesPerView: 2,
                 spaceBetween: 15,
                 loop: false,
             },
             1169: {
-                slidesPerView: 4,
-                spaceBetween: 40,
+                slidesPerView: 3,
+                spaceBetween: 21,
                 loop: false,
             },
             1899: {
@@ -124,11 +124,73 @@ $(document).ready(function() {
         }
     });
 
+    var swiperPost = new Swiper('.post-slider', {
+        navigation: {
+            nextEl: '.post-block__next',
+            prevEl: '.post-block__prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+
+
+
+    // function toggleClassZoom() {
+    //
+    //     if ($(window).width() >= 768) {
+    //         $('.certificates__img').addClass('zoom-img');
+    //         swiperSert.destroy();
+    //         // $('.certificat-slider .swiper-wrapper').removeAttr('style');
+    //         // $('.certificat-slider .swiper-slide').removeAttr('style');
+    //     } else {
+    //         $('.certificates__img').removeClass('zoom-img');
+    //     }
+    // }
+
+    var swiperSert = undefined;
+
+    function initSwiper() {
+        var screenWidth = $(window).width();
+        if (screenWidth < 768 && swiperSert == undefined) {
+            var swiperSert = new Swiper('.certificat-slider', {
+                slidesPerView: 2,
+                spaceBetween: 15,
+                simulateTouch: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 1
+                    }
+                }
+            });
+        } else if (screenWidth >= 768 && swiperSert != undefined) {
+            alert(111);
+            swiperSert.destroy();
+            swiperSert = undefined;
+            // jQuery('.swiper-wrapper').removeAttr('style');
+            // jQuery('.swiper-slide').removeAttr('style');
+        }
+    }
+
+    //Swiper plugin initialization
+    initSwiper();
+
+    //Swiper plugin initialization on window resize
+    $(window).resize(function()  {
+        initSwiper();
+    });
+
+
     var swiperTeam = new Swiper('.about-slider', {
         slidesPerView: 4,
         spaceBetween: 21,
-        centeredSlides: false,
-        slidesPerView: 'auto',
+        // centeredSlides: true,
+        // slidesPerView: 'auto',
         loop: true,
         pagination: {
             el: '.swiper-pagination',
@@ -136,10 +198,15 @@ $(document).ready(function() {
         },
 
         breakpoints: {
-            767: {
+            599: {
                 slidesPerView: 1,
                 spaceBetween: 15,
-                loop: false,
+                // loop: false,
+            },
+            767: {
+                slidesPerView: 2,
+                spaceBetween: 15,
+                // loop: false,
             },
             991: {
                 slidesPerView: 3,
@@ -169,8 +236,8 @@ $(document).ready(function() {
     var swiper2 = new Swiper('.network-slider', {
         slidesPerView: 4,
         spaceBetween: 20,
-        centeredSlides: false,
         // slidesPerView: 'auto',
+        // centeredSlides: true,
         loop: true,
         pagination: {
             el: '.swiper-pagination',
@@ -181,13 +248,14 @@ $(document).ready(function() {
             prevEl: '.swiper-button-prev',
         },
         breakpoints: {
-            767: {
+            599: {
                 slidesPerView: 1,
                 spaceBetween: 15,
                 loop: false,
             },
+
             1169: {
-                slidesPerView: 3,
+                slidesPerView: 2,
                 spaceBetween: 40,
                 loop: false,
             },
@@ -197,7 +265,7 @@ $(document).ready(function() {
     var swiper3 = new Swiper('.presentation-slider', {
         slidesPerView: 5,
         spaceBetween: 34,
-        centeredSlides: false,
+        // centeredSlides: true,
         // slidesPerView: 'auto',
         loop: true,
         pagination: {
@@ -209,6 +277,11 @@ $(document).ready(function() {
             prevEl: '.swiper-button-prev',
         },
         breakpoints: {
+            599: {
+                slidesPerView: 1,
+                spaceBetween: 15,
+                loop: false,
+            },
             767: {
                 slidesPerView: 2,
                 spaceBetween: 15,
@@ -294,7 +367,7 @@ $(document).ready(function() {
         var form_data = $(this).serialize();
         $.ajax({
             type: "POST",
-            url: "http://test.webdevfactory.ru/sendmessage.php",
+            url: "/sendmessage.php",
             data: form_data,
             success: function() {
                 cleanTnanks(this);
@@ -304,7 +377,9 @@ $(document).ready(function() {
     });
 
     function cleanTnanks(form) {
-        $('.request-modal, .overlay').fadeOut();
+        $('.request-modal').fadeOut();
+        $('.overlay').fadeIn();
+
         $('.thanks-modal').addClass('is-active');
         // location = "spasibo.php";
     };

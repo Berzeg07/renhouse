@@ -12,7 +12,7 @@
 
             ul.top-main__list
                 li
-                    button(type="button").btn.btn-orange.btn-plan Получить бизнес план
+                    button(type="button").btn.btn-orange.btn-plan.js-call Получить бизнес план
                 li
                     a(data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/Zg95ZA00Ang?v=_sI_Ps7JSEk&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0" href="javascript:;").btn-watch Смотреть видео о нас
 
@@ -144,7 +144,7 @@
                         li
                             span.network-slider__article 99 036 087 рублей - потенциальная ежемесячная выручка
                         li
-                            button(type="button").btn.btn-black.network-slider__btn Получить бизнес план
+                            button(type="button").btn.btn-black.network-slider__btn.js-call Получить бизнес план
 
             .swiper-slide
                 .network-slider__item
@@ -155,7 +155,7 @@
                         li
                             span.network-slider__article 99 036 087 рублей - потенциальная ежемесячная выручка
                         li
-                            button(type="button").btn.btn-black.network-slider__btn Получить бизнес план
+                            button(type="button").btn.btn-black.network-slider__btn.js-call Получить бизнес план
 
             .swiper-slide
                 .network-slider__item
@@ -166,7 +166,7 @@
                         li
                             span.network-slider__article 99 036 087 рублей - потенциальная ежемесячная выручка
                         li
-                            button(type="button").btn.btn-black.network-slider__btn Получить бизнес план
+                            button(type="button").btn.btn-black.network-slider__btn.js-call Получить бизнес план
 
             .swiper-slide
                 .network-slider__item
@@ -177,7 +177,7 @@
                         li
                             span.network-slider__article 99 036 087 рублей - потенциальная ежемесячная выручка
                         li
-                            button(type="button").btn.btn-black.network-slider__btn Получить бизнес план
+                            button(type="button").btn.btn-black.network-slider__btn.js-call Получить бизнес план
 
 
         .swiper-pagination
@@ -320,16 +320,32 @@
                     p 2760 руб/сутки - средний чек стоимости квартиры в сети за 2019 год
                     p 23% - средний процент рентабельности бизнеса в сети
         li
-            .certificates
-                .certificates__item    
-                    a(href="img/cert.jpg").certificates__img.zoom-img
-                        img(src="img/cert.jpg")
-                    .certificates__article №018-006994
-
-                .certificates__item
-                    a(href="img/cert.jpg").certificates__img.zoom-img
-                        img(src="img/cert.jpg")
-                    .certificates__article №018-006994
+            //- .certificates
+            //-     .certificates__item    
+            //-         a(href="img/cert.jpg").certificates__img.zoom-img
+            //-             img(src="img/cert.jpg")
+            //-         .certificates__article №018-006994
+            //- 
+            //-     .certificates__item
+            //-         a(href="img/cert.jpg").certificates__img.zoom-img
+            //-             img(src="img/cert.jpg")
+            //-         .certificates__article №018-006994
+            
+            .certificat-slider.swiper-container
+                .swiper-wrapper
+                    .swiper-slide
+                        a(href="img/cert.jpg" data-fancybox="sert").certificates__img.zoom-img
+                            img(src="img/cert.jpg")
+                        .certificates__article №018-006994
+                    .swiper-slide
+                        a(href="img/cert.jpg" data-fancybox="sert").certificates__img.zoom-img
+                            img(src="img/cert.jpg")
+                        .certificates__article №018-006994
+                
+                .swiper-button-next
+                    span
+                .swiper-button-prev
+                    span
 
 .container.advantage-block
     ul.advantage-block__top
@@ -479,8 +495,8 @@
                     .post-slider__column
                         p.post-slider__date 24 октября 2018
                         p.post-slider__title Франчайзинг посуточной аренды квартир
-                        p.article Опыт, инструменты и результат – основные составляющие успешной посуточной аренды квартир в рамках приобретаемой франшизы. Всего существует несколько форматов ведения подобного бизнеса, но, сначала о 8-ми причинах, аргументирующих его начало.
-                        a(href="#") Читать статью
+                        p.article.post-slider__article Опыт, инструменты и результат – основные составляющие успешной посуточной аренды квартир в рамках приобретаемой франшизы. Всего существует несколько форматов ведения подобного бизнеса, но, сначала о 8-ми причинах, аргументирующих его начало.
+                        a(href="#").post-slider__link Читать статью
                         
             .swiper-slide
                 .post-slider__item
@@ -489,9 +505,9 @@
                     .post-slider__column
                         p.post-slider__date 24 октября 2018
                         p.post-slider__title Франчайзинг посуточной аренды квартир
-                        p.article Опыт, инструменты и результат – основные составляющие успешной посуточной аренды квартир в рамках приобретаемой франшизы. Всего существует несколько форматов ведения подобного бизнеса, но, сначала о 8-ми причинах, аргументирующих его начало.
-                        a(href="#") Читать статью
-            
+                        p.article.post-slider__article Опыт, инструменты и результат – основные составляющие успешной посуточной аренды квартир в рамках приобретаемой франшизы. Всего существует несколько форматов ведения подобного бизнеса, но, сначала о 8-ми причинах, аргументирующих его начало.
+                        a(href="#").post-slider__link Читать статью
+
             .swiper-slide
                 .post-slider__item
                     .post-slider__column
@@ -499,12 +515,14 @@
                     .post-slider__column
                         p.post-slider__date 24 октября 2018
                         p.post-slider__title Франчайзинг посуточной аренды квартир
-                        p.article Опыт, инструменты и результат – основные составляющие успешной посуточной аренды квартир в рамках приобретаемой франшизы. Всего существует несколько форматов ведения подобного бизнеса, но, сначала о 8-ми причинах, аргументирующих его начало.
-                        a(href="#") Читать статью
+                        p.article.post-slider__article Опыт, инструменты и результат – основные составляющие успешной посуточной аренды квартир в рамках приобретаемой франшизы. Всего существует несколько форматов ведения подобного бизнеса, но, сначала о 8-ми причинах, аргументирующих его начало.
+                        a(href="#").post-slider__link Читать статью
 
         .swiper-pagination
-        .swiper-button-next
-        .swiper-button-prev
+    .swiper-button-next.post-block__next
+        span
+    .swiper-button-prev.post-block__prev
+        span
 
 
 .founder-block
@@ -581,23 +599,23 @@
             //-         <param name="movie" value="video/nature.swf">
             //-     </object>
             //- </video>    
+.shedule-block-wrap
+    .shedule-block.container
+        .shedule-block__item
+            p.main-title.shedule-block__title Фактический график 
+                span повышения цены на франшизу RentHouse
 
-.shedule-block.container
-    .shedule-block__item
-        p.main-title.shedule-block__title Фактический график 
-            span повышения цены на франшизу RentHouse
-
-        p.article.shedule-block__article Франшиза постояно совершенствуется. Паушальный взнос регулярно растет в цене. Хотите узнать почему? Спросите у отдела продаж прямо сейчас.
-        .shedule-block__btn-wrap.shedule-block__btn-wrap-desc
-            button(type="button").btn.btn-black.btn-black_shedule Получить консультацию
+            p.article.shedule-block__article Франшиза постояно совершенствуется. Паушальный взнос регулярно растет в цене. Хотите узнать почему? Спросите у отдела продаж прямо сейчас.
+            .shedule-block__btn-wrap.shedule-block__btn-wrap-desc
+                button(type="button").btn.btn-black.btn-black_shedule.js-call Получить консультацию
 
 
-    .shedule-block__item
-        .shedule-block__img
-            img(src="img/_schedule.png")
+        .shedule-block__item
+            .shedule-block__img
+                img(src="img/_schedule.png")
 
-        .shedule-block__btn-wrap.shedule-block__btn-wrap-mob  
-            button(type="button").btn.btn-black.btn-black_shedule Получить консультацию
+            .shedule-block__btn-wrap.shedule-block__btn-wrap-mob  
+                button(type="button").btn.btn-black.btn-black_shedule.js-call Получить консультацию
 
 .about-team.container
     .about-team__item
