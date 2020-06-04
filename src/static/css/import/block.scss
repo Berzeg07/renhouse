@@ -1,22 +1,4 @@
-// Технические стили для страницы block *
 
-.list-block {
-    margin-bottom: 40px;
-
-    li {
-        margin-bottom: 15px;
-    }
-}
-
-.block-title {
-    padding-top: 50px;
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: brown;
-}
-// БЭМ блоки ==================================================================*
-// Контейнер *
 .container {
     max-width: 1210px;
     width: 100%;
@@ -31,7 +13,7 @@
         padding: 0 44px;
     }
 }
-// Кнопки *
+
 .btn {
     display: inline-block;
     font-size: 18px;
@@ -71,7 +53,7 @@
         box-shadow: 0 13px 70px rgba(246, 174, 45, 0.33);
     }
 }
-// Заголовки *
+
 .main-title {
     font-size: 36px;
     font-weight: 700;
@@ -97,7 +79,6 @@
         font-size: 24px;
     }
 }
-// Основной текст *
 
 .article {
     line-height: 26px;
@@ -111,7 +92,6 @@
         font-size: 18px;
     }
 }
-// Затемняющий слой *
 
 .overlay {
     width: 100%;

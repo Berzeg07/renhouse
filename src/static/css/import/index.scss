@@ -505,8 +505,6 @@
         justify-content: center;
         align-items: center;
         width: auto;
-
-
     }
 }
 
@@ -549,8 +547,8 @@
     }
 }
 
-.network-slider{
-    .swiper-slide{
+.network-slider {
+    .swiper-slide {
         text-align: center;
     }
 }
@@ -605,6 +603,7 @@
 
 .network-slider__item {
     display: inline-block;
+
     &:after {
         background: rgba(255, 255, 255, 0.5);
     }
@@ -1650,8 +1649,6 @@
             top: 50%;
         }
     }
-
-
     @media(max-width: 1170px) {
         .swiper-pagination-progressbar {
             display: none;
@@ -2243,7 +2240,9 @@
 }
 
 .overflow-hidden {
-    overflow-y: hidden;
+    @media(max-width: 1169px) {
+        overflow-y: hidden;
+    }
 }
 
 .form-modal {

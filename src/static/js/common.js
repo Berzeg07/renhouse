@@ -269,12 +269,15 @@ function openCallModal() {
     closeModel = recallBlock.querySelector('.js-recall .close-modal'); //Закрытие окна обратной связи
     recallBlock.classList.add('recall_open'); //Открытие модального окна обратной связи
     overlayBlock.style.display = 'block'; //Включение подложки
-    document.querySelector('body').style.overflow = 'hidden';//Без скрола боди
+    // document.querySelector('body').style.overflow = 'hidden';//Без скрола боди
+    $('body').addClass('overflow-hidden');
 
     closeModel.addEventListener('click', () => {
         recallBlock.classList.remove('recall_open');
         overlayBlock.style.display='none';
-        document.querySelector('body').style.overflowY = 'scroll';
+        // document.querySelector('body').style.overflowY = 'scroll';
+        $('body').removeClass('overflow-hidden');
+
         sendForm.uname.value = '';
         sendForm.phone.value = '';
         sendForm.email.value = '';
@@ -432,7 +435,9 @@ function sendQuestions(questionNum) {
 
 //Окно спасибо
 function openThanksModel() {
-    document.querySelector('body').style.overflowY = 'scroll';
+    // document.querySelector('body').style.overflowY = 'scroll';
+    $('body').removeClass('overflow-hidden');
+
     document.querySelector('.overlay').style.display='block';
     document.querySelector('.thanks-modal').classList.add('is-active');
 }
@@ -441,7 +446,9 @@ function openThanksModel() {
 function clickOverlay() {
 
     document.querySelector('.overlay2').style.display='none';
-    document.querySelector('body').style.overflowY = 'scroll';
+    // document.querySelector('body').style.overflowY = 'scroll';
+    $('body').removeClass('overflow-hidden');
+
     document.querySelector('#recall-form').uname.value = '';
     document.querySelector('#recall-form').phone.value = '';
     document.querySelector('#recall-form').email.value = '';
@@ -500,21 +507,3 @@ btnsQuestion3.forEach((item) => {
         item.classList.add('questionare__buy2_active');
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
