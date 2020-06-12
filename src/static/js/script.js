@@ -19,6 +19,8 @@ $(document).ready(function() {
     // $('.voice-btn').removeClass('on');
     // <div class="voice-btn"><audio src="audio/audio.mp3"></audio></div>
 
+    $('.phone-inp').mask('+7 (999) 999-9999');
+
 
     $('.voice').click(function() {
         // $('.voice-btn').each(function() {

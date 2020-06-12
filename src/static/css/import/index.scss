@@ -88,7 +88,7 @@
         position: relative;
 
         &:hover {
-            color: $wheat;
+            color: #f6ae2d;
         }
 
         &:hover:after {
@@ -99,7 +99,7 @@
             bottom: -10px;
             width: 27px;
             height: 2px;
-            background: $wheat;
+            background: #f6ae2d;
         }
     }
 }
@@ -499,6 +499,9 @@
 }
 
 .filial-slider {
+    padding-left: 12px;
+    padding-right: 12px;
+
     .swiper-slide {
         text-align: center;
         display: flex;
@@ -569,10 +572,26 @@
     }
 }
 
+.about-slider .swiper-slide,
+.filial-slider__item,
+.good-comment__video,
+.network-slider__item,
+.team-slider__item {
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.perks__video-block img {
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.franchise-form__label, .voice, .collection__video, .perks__video-block {
+    cursor: pointer;
+}
+
 .filial-slider__item,
 .network-slider__item {
-    border-radius: 25px;
-    overflow: hidden;
     position: relative;
     transition: 0.5s;
 
@@ -691,7 +710,7 @@
     margin-bottom: 28px;
 
     span {
-        color: $wheat;
+        color: $orange;
     }
 }
 
@@ -1072,7 +1091,7 @@
 }
 
 .reasons-block__sub-title {
-    color: $wheat;
+    color: $orange;
     font-size: 36px;
     font-weight: 700;
     padding-left: 50px;
@@ -1549,6 +1568,15 @@
 .certificat-slider,
 .community-slider,
 .team-slider {
+    .swiper-slide {
+        border-radius: 14px;
+        overflow: hidden;
+
+        img {
+            display: block;
+        }
+    }
+
     .swiper-button-next,
     .swiper-button-prev {
         width: 51px;
@@ -1751,7 +1779,7 @@
 }
 
 .founder-block__sub-title {
-    color: $wheat;
+    color: $orange;
     font-size: 30px;
     padding-left: 55px;
     position: relative;
@@ -2751,6 +2779,10 @@
     .fotorama__thumb {
         background-color: transparent;
     }
+}
+
+.fotorama__stage__frame {
+    border-radius: 14px;
 }
 
 .fotorama__img {
