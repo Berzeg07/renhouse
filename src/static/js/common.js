@@ -35,10 +35,16 @@ $(document).ready(function() {
   curLabel.addClass('active selected');
   curLabel.prevAll().addClass('selected');
 
+  let btnActive = document.querySelector('.my-range .active');
+  dinamicApartaments.call(btnActive);
+
+
   // Change background gradient
   for (var i = 0; i < prefs.length; i++) {
     style += '.range {background: linear-gradient(to right, #f6ae2d 0%, #f6ae2d ' + val + '%, #fff ' + val + '%, #fff 100%)}';
     style += '.range input::-' + prefs[i] + '{background: linear-gradient(to right, #f6ae2d 0%, #f6ae2d ' + val + '%, #e8e8e8 ' + val + '%, #e8e8e8 100%)}';
+
+
 }
 
 return style;
@@ -246,6 +252,18 @@ function stateCity () {
 
 calculateLinksChecked.forEach((item) => {
     item.addEventListener('click', (e) => {
+        e.preventDefault();
+        //Выбор квартир оформление
+        stateCalc.call(item);
+
+        //Выбор квартир счет
+        dinamicApartaments.call(item);
+    });
+});
+
+
+calculateLinksChecked.forEach((item) => {
+    item.addEventListener('dragover', (e) => {
         e.preventDefault();
         //Выбор квартир оформление
         stateCalc.call(item);
