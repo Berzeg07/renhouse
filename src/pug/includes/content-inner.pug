@@ -435,84 +435,98 @@
 
 <section class="calculate">
   <div class="container">
-   <div class="calculate-column">
-    <h1 class="main-title calculate__caption">Посчитайте, сколько вы будете зарабатывать</h1>
+    <div class="calculate-column">
+      <h1 class="main-title calculate__caption">Посчитайте, сколько вы будете зарабатывать</h1>
 
-    <p class="calculate__description">Итоговый расчет производится на основе аналитики деятельности 22 филиалов RentHouse</p>
+      <p class="calculate__description">Итоговый расчет производится на основе аналитики деятельности 22 филиалов RentHouse</p>
 
-    <div class="calculate__city">
-      <h2>Выберите город</h2>
+      <div class="calculate__city">
+        <h2>Выберите город</h2>
 
-      <ul>
-        <li><a class="btn btn-white calculate-city-link" data-amount="80000" href="#">Москва</a></li>
-        <li><a class="btn btn-white calculate-city-link calculate__city_active" data-amount="45000" href="#">Регион</a></li>
-        <li><a class="btn btn-white calculate-city-link" data-amount="60000" href="#">Миллионник</a></li>
-      </ul>
-    </div>
-
-    <div class="calculate__apartament">
-      <h2>Количество квартир</h2>
-
-      <ul>
-        <li class="calculate-li-active">
-          <a class="calculate-link calculate-link_active" data-num="5" href="#">5</a>
-        </li>
-        <li class="calculate-li-active">
-            <a class="calculate-link calculate-link_active" data-num="10" href="#">10</a>
-        </li>
-        <li class="calculate-li-active">
-          <a class="calculate-link calculate-link_active" data-num="20" href="#">20</a>
-        </li>
-        <li class="calculate-li-active">
-          <a class="calculate-link calculate-link_active" data-num="40" href="#">40</a>
-        </li>
-        <li class="calculate-li-active">
-          <a class="calculate-link calculate-link_active calculate-link_first" data-num="60" href="#">60</a>
-        </li>
-        <li>
-          <a class="calculate-link" data-num="100" href="#">100</a>
-        </li>
-      </ul>
-    </div>
-   </div>
-
-    <div class="calculate__income">
-      <p class="calculate__income-sum"><span class="js-clear-income">630 000</span> руб</p>
-      <p class="calculate__income-description">Чистая прибыль в месяц</p>
-
-      <ul class="calculate__income-statistic">
-        <li>
-          <span class="calculate__income-span">Ваш доход</span>
-          <span class="calculate__income-span_last"><span class="js-income">900 000</span> руб</span>
-        </li>
-
-        <li>
-          <span class="calculate__income-span">Расходы</span>
-          <span class="calculate__income-span_last"><span class="js-consumption">300 000</span> руб</span>
-
-          <span class="calculate__income-quest">?</span>
-
-          <div class="calculate__income-info">
-            <p>Выплаты сотрудникам - <span class="js-workers">30 000</span> руб</p>
-            <p>Реклама - <span class="js-add">75 000</span> руб</p>
-            <p>Аренда офиса - <span class="js-office">8 000</span> руб</p>
-            <p>Сотовая связь - <span class="js-mobile">2 000</span> руб</p>
-            <p>Себестоимость квартир - <span class="js-apartaments">300 000</span> руб</p>
-            <p>Создание сайта - <span class="calculate__income-info-inner">бесплатно</span></p>
-            <p>Фирменный дизайн - <span class="calculate__income-info-inner">бесплатно</span></p>
-            <p>Подробнее в бесплатной финансовой модели Вашего города</p>
-          </div>
-        </li>
-      </ul>
-
-      <div class="calulate__down-column">
-        <a class="btn btn-orange calculate__income-btn js-call" href="#">Получить бизнес-план</a>
-
-        <p class="calculate__income-rule">Нажимая «Получить», вы соглашаетесь на обработку персональных данных</p>
+        <ul>
+          <li><a class="btn btn-white calculate-city-link" data-amount="80000" href="#">Москва</a></li>
+          <li><a class="btn btn-white calculate-city-link calculate__city_active" data-amount="45000" href="#">Регион</a></li>
+          <li><a class="btn btn-white calculate-city-link" data-amount="60000" href="#">Миллионник</a></li>
+        </ul>
       </div>
+
+      <div class="calculate__apartament">
+        <h2>Количество квартир</h2>
+<!--
+<ul>
+<li class="calculate-li-active">
+<a class="calculate-link calculate-link_active" data-num="5" href="#">5</a>
+</li>
+<li class="calculate-li-active">
+<a class="calculate-link calculate-link_active" data-num="10" href="#">10</a>
+</li>
+<li class="calculate-li-active">
+<a class="calculate-link calculate-link_active" data-num="20" href="#">20</a>
+</li>
+<li class="calculate-li-active">
+<a class="calculate-link calculate-link_active" data-num="40" href="#">40</a>
+</li>
+<li class="calculate-li-active">
+<a class="calculate-link calculate-link_active calculate-link_first" data-num="60" href="#">60</a>
+</li>
+<li>
+<a class="calculate-link" data-num="100" href="#">100</a>
+</li>
+</ul> -->
+  <div class="my-range">
+    <div class="range">
+      <input type="range" min="1" max="6" steps="1" value="1">
     </div>
 
+    <ul class="range-labels">
+      <li class="selected active">5</li>
+      <li>10</li>
+      <li>20</li>
+      <li>40</li>
+      <li>60</li>
+      <li>100</li>
+    </ul>
   </div>
+</div>
+</div>
+
+<div class="calculate__income">
+  <p class="calculate__income-sum"><span class="js-clear-income">630 000</span> руб</p>
+  <p class="calculate__income-description">Чистая прибыль в месяц</p>
+
+  <ul class="calculate__income-statistic">
+    <li>
+      <span class="calculate__income-span">Ваш доход</span>
+      <span class="calculate__income-span_last"><span class="js-income">900 000</span> руб</span>
+    </li>
+
+    <li>
+      <span class="calculate__income-span">Расходы</span>
+      <span class="calculate__income-span_last"><span class="js-consumption">300 000</span> руб</span>
+
+      <span class="calculate__income-quest">?</span>
+
+      <div class="calculate__income-info">
+        <p>Выплаты сотрудникам - <span class="js-workers">30 000</span> руб</p>
+        <p>Реклама - <span class="js-add">75 000</span> руб</p>
+        <p>Аренда офиса - <span class="js-office">8 000</span> руб</p>
+        <p>Сотовая связь - <span class="js-mobile">2 000</span> руб</p>
+        <p>Себестоимость квартир - <span class="js-apartaments">300 000</span> руб</p>
+        <p>Создание сайта - <span class="calculate__income-info-inner">бесплатно</span></p>
+        <p>Фирменный дизайн - <span class="calculate__income-info-inner">бесплатно</span></p>
+        <p>Подробнее в бесплатной финансовой модели Вашего города</p>
+      </div>
+    </li>
+  </ul>
+
+  <div class="calulate__down-column">
+    <a class="btn btn-orange calculate__income-btn js-call" href="#">Получить бизнес-план</a>
+
+    <p class="calculate__income-rule">Нажимая «Получить», вы соглашаетесь на обработку персональных данных</p>
+  </div>
+</div>
+
+</div>
 </section>
 
 <section class="collection">

@@ -14,13 +14,55 @@ $(document).ready(function() {
     //     }
     // };
 
-    function resizeScrenn() {
-        if ($(window).width() >= 1170) {
+    var sheet = document.createElement('style'),
+    $rangeInput = $('.range input'),
+    prefs = ['webkit-slider-runnable-track', 'moz-range-track', 'ms-track'];
 
-            var swiper4 = new Swiper('.run-franchise-slider', {
-                slidesPerView: 4,
-                spaceBetween: 30,
-                centeredSlides: false,
+
+
+    document.body.appendChild(sheet);
+
+    var getTrackStyle = function (el) {
+      var curVal = el.value,
+      val = (curVal - 1) * 20,
+      style = '';
+
+  // Set active label
+  $('.range-labels li').removeClass('active selected');
+
+  var curLabel = $('.range-labels').find('li:nth-child(' + curVal + ')');
+
+  curLabel.addClass('active selected');
+  curLabel.prevAll().addClass('selected');
+
+  // Change background gradient
+  for (var i = 0; i < prefs.length; i++) {
+    style += '.range {background: linear-gradient(to right, #f6ae2d 0%, #f6ae2d ' + val + '%, #fff ' + val + '%, #fff 100%)}';
+    style += '.range input::-' + prefs[i] + '{background: linear-gradient(to right, #f6ae2d 0%, #f6ae2d ' + val + '%, #e8e8e8 ' + val + '%, #e8e8e8 100%)}';
+}
+
+return style;
+}
+
+$rangeInput.on('input', function () {
+  sheet.textContent = getTrackStyle(this);
+});
+
+// Change input value on label click
+$('.range-labels li').on('click', function () {
+  var index = $(this).index();
+
+  $rangeInput.val(index + 1).trigger('input');
+
+});
+
+function resizeScrenn() {
+    if ($(window).width() >= 1170) {
+
+        var swiper4 = new Swiper('.run-franchise-slider', {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            centeredSlides: false,
         // slidesPerView: 'auto',
         loop: true,
         pagination: {
@@ -35,9 +77,9 @@ $(document).ready(function() {
             }
         }
     });
-        } else {
-            if(swiper4) {
-                swiper4.destroy();
+    } else {
+        if(swiper4) {
+            swiper4.destroy();
         }// или swiper.autoplay.stop();
     }
 }
@@ -244,7 +286,7 @@ function stateCalc() {
 
 //Обратная связь вместо с опросником
 let btnCall = document.querySelectorAll('.js-call'),//Кнопки для открытия модальных окок обраной связи
-    recalName, recalPhone, recalEmail, recalIncome, recalInvestment, recalWhen, recalWhen2;
+recalName, recalPhone, recalEmail, recalIncome, recalInvestment, recalWhen, recalWhen2;
 
 
 //Открытие модального окна для обратной связи
@@ -317,9 +359,9 @@ function openQuestioner() {
     question1.classList.add('recall_open');//Открытие первого опросника
 
 
-        modelClose.onclick = function() {
-            sendQuestions(question1);
-        };
+    modelClose.onclick = function() {
+        sendQuestions(question1);
+    };
 
     //Отправка результатов опроса в переменную и вызов второго опросника
     further.onclick = function(e) {
@@ -337,7 +379,7 @@ function openQuestioner2() {
     question2.classList.add('recall_open');
 
     let modelClose = question2.querySelector('.questionnaire__close');
-        further = question2.querySelector('.questionare__further');
+    further = question2.querySelector('.questionare__further');
 
 
     modelClose.onclick = function() {
@@ -358,7 +400,7 @@ function openQuestioner3() {
     question3.classList.add('recall_open');
 
     let modelClose = question3.querySelector('.questionnaire__close'),
-        further = question3.querySelector('.questionare__further');
+    further = question3.querySelector('.questionare__further');
 
     modelClose.onclick = function() {
         sendQuestions(question3);
