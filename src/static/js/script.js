@@ -1,31 +1,10 @@
 $(document).ready(function() {
-    // document.onkeydown = function(e) {
-    //     if (e.ctrlKey &&
-    //         (e.keyCode === 67 ||
-    //             e.keyCode === 86 ||
-    //             e.keyCode === 85 ||
-    //             e.keyCode === 83 ||
-    //             e.keyCode === 117)) {
-    //         alert('not allowed');
-    //         return false;
-    //     } else {
-    //         return true;
-    //     }
-    // };
 
-    // $('.voice-btn__audio').get(0).pause();
-    // var test = $('.voice-btn__audio');
-    // console.log('test ', test);
-    // $('.voice-btn').removeClass('on');
-    // <div class="voice-btn"><audio src="audio/audio.mp3"></audio></div>
 
     $('.phone-inp').mask('+7 (999) 999-9999');
 
 
     $('.voice').click(function() {
-        // $('.voice-btn').each(function() {
-        //     $(this).find('.voice-btn__audio').get(0).pause();
-        // });
         $('.voice').each(function() {
             $(this).find('.voice-btn__audio').get(0).pause();
         });
@@ -98,6 +77,10 @@ $(document).ready(function() {
             el: '.swiper-pagination',
             type: 'progressbar',
         },
+        // scrollbar: {
+        //     el: '.swiper-scrollbar',
+        //     hide: false,
+        // },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -183,7 +166,7 @@ $(document).ready(function() {
     initSwiper();
 
     //Swiper plugin initialization on window resize
-    $(window).resize(function()  {
+    $(window).resize(function() {
         initSwiper();
     });
 
