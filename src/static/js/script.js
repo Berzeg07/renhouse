@@ -1,31 +1,8 @@
 $(document).ready(function() {
-    // document.onkeydown = function(e) {
-    //     if (e.ctrlKey &&
-    //         (e.keyCode === 67 ||
-    //             e.keyCode === 86 ||
-    //             e.keyCode === 85 ||
-    //             e.keyCode === 83 ||
-    //             e.keyCode === 117)) {
-    //         alert('not allowed');
-    //         return false;
-    //     } else {
-    //         return true;
-    //     }
-    // };
-
-    // $('.voice-btn__audio').get(0).pause();
-    // var test = $('.voice-btn__audio');
-    // console.log('test ', test);
-    // $('.voice-btn').removeClass('on');
-    // <div class="voice-btn"><audio src="audio/audio.mp3"></audio></div>
 
     $('.phone-inp').mask('+7 (999) 999-9999');
 
-
     $('.voice').click(function() {
-        // $('.voice-btn').each(function() {
-        //     $(this).find('.voice-btn__audio').get(0).pause();
-        // });
         $('.voice').each(function() {
             $(this).find('.voice-btn__audio').get(0).pause();
         });
@@ -98,6 +75,10 @@ $(document).ready(function() {
             el: '.swiper-pagination',
             type: 'progressbar',
         },
+        // scrollbar: {
+        //     el: '.swiper-scrollbar',
+        //     hide: false,
+        // },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -183,13 +164,13 @@ $(document).ready(function() {
     initSwiper();
 
     //Swiper plugin initialization on window resize
-    $(window).resize(function()  {
+    $(window).resize(function() {
         initSwiper();
     });
 
 
     var swiperTeam = new Swiper('.about-slider', {
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 21,
         // centeredSlides: true,
         // slidesPerView: 'auto',
@@ -315,10 +296,9 @@ $(document).ready(function() {
     $.fancybox.defaults.backFocus = false;
 
     var swiperTeam = new Swiper('.team-slider', {
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 46,
-        centeredSlides: false,
-        // slidesPerView: 'auto',
+        centeredSlides: true,
         loop: true,
         simulateTouch: true,
         pagination: {
@@ -333,15 +313,16 @@ $(document).ready(function() {
             499: {
                 slidesPerView: 1,
                 spaceBetween: 15,
-                loop: false,
+                // loop: false,
             },
             767: {
                 slidesPerView: 2,
                 spaceBetween: 15,
-                loop: false,
+                // loop: false,
             },
             1169: {
                 spaceBetween: 26,
+                centeredSlides: false
             }
         }
     });
