@@ -23,13 +23,16 @@ ul {
 }
 
 body {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
     font-family: "Lato";
     font-size: 18px;
     font-weight: 400;
     overflow-x: hidden;
-    color: #252422;
+    color: #131313;
 }
 
 body,

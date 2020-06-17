@@ -1,8 +1,6 @@
 $(document).ready(function() {
 
-
     $('.phone-inp').mask('+7 (999) 999-9999');
-
 
     $('.voice').click(function() {
         $('.voice').each(function() {
@@ -172,7 +170,7 @@ $(document).ready(function() {
 
 
     var swiperTeam = new Swiper('.about-slider', {
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 21,
         // centeredSlides: true,
         // slidesPerView: 'auto',
@@ -298,10 +296,9 @@ $(document).ready(function() {
     $.fancybox.defaults.backFocus = false;
 
     var swiperTeam = new Swiper('.team-slider', {
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 46,
-        centeredSlides: false,
-        // slidesPerView: 'auto',
+        centeredSlides: true,
         loop: true,
         simulateTouch: true,
         pagination: {
@@ -316,15 +313,16 @@ $(document).ready(function() {
             499: {
                 slidesPerView: 1,
                 spaceBetween: 15,
-                loop: false,
+                // loop: false,
             },
             767: {
                 slidesPerView: 2,
                 spaceBetween: 15,
-                loop: false,
+                // loop: false,
             },
             1169: {
                 spaceBetween: 26,
+                centeredSlides: false
             }
         }
     });
