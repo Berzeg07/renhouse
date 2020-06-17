@@ -1,23 +1,8 @@
 $(document).ready(function() {
 
-    // document.onkeydown = function(e) {
-    //     if (e.ctrlKey &&
-    //         (e.keyCode === 67 ||
-    //             e.keyCode === 86 ||
-    //             e.keyCode === 85 ||
-    //             e.keyCode === 83 ||
-    //             e.keyCode === 117)) {
-    //         alert('not allowed');
-    //         return false;
-    //     } else {
-    //         return true;
-    //     }
-    // };
-
     var sheet = document.createElement('style'),
     $rangeInput = $('.range input'),
     prefs = ['webkit-slider-runnable-track', 'moz-range-track', 'ms-track'];
-
 
 
     document.body.appendChild(sheet);

@@ -18,8 +18,8 @@
 		max-width: 450px;
 	}
 
-	@media (min-width : 1200px) {
-		max-width: 650px;
+	@media (min-width : 1170px) {
+		max-width: 512px;
 	}
 }
 @mixin rangeThumb {
@@ -36,13 +36,32 @@
 	width: 100%;
 	height: 4px;
 	cursor: pointer;
-	background: #e8e8e8;
+	background-image: linear-gradient(to right, #f6ae2d 0%, #f6ae2d 80%, #e8e8e8 80%, #e8e8e8 100%);
 }
 
 .range {
 	position: relative;
 	width: 100%;
 	height: 5px;
+
+	background: linear-gradient(to right, #f6ae2d 0%, #f6ae2d 80%, #fff 80%, #fff 100%);
+
+	@media (min-width : 1170px) {
+		position: relative;
+
+		&::before {
+			content: '';
+
+			position: absolute;
+			top: 2px;
+			right: -125px;
+			background-color: #e8e8e8;
+			display: block;
+
+			width: 125px;
+			height: 4px;
+		}
+	}
 }
 
 .range input {
@@ -50,6 +69,7 @@
 	position: absolute;
 	top: 2px;
 	height: 0;
+
 	-webkit-appearance: none;
 
 	// Thumb
@@ -119,6 +139,7 @@
 		}
 		@media (min-width : 768px) {
 			font-size: 18px;
+			width: 14px;
 		}
 
 		&::before {
@@ -522,6 +543,7 @@
 	@media (min-width : 768px) {
 		font-size: 24px;
 		line-height: 32px;
+		max-width: 481px;
 
 		img {
 			margin-bottom: -33px;
@@ -532,6 +554,7 @@
 	@media (min-width : 1170px) {
 		font-size: 36px;
 		line-height: 43px;
+		max-width: 605px;
 
 		img {
 			margin-bottom: -13px;
@@ -920,10 +943,11 @@
 
 	margin-bottom: 43px;
 
-	display: flex;
-
 	span {
 		font-weight: 600;
+		@media (min-width : 1170px) {
+			font-size: 18px;
+		}
 	}
 
 	@media (min-width : 768px) {
@@ -1274,6 +1298,10 @@
 
 	display: block;
 
+	span {
+		font-weight: 400;
+	}
+
 	@media (min-width : 1170px) {
 		font-size: 36px;
 
@@ -1603,7 +1631,7 @@
 	@media (min-width : 1170px) {
 		height: auto;
 		margin-bottom: 0;
-		padding-top: 82px;
+		padding-top: 75px;
 		padding-bottom: 0;
 
 		background-image: url('../img/city-bonus-desc.png');
@@ -1659,7 +1687,7 @@
 		font-size: 32px;
 		line-height: 49px;
 
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 	}
 }
 
@@ -1687,10 +1715,14 @@
 			margin-bottom: 3px;
 			margin-left: -14px;
 		}
+		@media (min-width : 1170px) {
+			font-size: 31px;
+			padding: 10px 15px;
+			margin-bottom: 2px;
+		}
 	}
 
 	@media (min-width : 1170px) {
-		font-size: 30px;
 		margin-bottom: 0;
 	}
 
@@ -1717,7 +1749,11 @@
 	}
 
 	@media (min-width : 1170px) {
-		margin-top: -40px;
+		margin-top: -36px;
+		margin-left: 0;
+		margin-right: 33px;
+
+		padding: 40px 50px 30px 52px;
 	}
 }
 
@@ -1737,7 +1773,7 @@
 	@media (min-width : 768px) {
 		width: 371px;
 		margin: 0 auto;
-		margin-bottom: 49px;
+		margin-bottom: 40px;
 		font-size: 24px;
 		line-height: 36px;
 	}
@@ -1781,6 +1817,9 @@
 		height: 54px;
 		border-radius: 27px;
 		margin-bottom: 20px;
+		font-size: 18px;
+		padding-left: 32px;
+		padding-right: 32px;
 	}
 }
 
@@ -1833,7 +1872,7 @@
 	color: #131313;
 
 	@media (min-width : 1200px) {
-		padding: 94px 0 138px;
+		padding: 135px 0 88px;
 	}
 }
 
@@ -1855,7 +1894,7 @@
 		font-size: 36px;
 		line-height: 44px;
 		width: 351px;
-		margin-bottom: 38px;
+		margin-bottom: 22px;
 	}
 }
 
@@ -1874,7 +1913,7 @@
 		color: #313131;
 		font-size: 18px;
 		line-height: 43px;
-		margin-bottom: 70px;
+		margin-bottom: 50px;
 	}
 }
 
@@ -1939,7 +1978,7 @@
 	}
 
 	@media (min-width : 1170px) {
-		margin-bottom: 129px;
+		margin-bottom: 123px;
 	}
 }
 
@@ -2090,6 +2129,7 @@
 	@media (min-width : 1170px) {
 		flex-direction: column;
 		margin-bottom: 0;
+		margin-top: 32px;
 	}
 }
 
@@ -2116,6 +2156,11 @@
 			background-image: url('../img/promotion.png');
 			width: 63px;
 			height: 63px;
+
+			@media (min-width : 1170px) {
+				left: 4px;
+				top: 3px;
+			}
 		}
 	}
 
@@ -2126,6 +2171,11 @@
 			background-image: url('../img/leader.png');
 			width: 61px;
 			height: 61px;
+
+			@media (min-width : 1170px) {
+				left: 7px;
+				top: 2px;
+			}
 		}
 	}
 
@@ -2149,7 +2199,7 @@
 
 	@media (min-width : 1170px) {
 
-		padding-left: 135px;
+		padding-left: 142px;
 
 		&:nth-of-type(1),
 		&:nth-of-type(2),
@@ -2161,6 +2211,14 @@
 			left: 0;
 			top:0;
 			transform: none;
+		};
+
+		&:nth-of-type(1){
+			margin-bottom: 42px;
+		}
+
+		&:nth-of-type(2) {
+			margin-bottom: 73px;
 		}
 	}
 }
@@ -2172,6 +2230,7 @@
 
 	@media (min-width : 1170px) {
 		text-align: left;
+		margin-bottom: 23px;
 	}
 }
 
@@ -2228,7 +2287,7 @@
 		font-size: 36px;
 		line-height: 44px;
 		width: 516px;
-		margin-bottom: 58px;
+		margin-bottom: 46px;
 	}
 }
 
@@ -2240,6 +2299,9 @@
 	font-size: 16px;
 	line-height: 24px;
 	padding-right: 22px;
+	br {
+		display: none;
+	}
 
 	@media (min-width : 500px) {
 		padding-right: 0;
@@ -2253,6 +2315,10 @@
 		font-size: 18px;
 		line-height: 30px;
 		width: 501px;
+
+		br {
+			display: block;
+		}
 	}
 }
 
@@ -2268,6 +2334,11 @@
 
 		&:nth-of-type(2) {
 			margin-bottom: 10px;
+
+			@media (min-width : 1170px) {
+				line-height: 35px;
+				margin-bottom: 4px;
+			}
 		}
 	}
 }
@@ -2526,9 +2597,10 @@
 	@media (min-width : 1170px) {
 		font-size: 18px;
 		line-height: 30px;
-		width: 490px;
+		width: 515px;
 		margin-bottom: 72px;
 		padding-bottom: 54px;
+		padding-left: 85px;
 
 		&::before {
 			top: 3px;
@@ -2561,12 +2633,14 @@
 	@media (min-width : 1170px) {
 		flex-direction: column;
 		align-items: flex-start;
+		margin-bottom: 48px;
 	}
 }
 
 .calculate__city h2 {
 	margin-bottom: 27px;
 	font-size: 16px;
+	font-weight: 500;
 
 	@media (min-width : 500px) {
 		margin-bottom: 0;
@@ -2594,6 +2668,10 @@
 	@media (min-width : 768px) {
 		margin-left: -27px;
 	}
+
+	@media (min-width : 1200px) {
+		margin-left: -16px;
+	}
 }
 
 .calculate__city li {
@@ -2611,10 +2689,15 @@
 		}
 
 	}
+
+	@media (min-width : 1200px) {
+		margin-left: 16px;
+	}
 }
 
 .calculate__city a {
 	padding: 12px 14px;
+	border: 1px solid #e8e8e8;
 
 	font-size: 14px;
 
@@ -2855,7 +2938,7 @@
 			left: 31px;
 
 
-			background-image: url('../img/consumption.png');
+			background-image: url('../img/profit.png');
 			background-repeat: no-repeat;
 			background-position: 0 0;
 			background-size: cover;
@@ -2867,8 +2950,8 @@
 		&:last-child {
 			margin-bottom: 0;
 
-			.calculate__income-quest {
-
+			&::before {
+				background-image: url('../img/consumption.png');
 			}
 
 			.calculate__income-quest {
@@ -3050,7 +3133,7 @@
 			}
 		}
 	}
-*/
+	*/
 
 /*perks
 =========================================*/
@@ -3165,6 +3248,10 @@
 		width: 322px;
 		margin-bottom: 61px;
 	}
+
+	@media (min-width : 1200px) {
+		margin-bottom: 35px;
+	}
 }
 
 .perks__slider {
@@ -3187,14 +3274,16 @@
 	display: none;
 
 	@media (min-width : 1170px) {
-		display: block;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 28px;
 		top: auto;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: 26px 13px;
 		width: 49px;
 		height: 50px;
-		display: block;
 		background-color: #f4f4f4;
 		position: absolute;
 		border-radius: 50%;
@@ -3206,23 +3295,20 @@
 .perks__slider .swiper-button-next {
 	bottom: 9%;
 	right: 38%;
-	background-image: url('../img/str-black.png');
-	transform: rotate(180deg);
+	background-image: none;
 
 	&:hover {
-		background-image: url('../img/str-orange.png');
-		transform: rotate(0deg);
+		color: orange;
 	}
 }
 
 .perks__slider .swiper-button-prev {
 	bottom: 9%;
 	left: 40%;
-	background-image: url('../img/str-black.png');
+	background-image: none;
 
 	&:hover {
-		background-image: url('../img/str-orange.png');
-		transform: rotate(180deg);
+		color: orange;
 	}
 }
 
@@ -3368,11 +3454,11 @@
 
 	@media (min-width : 1170px) {
 		background-image: url('../img/badroom-desc.png');
-		padding-bottom: 114px;
+		padding-bottom: 81px;
 	}
 
-	@media (min-width : 1900px) {
-		background-position: right -30px top 288px;
+	@media (min-width : 1920px) {
+		background-position: right -41px top 314px;
 	}
 
 
@@ -3445,7 +3531,7 @@
 	}
 
 	@media (min-width : 1170px) {
-		padding-top: 103px;
+		padding-top: 126px;
 	}
 }
 
@@ -3454,7 +3540,7 @@
 	position: relative;
 	color: #f6ae2d;
 	text-transform: uppercase;
-	padding-left: 29px;
+	padding-left: 26px;
 	margin-bottom: 54px;
 	display: block;
 	padding-top: 10px;
@@ -3464,7 +3550,7 @@
 
 		position: absolute;
 		top: 0px;
-		left: 0px;
+		left: -7px;
 
 		background-image: url('../img/marker.png');
 		background-repeat: no-repeat;
@@ -3486,7 +3572,7 @@
 	}
 
 	@media (min-width : 1170px) {
-		margin-bottom: 34px;
+		margin-bottom: 41px;
 	}
 
 }
@@ -3510,6 +3596,7 @@
 	@media (min-width : 1170px) {
 		font-size: 24px;
 		width: auto;
+		margin-bottom: 11px;
 	}
 }
 
@@ -3565,6 +3652,7 @@
 
 	@media (min-width : 1900px) {
 		right: 410px;
+		bottom: 27px;
 	}
 
 
@@ -3591,6 +3679,10 @@
 
 	@media (min-width : 768px) {
 		margin-right: 90px;
+	}
+
+	@media (min-width : 1170px) {
+		margin-right: 44px;
 	}
 }
 
@@ -3632,15 +3724,19 @@
 			font-size: 24px;
 			line-height: 36px;
 
-			width: 695px;
+			max-width: 735px;
+			width: 100%;
 			margin-bottom: 51px;
 		}
 
+		@media (min-width : 1920px) {
+			margin-top: -7px;
+		}
 
 	}
 
 	.good-comment__message p {
-		margin-bottom: 5px;
+		margin-bottom: 2px;
 		&:last-child {
 			margin-bottom: 0;
 		}
@@ -3650,6 +3746,11 @@
 
 			&:last-child {
 				margin-bottom: 0;
+
+				@media (min-width : 1920px) {
+					font-size: 18px;
+					line-height: 32px;
+				}
 			}
 		}
 	}
@@ -3736,7 +3837,7 @@
 		}
 
 		@media (min-width : 1900px) {
-			margin-right: 30px;
+			margin-right: 4px;
 		}
 	}
 
