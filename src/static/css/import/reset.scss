@@ -37,6 +37,8 @@ body {
 body,
 html {
     height: 100%;
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
 }
 
 ol,
@@ -66,8 +68,4 @@ input,
 select,
 textarea {
     font-family: inherit;
-}
-
-.expading__description-img{
-    display: none;
 }
