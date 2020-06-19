@@ -31,7 +31,6 @@ body {
     font-family: "Lato";
     font-size: 18px;
     font-weight: 400;
-    overflow-x: hidden;
     color: #131313;
 }
 
@@ -67,4 +66,8 @@ input,
 select,
 textarea {
     font-family: inherit;
+}
+
+.expading__description-img{
+    display: none;
 }
