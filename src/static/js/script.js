@@ -50,8 +50,18 @@ $(document).ready(function() {
 
     $('.link-detail').click(function(e) {
         e.preventDefault();
-        $('.franchaizi-modal').addClass('is-active');
+        var modalId = $(this).attr('data-attr');
+        if (!modalId) {
+            return;
+        }
+        $(modalId).addClass('is-active');
         $('.overlay').fadeIn();
+        $('body').addClass('overflow-hidden');
+    });
+
+    $('.subscription__link').click(function(e) {
+        e.preventDefault();
+        $('#mailing, .overlay').fadeIn();
         $('body').addClass('overflow-hidden');
     });
 
@@ -366,6 +376,8 @@ $(document).ready(function() {
         $('.thanks-modal').addClass('is-active');
         // location = "spasibo.php";
     };
+
+
 
 
     //  $(function() {

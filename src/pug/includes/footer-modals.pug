@@ -15,6 +15,19 @@
         p.privacy Нажимая кнопку, принимаю условия политики и 
             a(href="#") пользовательского соглашения
 
+.request-modal.modal#mailing
+    form.form-modal(method="post")
+        button(type="button").close-modal
+
+        p.request-modal__title Подписаться на еженедельную рассылку
+        input.inp(type="text" placeholder="E-mail" name="email")
+
+        .request-modal__button-wrap
+            button(type="submit" name="submit").btn.btn-orange.btn_form Подписаться
+
+        p.privacy Нажимая кнопку, принимаю условия политики и 
+            a(href="#") пользовательского соглашения
+
 .thanks-modal.modal
     .form-modal
         button(type="submit").close-modal
@@ -54,7 +67,66 @@
                 a(href="#")
                     img(src="img/inst-icon-g.png")
 
-.franchaizi-modal.modal
+.franchaizi-modal.modal#skbModal
+    .franchaizi-modal__inner
+        button(type="submit").close-modal
+
+        p.request-modal__title Франчайзи в Санкт Петербурге
+
+        .franchaizi-scroll-box.swiper-container
+            .swiper-wrapper
+                .swiper-slide
+                    ul.franchaizi-list
+                        li.franchaizi-list__item
+                            .franchaizi-list__inner
+                                .franchaizi-list__column
+                                    .franchaizi-list__img
+                                        img(src="img/batalovy.jpg")
+                                        .franchaizi-list__voice.voice-btn.voice
+                                            audio(src="audio/batalov-audio.mp3").voice-btn__audio
+
+                                .franchaizi-list__column
+                                    .franchaizi-list__name Вероника и Евгений Баталовы
+                                    .franchaizi-list__article Запуск 10 июня 2018
+
+                                .franchaizi-list__column
+                                    ul.franchaizi-list__info
+                                        li
+                                            a(href="tel:73432264150").franchaizi-list__phone +7 (812) 602 72 15
+                                        li
+                                            a(href="mailto:ekaterinburg.reho24.ru").franchaizi-list__email spb.reho24.ru 
+                                        li
+                                            a(href="mailto:ekaterinburg@reho24.ru").franchaizi-list__email spb@reho24.ru
+
+                                .franchaizi-list__column
+                                    p.franchaizi-list__article Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+
+                        li.franchaizi-list__item
+                            .franchaizi-list__inner
+                                .franchaizi-list__column
+                                    .franchaizi-list__img
+                                        img(src="img/batalovy.jpg")
+                                        .franchaizi-list__voice.voice-btn.voice
+                                            audio(src="audio/batalov-audio.mp3").voice-btn__audio
+
+                                .franchaizi-list__column
+                                    .franchaizi-list__name Митькин Максим и Морозов Александр
+                                    .franchaizi-list__article Запуск 13 ноября 2019
+
+                                .franchaizi-list__column
+                                    ul.franchaizi-list__info
+                                        li
+                                            a(href="tel:73432264150").franchaizi-list__phone +7 (812) 409 50 79
+                                        li
+                                            a(href="mailto:ekaterinburg.reho24.ru").franchaizi-list__email mspb.reho24.ru 
+                                        li
+                                            a(href="mailto:ekaterinburg@reho24.ru").franchaizi-list__email mspb@reho24.ru
+
+                                .franchaizi-list__column
+                                    p.franchaizi-list__article Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+            .swiper-scrollbar
+                
+.franchaizi-modal.modal#ekbModal
     .franchaizi-modal__inner
         button(type="submit").close-modal
 
@@ -70,7 +142,7 @@
                                     .franchaizi-list__img
                                         img(src="img/fr-1.png")
                                         .franchaizi-list__voice.voice-btn.voice
-                                            audio(src="audio/audio.mp3").voice-btn__audio
+                                            audio(src="audio/stepanenko-audio.mp3").voice-btn__audio
 
                                 .franchaizi-list__column
                                     .franchaizi-list__name Степаненков Никита Сергеевич
@@ -94,52 +166,13 @@
                             .franchaizi-list__inner
                                 .franchaizi-list__column
                                     .franchaizi-list__img
-                                        img(src="img/fr-2.png")
-                                        button(type="button").franchaizi-list__voice.voice-btn.voice
-                                            audio(src="audio/audio.mp3").voice-btn__audio  
-
-                                .franchaizi-list__column
-                                    .franchaizi-list__name Капустина Анна Владимировна
-                                    <div class="franchaizi-list__article"> В процессе открытия
-                                        <div class="drop-icon">
-                                            <span>?</span>
-                                            <div class="drop-icon__inner">
-                                                <p>Данный статус означает, что у партнера до пяти объектов в управлении</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                        
-                                        
-                                    
-                                .franchaizi-list__column
-                                    ul.franchaizi-list__info
-                                        li
-                                            a(href="tel:73432264150").franchaizi-list__phone +7 (343) 226-41-50
-                                        li
-                                            a(href="mailto:ekaterinburg.reho24.ru").franchaizi-list__email ekaterinburg.reho24.ru 
-                                        li
-                                            a(href="mailto:ekaterinburg@reho24.ru").franchaizi-list__email ekaterinburg@reho24.ru
-
-                                .franchaizi-list__column
-                                    p.franchaizi-list__article Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
-
-                        li.franchaizi-list__item
-                            .franchaizi-list__inner
-                                .franchaizi-list__column
-                                    .franchaizi-list__img
                                         img(src="img/fr-3.png")
-                                        button(type="button").franchaizi-list__voice.voice-btn.voice
-                                            audio(src="audio/audio.mp3").voice-btn__audio   
+                                        //- button(type="button").franchaizi-list__voice.voice-btn.voice
+                                        //-     audio(src="audio/audio.mp3").voice-btn__audio   
 
                                 .franchaizi-list__column
                                     .franchaizi-list__name Калманов Михаил Борисович
-                                    <div class="franchaizi-list__article"> В процессе открытия
-                                        <div class="drop-icon">
-                                            <span>?</span>
-                                            <div class="drop-icon__inner">
-                                                <p>Данный статус означает, что у партнера до пяти объектов в управлении</p>
-                                            </div>
-                                        </div>
+                                    <div class="franchaizi-list__article"> Запуск 26.03.2020
                                     </div>
                                         
                                         
@@ -160,12 +193,12 @@
                             .franchaizi-list__inner
                                 .franchaizi-list__column
                                     .franchaizi-list__img
-                                        img(src="img/fr-3.png")
-                                        button(type="button").franchaizi-list__voice.voice-btn.voice
-                                            audio(src="audio/audio.mp3").voice-btn__audio    
+                                        img(src="img/orlova.jpg")
+                                        //- button(type="button").franchaizi-list__voice.voice-btn.voice
+                                        //-     audio(src="audio/audio.mp3").voice-btn__audio    
 
                                 .franchaizi-list__column
-                                    .franchaizi-list__name Калманов Михаил Борисович
+                                    .franchaizi-list__name Орловы Денис и Наталья
                                     <div class="franchaizi-list__article"> В процессе открытия
                                         <div class="drop-icon">
                                             <span>?</span>
@@ -180,17 +213,47 @@
                                 .franchaizi-list__column
                                     ul.franchaizi-list__info
                                         li
-                                            a(href="tel:73432264575").franchaizi-list__phone +7 (343) 226-45-75
+                                            a(href="tel:73432264575").franchaizi-list__phone +7 (343) 300 90 26
                                         li
-                                            a(href="mailto:ekaterinburg.reho24.ru").franchaizi-list__email ekaterinburg.reho24.ru 
+                                            a(href="mailto:ekaterinburg.reho24.ru").franchaizi-list__email oekb.reho24.ru 
                                         li
-                                            a(href="mailto:ekaterinburg@reho24.ru").franchaizi-list__email ekaterinburg@reho24.ru
+                                            a(href="mailto:ekaterinburg@reho24.ru").franchaizi-list__email oekb@reho24.ru
 
                                 .franchaizi-list__column
                                     p.franchaizi-list__article Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
-            
-            
-            
-            
             .swiper-scrollbar
-                
+
+.franchaizi-modal.modal#nvbModal
+    .franchaizi-modal__inner
+        button(type="submit").close-modal
+
+        p.request-modal__title Франчайзи в Новосибирске
+
+        .franchaizi-scroll-box.swiper-container
+            .swiper-wrapper
+                .swiper-slide
+                    ul.franchaizi-list
+                        li.franchaizi-list__item
+                            .franchaizi-list__inner
+                                .franchaizi-list__column
+                                    .franchaizi-list__img
+                                        img(src="img/polyakov-img.png")
+                                        .franchaizi-list__voice.voice-btn.voice
+                                            audio(src="audio/polyakov-audio.mp3").voice-btn__audio
+
+                                .franchaizi-list__column
+                                    .franchaizi-list__name Поляков Сергей
+                                    .franchaizi-list__article Запуск 28 марта 2019
+
+                                .franchaizi-list__column
+                                    ul.franchaizi-list__info
+                                        li
+                                            a(href="tel:73432264150").franchaizi-list__phone +7 (383) 202 18 12
+                                        li
+                                            a(href="mailto:ekaterinburg.reho24.ru").franchaizi-list__email pnovosibirsk.reho24.ru 
+                                        li
+                                            a(href="mailto:ekaterinburg@reho24.ru").franchaizi-list__email pnovosibirsk@reho24.ru
+
+                                .franchaizi-list__column
+                                    p.franchaizi-list__article Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+            .swiper-scrollbar
