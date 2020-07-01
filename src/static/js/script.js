@@ -306,8 +306,8 @@ $(document).ready(function() {
     $.fancybox.defaults.backFocus = false;
 
     var swiperTeam = new Swiper('.team-slider', {
-        slidesPerView: 3,
-        spaceBetween: 46,
+        slidesPerView: 4,
+        spaceBetween: 20,
         centeredSlides: true,
         loop: true,
         simulateTouch: true,
