@@ -57,6 +57,13 @@ img {
     height: auto;
 }
 
+.loupe {
+    border: 1px solid black;
+    img {
+        max-width: inherit;
+    }
+}
+
 button {
     cursor: pointer;
     border: none;

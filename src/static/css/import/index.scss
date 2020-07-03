@@ -539,9 +539,43 @@
         top: auto;
         background: none;
     }
+    .swiper-scrollbar {
+        background: #F5F5F6;
+    }
+    .swiper-scrollbar-drag {
+        background: #E0E0E0;
+    }
+}
+
+.certificates_photos {
+    @media(max-width: 1199px) {
+        display: none !important;
+    }
+}
+
+.certificat-slider {
+    @media(min-width: 1200px) {
+        display: none;
+    }
+}
+
+.presentation-slider {
+    .swiper-scrollbar {
+        background: #494949;
+        max-width: 1170px;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 .team-slider {
+    .swiper-scrollbar {
+        background: #F5F5F6;
+    }
+    .swiper-scrollbar-drag {
+        background: #E0E0E0;
+    }
     @media(max-width: 1169px) {
         padding-bottom: 0;
     }
@@ -663,6 +697,9 @@
     opacity: 0;
     visibility: hidden;
     transition: 0.5s;
+    @media(min-width: 1280px) {
+        bottom: 0;
+    }
 }
 
 .link-detail {
@@ -694,16 +731,20 @@
                 content: '';
                 position: absolute;
                 right: 0;
-                top: 50%;
-                transform: translateY(-50%);
+                top: 15px;
                 width: 36px;
                 height: 2px;
-                background: $wheat;
+                background: #f6ae2d;
             }
         }
     }
     @media(min-width: 1170px) {
         width: 750px;
+        span {
+            &:after {
+                top: 22px;
+            }
+        }
     }
 }
 
@@ -1078,7 +1119,7 @@
         content: '';
         position: absolute;
         left: 0;
-        top: 18px;
+        top: 9px;
         width: 33px;
         height: 3px;
         background: $black;
@@ -1104,6 +1145,12 @@
 }
 
 .reasons-block__top {
+    li {
+        &:first-child {
+            position: relative;
+            z-index: 10;
+        }
+    }
     @media(min-width: 768px) {
         display: flex;
         margin-bottom: 40px;
@@ -1644,6 +1691,14 @@
 }
 
 .team-slider {
+    .swiper-slide {
+        @media(min-width: 1200px) {
+            width: auto !important;
+        }
+    }
+    img {
+        border-radius: 30px;
+    }
     .team-slider__item {
         text-align: center;
     }
@@ -2217,7 +2272,8 @@
     }
 }
 
-.request-modal {
+.request-modal,
+.modal-mail {
     position: fixed;
     left: 50%;
     top: 50%;

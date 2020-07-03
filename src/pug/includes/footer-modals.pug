@@ -1,4 +1,4 @@
-.request-modal.modal
+.request-modal.modal#recalModal
     form.form-modal(method="post")
         button(type="button").close-modal
 
@@ -12,10 +12,10 @@
         .request-modal__button-wrap
             button(type="submit" name="submit").btn.btn-orange.btn_form Отправить
 
-        p.privacy Нажимая кнопку, принимаю условия политики и 
+        p.privacy Нажимая кнопку, принимаю условия политики и   
             a(href="#") пользовательского соглашения
 
-.request-modal.modal#mailing
+.modal-mail.modal#mailing
     form.form-modal(method="post")
         button(type="button").close-modal
 
@@ -92,22 +92,22 @@
                                 .franchaizi-list__column
                                     ul.franchaizi-list__info
                                         li
-                                            a(href="tel:73432264150").franchaizi-list__phone +7 (812) 602 72 15
+                                            a(href="tel:78126027215").franchaizi-list__phone +7 (812) 602 72 15
                                         li
                                             a(href="mailto:ekaterinburg.reho24.ru").franchaizi-list__email spb.reho24.ru 
                                         li
                                             a(href="mailto:ekaterinburg@reho24.ru").franchaizi-list__email spb@reho24.ru
 
                                 .franchaizi-list__column
-                                    p.franchaizi-list__article Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+                                 
 
                         li.franchaizi-list__item
                             .franchaizi-list__inner
                                 .franchaizi-list__column
                                     .franchaizi-list__img
-                                        img(src="img/batalovy.jpg")
-                                        .franchaizi-list__voice.voice-btn.voice
-                                            audio(src="audio/batalov-audio.mp3").voice-btn__audio
+                                        img(src="img/mitkin.jpg")
+                                        //- .franchaizi-list__voice.voice-btn.voice
+                                        //-     audio(src="audio/batalov-audio.mp3").voice-btn__audio
 
                                 .franchaizi-list__column
                                     .franchaizi-list__name Митькин Максим и Морозов Александр
@@ -116,14 +116,14 @@
                                 .franchaizi-list__column
                                     ul.franchaizi-list__info
                                         li
-                                            a(href="tel:73432264150").franchaizi-list__phone +7 (812) 409 50 79
+                                            a(href="tel:78124095079").franchaizi-list__phone +7 (812) 409 50 79
                                         li
                                             a(href="mailto:ekaterinburg.reho24.ru").franchaizi-list__email mspb.reho24.ru 
                                         li
                                             a(href="mailto:ekaterinburg@reho24.ru").franchaizi-list__email mspb@reho24.ru
 
                                 .franchaizi-list__column
-                                    p.franchaizi-list__article Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+                                    
             .swiper-scrollbar
                 
 .franchaizi-modal.modal#ekbModal
@@ -175,8 +175,6 @@
                                     <div class="franchaizi-list__article"> Запуск 26.03.2020
                                     </div>
                                         
-                                        
-                                    
                                 .franchaizi-list__column
                                     ul.franchaizi-list__info
                                         li
@@ -187,7 +185,7 @@
                                             a(href="mailto:ekaterinburg@reho24.ru").franchaizi-list__email ekaterinburg@reho24.ru
 
                                 .franchaizi-list__column
-                                    p.franchaizi-list__article Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+                                    //- p.franchaizi-list__article Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
                         
                         li.franchaizi-list__item
                             .franchaizi-list__inner
@@ -213,14 +211,14 @@
                                 .franchaizi-list__column
                                     ul.franchaizi-list__info
                                         li
-                                            a(href="tel:73432264575").franchaizi-list__phone +7 (343) 300 90 26
+                                            a(href="tel:73433009026").franchaizi-list__phone +7 (343) 300 90 26
                                         li
                                             a(href="mailto:ekaterinburg.reho24.ru").franchaizi-list__email oekb.reho24.ru 
                                         li
                                             a(href="mailto:ekaterinburg@reho24.ru").franchaizi-list__email oekb@reho24.ru
 
                                 .franchaizi-list__column
-                                    p.franchaizi-list__article Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+                                    //- p.franchaizi-list__article Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
             .swiper-scrollbar
 
 .franchaizi-modal.modal#nvbModal
@@ -248,12 +246,117 @@
                                 .franchaizi-list__column
                                     ul.franchaizi-list__info
                                         li
-                                            a(href="tel:73432264150").franchaizi-list__phone +7 (383) 202 18 12
+                                            a(href="tel:73832021812").franchaizi-list__phone +7 (383) 202 18 12
                                         li
                                             a(href="mailto:ekaterinburg.reho24.ru").franchaizi-list__email pnovosibirsk.reho24.ru 
                                         li
                                             a(href="mailto:ekaterinburg@reho24.ru").franchaizi-list__email pnovosibirsk@reho24.ru
 
                                 .franchaizi-list__column
-                                    p.franchaizi-list__article Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+                                    //- p.franchaizi-list__article Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+            .swiper-scrollbar
+
+.franchaizi-modal.modal#kazanModal
+    .franchaizi-modal__inner
+        button(type="submit").close-modal
+
+        p.request-modal__title Франчайзи в Казани
+
+        .franchaizi-scroll-box.swiper-container
+            .swiper-wrapper
+                .swiper-slide
+                    ul.franchaizi-list
+                        li.franchaizi-list__item
+                            .franchaizi-list__inner
+                                .franchaizi-list__column
+                                    .franchaizi-list__img
+                                        img(src="img/palamarja.jpg")
+
+                                .franchaizi-list__column
+                                    .franchaizi-list__name Паламаржа Константин
+                                    .franchaizi-list__article Запуск 15 декабря 2018
+
+                                .franchaizi-list__column
+                                    ul.franchaizi-list__info
+                                        li
+                                            a(href="tel:78432661815").franchaizi-list__phone +7(843)2661815
+                                        li
+                                            a(href="mailto:ekaterinburg.reho24.ru").franchaizi-list__email pkazan.reho24.ru 
+                                        li
+                                            a(href="mailto:ekaterinburg@reho24.ru").franchaizi-list__email pkazan@reho24.ru
+
+                                .franchaizi-list__column
+                                     a(data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/ZsJ1J7wIMN8?v=_sI_Ps7JSEk&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0" href="javascript:;") 
+                                            img(src="img/tube-kazan.jpg") 
+            .swiper-scrollbar
+
+
+
+.franchaizi-modal.modal#stavropolModal
+    .franchaizi-modal__inner
+        button(type="submit").close-modal
+
+        p.request-modal__title Франчайзи в Cтаврополе
+
+        .franchaizi-scroll-box.swiper-container
+            .swiper-wrapper
+                .swiper-slide
+                    ul.franchaizi-list
+                        li.franchaizi-list__item
+                            .franchaizi-list__inner
+                                .franchaizi-list__column
+                                    .franchaizi-list__img
+                                        img(src="img/kalimov-img.jpg")
+
+                                .franchaizi-list__column
+                                    .franchaizi-list__name Калимов Евгений Владимирович
+                                    //- .franchaizi-list__article Запуск 15 декабря 2018
+
+                                .franchaizi-list__column
+                                    ul.franchaizi-list__info
+                                        li
+                                            a(href="tel:78652979867").franchaizi-list__phone +7 (8652) 97 98 67
+                                        li
+                                            a(href="mailto:ekaterinburg.reho24.ru").franchaizi-list__email kstavropol.reho24.ru 
+                                        li
+                                            a(href="mailto:ekaterinburg@reho24.ru").franchaizi-list__email kstavropol@reho24.ru
+
+                                .franchaizi-list__column
+                                    //-  a(data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/enRiyPi7fac?v=_sI_Ps7JSEk&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0" href="javascript:;") 
+                                    //-         img(src="img/tube-kazan.jpg") 
+            .swiper-scrollbar
+
+
+.franchaizi-modal.modal#penzaModal
+    .franchaizi-modal__inner
+        button(type="submit").close-modal
+
+        p.request-modal__title Франчайзи в Пензе
+
+        .franchaizi-scroll-box.swiper-container
+            .swiper-wrapper
+                .swiper-slide
+                    ul.franchaizi-list
+                        li.franchaizi-list__item
+                            .franchaizi-list__inner
+                                .franchaizi-list__column
+                                    .franchaizi-list__img
+                                        img(src="img/maksimov-img.jpg")
+
+                                .franchaizi-list__column
+                                    .franchaizi-list__name Максимов Александр Николаевич
+                                    //- .franchaizi-list__article Запуск 15 декабря 2018
+
+                                .franchaizi-list__column
+                                    ul.franchaizi-list__info
+                                        li
+                                            a(href="tel:78412500617").franchaizi-list__phone +7 (841) 250 06 17
+                                        li
+                                            a(href="mailto:ekaterinburg.reho24.ru").franchaizi-list__email mpenza.reho24.ru 
+                                        li
+                                            a(href="mailto:ekaterinburg@reho24.ru").franchaizi-list__email mpenza@reho24.ru
+
+                                .franchaizi-list__column
+                                    //-  a(data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/enRiyPi7fac?v=_sI_Ps7JSEk&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0" href="javascript:;") 
+                                    //-         img(src="img/tube-kazan.jpg") 
             .swiper-scrollbar

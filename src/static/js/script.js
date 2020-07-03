@@ -3,9 +3,10 @@ $(document).ready(function() {
     $('.phone-inp').mask('+7 (999) 999-9999');
 
     $('.voice').click(function() {
-        $('.voice').each(function() {
-            $(this).find('.voice-btn__audio').get(0).pause();
-        });
+        // $('.voice').each(function() {
+        //     $(this).find('.voice-btn__audio').get(0).pause();
+        // });
+        $('.voice-btn__audio').get(0).pause();
         if ($(this).hasClass('on')) {
             $(this).removeClass('on');
             $(this).find('.voice-btn__audio').get(0).pause();
@@ -17,6 +18,9 @@ $(document).ready(function() {
                 $(this).parent().removeClass('on');
             });
         }
+        // $('.voice').each(function() {
+        //     $(this).find('.voice-btn__audio').get(0).pause();
+        // });
     });
 
     $(function() {
@@ -32,7 +36,7 @@ $(document).ready(function() {
 
     $('.callreq').click(function(e) {
         e.preventDefault();
-        $('.request-modal, .overlay').fadeIn();
+        $('#recalModal, .overlay').fadeIn();
         $('body').addClass('overflow-hidden');
     });
 
@@ -81,14 +85,14 @@ $(document).ready(function() {
         // centeredSlides: true,
         // slidesPerView: 'auto',
         loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'progressbar',
-        },
-        // scrollbar: {
-        //     el: '.swiper-scrollbar',
-        //     hide: false,
+        // pagination: {
+        //     el: '.swiper-pagination',
+        //     type: 'progressbar',
         // },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            hide: false,
+        },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -232,10 +236,14 @@ $(document).ready(function() {
         // slidesPerView: 'auto',
         // centeredSlides: true,
         loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'progressbar',
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            hide: false,
         },
+        // pagination: {
+        //     el: '.swiper-pagination',
+        //     type: 'progressbar',
+        // },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -261,10 +269,14 @@ $(document).ready(function() {
         // centeredSlides: true,
         // slidesPerView: 'auto',
         loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'progressbar',
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            hide: false,
         },
+        // pagination: {
+        //     el: '.swiper-pagination',
+        //     type: 'progressbar',
+        // },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -311,9 +323,13 @@ $(document).ready(function() {
         centeredSlides: true,
         loop: true,
         simulateTouch: true,
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'progressbar',
+        // pagination: {
+        //     el: '.swiper-pagination',
+        //     type: 'progressbar',
+        // },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            hide: false,
         },
         navigation: {
             nextEl: '.swiper-button-next',

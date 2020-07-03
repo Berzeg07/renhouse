@@ -26,26 +26,13 @@
 .filial-block
     h2.main-title.filial-block__title
         |Мы работаем уже в 
-        span 17 городах 
+        span 7 городах 
         |России
 
     p.article.filial-block__article В управлении сети находится более 200 квартир в крупнейших городах
 
     .filial-slider.swiper-container.progress-slider
         .swiper-wrapper
-            .swiper-slide
-                .filial-slider__item
-                    img(src="img/sl-1.jpg")
-
-                    ul.filial-slider__top
-                        li Москва
-                        li Открыт 1 филиал
-
-                    ul.filial-slider__bottom
-                        li 
-                            span.franchaize 5 франчайзи
-                        li 
-                            a(href="#").link-detail Подробнее
 
             .swiper-slide
                 .filial-slider__item
@@ -82,9 +69,9 @@
 
                     ul.filial-slider__bottom
                         li 
-                            span.franchaize 5 франчайзи
+                            span.franchaize 1 франчайзи
                         li 
-                            a(href="#").link-detail Подробнее
+                            a(href="#" data-attr="#kazanModal").link-detail Подробнее
 
             .swiper-slide
                 .filial-slider__item
@@ -95,38 +82,52 @@
 
                     ul.filial-slider__bottom
                         li 
-                            span.franchaize 5 франчайзи
+                            span.franchaize 1 франчайзи
                         li 
                             a(href="#" data-attr="#nvbModal").link-detail Подробнее
 
             .swiper-slide
                 .filial-slider__item
-                    img(src="img/sl-6.jpg")
+                    img(src="img/stavropol-img.jpg")
                     ul.filial-slider__top
-                        li Чебоксары
+                        li Ставрополь
                         li Открыт 1 филиал
 
                     ul.filial-slider__bottom
                         li 
-                            span.franchaize 5 франчайзи
+                            span.franchaize 1 франчайзи
                         li 
-                            a(href="#").link-detail Подробнее  
+                            a(href="#" data-attr="#stavropolModal").link-detail Подробнее  
+
 
             .swiper-slide
                 .filial-slider__item
-                    img(src="img/sl-6.jpg")
+                    img(src="img/krasnoyarsk-img.jpg")
                     ul.filial-slider__top
-                        li Челябинск
+                        li Красноярск
                         li Открыт 1 филиал
 
                     ul.filial-slider__bottom
                         li 
-                            span.franchaize 5 франчайзи
-                        li 
-                            a(href="#").link-detail Подробнее   
+                            span.franchaize 1 франчайзи
+         
+            .swiper-slide
+                .filial-slider__item
+                    img(src="img/penza-img.jpg")
+                    ul.filial-slider__top
+                        li Пенза
+                        li Открыт 1 филиал
 
-        .swiper-pagination
-        //- .swiper-scrollbar
+                    ul.filial-slider__bottom
+                        li 
+                            span.franchaize 1 франчайзи
+                        li 
+                            a(href="#" data-attr="#penzaModal").link-detail Подробнее 
+                            
+                             
+
+        //- .swiper-pagination
+        .swiper-scrollbar
 
 .network-block
     h2.main-title.network-block__title
@@ -138,10 +139,10 @@
         .swiper-wrapper
             .swiper-slide
                 .network-slider__item
-                    img(src="img/sl-7.jpg")
+                    img(src="img/ekb-slide.jpg")
                     ul.network-slider__list
                         li
-                            span.network-slider__city Саратов
+                            span.network-slider__city Екатеринбург
                         li
                             span.network-slider__article 99 036 087 рублей - потенциальная ежемесячная выручка
                         li
@@ -149,10 +150,10 @@
 
             .swiper-slide
                 .network-slider__item
-                    img(src="img/sl-8.jpg")
+                    img(src="img/spb-slide.jpg")
                     ul.network-slider__list
                         li
-                            span.network-slider__city Курск
+                            span.network-slider__city Санкт-Петербург
                         li
                             span.network-slider__article 99 036 087 рублей - потенциальная ежемесячная выручка
                         li
@@ -160,10 +161,10 @@
 
             .swiper-slide
                 .network-slider__item
-                    img(src="img/sl-9.jpg")
+                    img(src="img/stv-slide.jpg")
                     ul.network-slider__list
                         li
-                            span.network-slider__city Таганрог
+                            span.network-slider__city Ставрополь
                         li
                             span.network-slider__article 99 036 087 рублей - потенциальная ежемесячная выручка
                         li
@@ -171,17 +172,40 @@
 
             .swiper-slide
                 .network-slider__item
-                    img(src="img/sl-10.jpg")
+                    img(src="img/kzn-slide.jpg")
                     ul.network-slider__list
                         li
-                            span.network-slider__city Краснодар
+                            span.network-slider__city Казань
                         li
                             span.network-slider__article 99 036 087 рублей - потенциальная ежемесячная выручка
                         li
                             button(type="button").btn.btn-black.network-slider__btn.js-call Получить бизнес план
 
+            .swiper-slide
+                .network-slider__item
+                    img(src="img/penza-slide.jpg")
+                    ul.network-slider__list
+                        li
+                            span.network-slider__city Пенза
+                        li
+                            span.network-slider__article 99 036 087 рублей - потенциальная ежемесячная выручка
+                        li
+                            button(type="button").btn.btn-black.network-slider__btn.js-call Получить бизнес план
 
-        .swiper-pagination
+            .swiper-slide
+                .network-slider__item
+                    img(src="img/nvsb-slide.jpg")
+                    ul.network-slider__list
+                        li
+                            span.network-slider__city Новосибирск
+                        li
+                            span.network-slider__article 99 036 087 рублей - потенциальная ежемесячная выручка
+                        li
+                            button(type="button").btn.btn-black.network-slider__btn.js-call Получить бизнес план
+
+        //- .swiper-pagination
+        .swiper-scrollbar
+
 
 .stat-block.container
     h2.main-title.stat-block__title Как RentHouse опережает<br> конкурентов при COVID-19?
@@ -260,8 +284,10 @@
             .swiper-slide
                 .presentation-slider__item
                     img(src="img/s-1.jpg")
+        .swiper-scrollbar
 
-        .swiper-pagination
+        //- .swiper-pagination
+        
 
 .container.reasons-block#aboutUs
     ul.reasons-block__top
@@ -272,7 +298,8 @@
             .reasons-block__image
                 img(src="img/city-img.jpg")
 
-    ol.reasons-list
+.reasons-list
+    ol
         li
             p.reasons-list__title Бизнес в сфере недвижимости стабилен
             p.reasons-list__article Людям всегда нужно где-то жить. Наш бизнес построен на 
@@ -321,7 +348,7 @@
                     p 2760 руб/сутки - средний чек стоимости квартиры в сети за 2019 год
                     p 23% - средний процент рентабельности бизнеса в сети
         li
-            .certificates
+            .certificates.certificates_photos
                 .certificates__item    
                     a(href="img/cert1.jpg").certificates__img.zoom-img
                         img(src="img/cert.jpg" width="279" height="376")
@@ -332,21 +359,21 @@
                         img(src="img/cert.jpg" width="279" height="376")
                     .certificates__article №018-006994
             
-            //- .certificat-slider.swiper-container
-            //-     .swiper-wrapper
-            //-         .swiper-slide
-            //-             a(href="img/cert1.jpg" data-fancybox="sert").certificates__img.zoom-img
-            //-                 img(src="img/cert.jpg")
-            //-             .certificates__article №018-006994
-            //-         .swiper-slide
-            //-             a(href="img/cert2.jpg" data-fancybox="sert").certificates__img.zoom-img
-            //-                 img(src="img/cert.jpg")
-            //-             .certificates__article №018-006994
+            .certificat-slider.swiper-container
+                .swiper-wrapper
+                    .swiper-slide
+                        a(href="img/cert1.jpg" data-fancybox="sert").certificates__img.zoom-img
+                            img(src="img/cert.jpg")
+                        .certificates__article №018-006994
+                    .swiper-slide
+                        a(href="img/cert2.jpg" data-fancybox="sert").certificates__img.zoom-img
+                            img(src="img/cert.jpg")
+                        .certificates__article №018-006994
                 
-            //-     .swiper-button-next
-            //-         span
-            //-     .swiper-button-prev
-            //-         span
+                .swiper-button-next
+                    span
+                .swiper-button-prev
+                    span
 
 .container.advantage-block
     ul.advantage-block__top
@@ -397,13 +424,15 @@
             .community-slider.swiper-container
                 .swiper-wrapper
                     .swiper-slide
-                        img(src="img/dsc2.jpg")
+                        img(src="img/otz-slide-1.jpg")
                     .swiper-slide
-                        img(src="img/dsc2.jpg")
+                        img(src="img/otz-slide-2.jpg")
                     .swiper-slide
-                        img(src="img/dsc2.jpg")
+                        img(src="img/otz-slide-3.jpg")
                     .swiper-slide
-                        img(src="img/dsc2.jpg")
+                        img(src="img/otz-slide-4.jpg")
+                    .swiper-slide
+                        img(src="img/otz-slide-5.jpg")
 
 
                 .swiper-button-next
@@ -434,13 +463,19 @@
             .community-slider.swiper-container
                 .swiper-wrapper
                     .swiper-slide
-                        img(src="img/dsc1.jpg")
+                        img(src="img/photo-1.jpg")
                     .swiper-slide
-                        img(src="img/dsc1.jpg")
+                        img(src="img/photo-2.jpg")
                     .swiper-slide
-                        img(src="img/dsc1.jpg")
+                        img(src="img/photo-3.jpg")
                     .swiper-slide
-                        img(src="img/dsc1.jpg")
+                        img(src="img/photo-4.jpg")
+                    .swiper-slide
+                        img(src="img/photo-5.jpg")
+                    .swiper-slide
+                        img(src="img/photo-6.jpg")
+                    .swiper-slide
+                        img(src="img/photo-7.jpg")
 
 
                 .swiper-button-next
@@ -458,8 +493,17 @@
 
             .swiper-slide
                 .team-slider__item
-                    a(href="img/slide-2.jpg" data-fancybox="gallery" style="display:block;")
-                        img(src="img/slide-2.jpg")
+                    a(href="img/t-5.jpg" data-fancybox="gallery" style="display:block;")
+                        img(src="img/t-5.jpg")
+            .swiper-slide
+                .team-slider__item
+                    a(href="img/t-7.jpg" data-fancybox="gallery" style="display:block;")
+                        img(src="img/t-7.jpg")
+
+            .swiper-slide
+                .team-slider__item
+                    a(href="img/t-8.jpg" data-fancybox="gallery" style="display:block;")
+                        img(src="img/t-8.jpg")
 
             .swiper-slide
                 .team-slider__item
@@ -471,12 +515,9 @@
                     a(href="img/slide-4.jpg" data-fancybox="gallery" style="display:block;")
                         img(src="img/slide-4.jpg")
 
-            .swiper-slide
-                .team-slider__item
-                    a(href="img/slide-2.jpg" data-fancybox="gallery" style="display:block;")
-                        img(src="img/slide-2.jpg")
 
-        .swiper-pagination
+        //- .swiper-pagination
+        .swiper-scrollbar
         .swiper-button-next
             span
         .swiper-button-prev
