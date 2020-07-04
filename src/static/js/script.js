@@ -235,7 +235,7 @@ $(document).ready(function() {
         spaceBetween: 20,
         // slidesPerView: 'auto',
         // centeredSlides: true,
-        loop: true,
+        loop: false,
         scrollbar: {
             el: '.swiper-scrollbar',
             hide: false,
@@ -252,13 +252,13 @@ $(document).ready(function() {
             599: {
                 slidesPerView: 1,
                 spaceBetween: 15,
-                loop: false,
+                // loop: false,
             },
 
             1169: {
                 slidesPerView: 2,
                 spaceBetween: 40,
-                loop: false,
+                // loop: false,
             },
         }
     });
@@ -348,6 +348,8 @@ $(document).ready(function() {
             },
             1169: {
                 spaceBetween: 26,
+                // slidesPerView: 2,
+                // loop: false,
                 centeredSlides: false
             }
         }
