@@ -212,13 +212,13 @@
     ul.stat-block__inner
         li
             p.stat-block__list-title частники
-            .stat-block__img
+            .stat-block__img.stat-block__img_left
                 img(src="img/40percent.png")
 
             p.article.stat-block__article-right В результате эпидемии COVID-19 конкуренты сократились на 40% на период марта 2020 года. 
         li
             p.stat-block__list-title RENTHOUSE
-            .stat-block__img
+            .stat-block__img.stat-block__img_right
                 img(src="img/5percent.png")
 
             p.article.stat-block__article Сеть RentHouse в сравнении <br>февраль-март просела всего на 5%. <br>
@@ -569,6 +569,8 @@
 
 
 .founder-block
+    .bg-img
+        img(src="img/room-image.png")
     .founder-block__inner.container
         .founder-block__item
             .founder-img
@@ -590,7 +592,7 @@
                     p.article.founder-block__article Уже 6 лет наша сеть стабильно увеличивает долю занимаемого рынка. Только за последние 
                         b 1,5 года 
                         |мы обработали 
-                        b 152 665входящих звонков 
+                        b 152 665 входящих звонков 
                         |от гостей, провели 
                         b 9413 заселений 
                         |гостей в наши апартаменты и заработали 
@@ -602,7 +604,7 @@
         p.article.founder-block__article Уже 6 лет наша сеть стабильно увеличивает долю занимаемого рынка. Только за последние 
             b 1,5 года 
             |мы обработали 
-            b 152 665входящих звонков 
+            b 152 665 входящих звонков 
             |от гостей, провели 
             b 9413 заселений 
             |гостей в наши апартаменты и заработали 
@@ -693,4 +695,5 @@
             .swiper-slide
                 img(src="img/t-3.jpg")
                 
-        .swiper-pagination
+        //- .swiper-pagination
+        .swiper-scrollbar
